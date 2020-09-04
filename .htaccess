@@ -3,9 +3,10 @@ RewriteEngine on
 
 # Does not apply to existing directories. In other words, if a folder exists, then don't change anything.
 RewriteCond %{REQUEST_FILENAME} !-d
-
 # Check for file in directory with .html extension.
 RewriteCond %{REQUEST_FILENAME}\.html -f
-
 # Here, we show the page with a .html extension.
 RewriteRule ^(.*)$ $1.html [NC,L]
+
+# Redirect index.html to homepage.
+RewriteRule (.*)/index$ $1/ [R=301]
