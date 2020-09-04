@@ -9,4 +9,5 @@ RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
 
 # Redirect index.html to homepage.
-RewriteRule (.*)/index$ $1/ [R=301]
+RewriteRule ^(.*)/index$ $1/ [R=301,L]
+RewriteRule ^index\.html$ / [R=301,L]
