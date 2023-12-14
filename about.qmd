@@ -1,0 +1,87 @@
+---
+title: "About Me"
+---
+---
+
+### {{< fa user-tie >}} Professional Experience
+
+:::: {.columns}
+
+::: {.column width="40%"}
+contents...
+:::
+
+::: {.column width="60%"}
+contents...
+:::
+
+::::
+
+```{=html}
+<div class="container">
+    <div class="row">
+        <div class="column" width=15%>
+            08/2017 &ndash; 06/2023
+        </div>
+        <div class="column" width=85%>
+            Graduate Research & Teaching Assistant <br>
+            <i>Cornell University, USA</i>
+    </div>    
+</div>
+```
+
+### {{< fa solid user-graduate >}} Education 
+```{=html}
+<!-- Empty vertical space -->
+ <br>
+
+<!-- MS & PhD, Cornell University, 2017 – 2023 --> 
+<div class="box">
+    <div class="card border-primary mb-3" style="max-width: 36.5rem;">
+        <div class="card-header bg-light border-success">
+            <img src="images/cornell_logo_simple_black.svg" height=75 alt="Cornell University, USA">
+        </div>
+    <div class="card-body bg-light">
+        <h4 style="margin-top: -5px; text-align:left">MS & Ph.D.
+            <span style="float:right;"> 2017 &ndash; 2023 </span>
+        </h4>
+        <p class="card-text">
+            Major: Astronomy <br>
+            Minor: Physics <br>  
+        </p>
+    </div>
+    <div class="card-footer bg-light border-success">
+        GPA: 4.0/4.0 <br>
+        Cranson & Edna B. Shelley Outstanding Teaching Assistant Award (2019)  
+    </div>
+</div>    
+
+<!-- Empty horizontal space -->
+<div class="horizontalgap" style="width:2rem"></div>  
+
+<!-- BS & MS, IISER Pune, 2012 – 2017 -->
+<div class="box"> 
+    <div class="card border-primary mb-3" style="max-width: 36.5rem;">
+        <div class="card-header bg-light border-success">
+            <img src="images/IISER_Pune_logo.svg" height=75 alt="IISER Pune, India">
+            &nbsp; Indian Institute of Science Education & Research, Pune
+        </div>
+    <div class="card-body bg-light">
+        <h4 class="card-title" style="margin-top: -5px; text-align:left">BS & MS
+            <span style="float:right;"> 2012 &ndash; 2017 </span>
+        </h4>
+        <p class="card-text">
+            Major: Physics <br>
+            Minor: Mathematics <br>  
+        </p>
+    </div>
+    <div class="card-footer bg-light border-success">
+        GPA: 9.9/10 <br>
+        Institute Gold Medal (2017)  
+    </div>
+</div>
+```
+
+### {{< fa certificate >}} Licenses & Certifications
+
+### {{< fa mountain-sun >}} Recreational Activities

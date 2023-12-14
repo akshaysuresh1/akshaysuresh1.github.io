@@ -1,0 +1,48 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  site-url: https://akshaysuresh1.com/
+  favicon: images/AkshaySuresh_favicon.png
+  open-graph: true
+
+  navbar:
+    title: False
+    logo: "images/AkshaySuresh_logo.png"
+    logo-alt: "Akshay Suresh"
+    background: primary
+    search: true  
+    right:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: projects.qmd
+        text: Projects
+      - href: blog.qmd
+        text: Blog 
+      - icon: github
+        href: https://github.com/akshaysuresh1
+      - icon: linkedin
+        href: https://linkedin.com/in/akshaysureshas1
+      - icon: envelope
+        href: mailto:akshay721@gmail.com
+
+  page-footer: 
+    background: light
+    left: Copyright 2023, Akshay Suresh.
+    right: Website built with [Quarto](https://quarto.org/).
+
+format:
+  html:
+    page-layout: full
+    sidebar: false
+    grid: 
+      body-width: 2000px
+      sidebar-width: 200px
+      margin-width: 200px
+    theme: styles.scss
+    # css: styles.css
+    mainfont: Montserrat
+    toc: true

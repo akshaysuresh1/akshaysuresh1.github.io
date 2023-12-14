@@ -1,0 +1,7 @@
+---
+title: "Error 404: Page not found."
+---
+
+<!-- ::: {.small-text} -->
+You may want to try the search feature in the navigation bar.
+<!-- ::: -->

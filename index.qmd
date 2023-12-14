@@ -1,0 +1,37 @@
+---
+title: Akshay Suresh
+image: images/AkshaySuresh_2023_06.jpg
+resources: pdfs/AkshaySuresh_Resume.pdf
+toc: false
+about: 
+  template: trestles
+  image-shape: round
+  image-width: 14em
+  links:
+    - icon: filetype-pdf
+      text: "Resume (last updated: Dec 4, 2023)"
+      href: pdfs/AkshaySuresh_Resume.pdf
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/akshaysureshas1
+    - icon: github
+      text: GitHub
+      href: https://github.com/akshaysuresh1
+    - icon: envelope
+      text: Email
+      href: mailto:akshay721@gmail.com
+---
+
+### AI Researcher | Data Scientist | Freelancer
+---
+
+Hi there! I am Akshay Suresh. Professionaly, I love developing artificial intelligence (AI) algorithms to tackle challenging real-world problems and generate sustainable benefit for humanity. 
+
+Building on my educational training in physics and data science, I am excited to make impactful contributions in the following domains.
+
+* AI for climate change
+* AI for healthcare
+* Environment perception algorithms for autonomous vehicles
+* Pioneering safe artificial general intelligence
+
+Outside of work, I enjoy following cricket, playing board games, and exploring natural wonders. Visit my [About](about.qmd) and [Projects](projects.qmd) pages to hear of my experiences in and beyond the workplace.
