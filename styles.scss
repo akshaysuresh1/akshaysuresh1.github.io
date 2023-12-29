@@ -9,6 +9,8 @@
 $light-sage-green: #D1D9CE;
 $dark-sage-green: #98A08D;
 $cream: #FDFBF7;
+$pale-black:#181818;
+$dim-gray:#404040;
 $dark-gray: #c2b6b6;
 $gray: #c7c7c7;
 $light-gray: #ededed; 
@@ -17,7 +19,8 @@ $black: #000000;
 $burnt-orange: #ad7237;
 $light-blue: #d8f5fd;
 $blue: #5c81fa;
-$dark-blue: #10029a; 
+$dark-blue: #10029a;
+$indigo: #3F00FF; 
 
 // Base document colors
 $navbar-bg: $dark-gray;
@@ -143,16 +146,23 @@ footer {
 
 // btn styling
 .btn {
-  color: $dark-gray;
-  background-color: $cream; //$light-sage-green;
-  border-color: $dark-gray;
+  color: $dim-gray;
+  background-color: transparent; 
+  border-color: $dim-gray;
 }
 
 // button hover styling
 .btn:hover {
-  color: $cream;
-  background-color: $purple;
-  border-color: $dark-gray;
+  color: $indigo;
+  background-color: transparent;
+  border-color: $indigo;
+}
+
+// disabled button styling
+.btn:disabled {
+  color: $pale-black;
+  background-color: transparent; 
+  border-color: $pale-black;
 }
 
 // image styling
@@ -218,4 +228,14 @@ div.horizontalgap {
   overflow: hidden;
   height: 1px;
   width: 0px;
+}
+
+// Remove row borders.
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th,
+.table-borderless > tfoot > tr > td,
+.table-borderless > tfoot > tr > th,
+.table-borderless > thead > tr > td,
+.table-borderless > thead > tr > th {
+    border: none !important;
 }

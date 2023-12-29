@@ -1,0 +1,43 @@
+---
+title: "Refereed Publications"
+toc: true
+---
+---
+[<i class="fa-brands fa-orcid"></i> 0000-0002-5389-7806](https://orcid.org/0000-0002-5389-7806)
+
+### {{< fa receipt >}} Journal articles
+
+<u>Astronomy:</u> 9 publications during 2016 &ndash; 2023 (7 first-author, 2 co-author).
+
+1. [[Reuters press release](https://www.reuters.com/science/scientists-expand-search-signs-intelligent-alien-life-2023-05-31/)] <b>Suresh,&nbsp;A.</b>, Gajjar,&nbsp;V., Nagarajan,&nbsp;P., Sheikh,&nbsp;S.&nbsp;Z., et al., (9 authors), <i>A 4&ndash;8&nbsp;GHz Galactic Center Search for Periodic Technosignatures</i>, [2023 AJ 165 255](https://doi.org/10.3847/1538-3881/acccf0).
+
+2. <b>Suresh,&nbsp;A.</b>, Cordes,&nbsp;J.&nbsp;M., Chatterjee,&nbsp;S., Gajjar,&nbsp;V., et al. (9 authors), <i>4&ndash;8&nbsp;GHz Fourier-domain Searches for Galactic Center Pulsars</i>, [2022 ApJ 933 121](https://doi.org/10.3847/1538-4357/ac74c0).
+
+3. <b>Suresh,&nbsp;A.</b>, Cordes,&nbsp;J.&nbsp;M., Chatterjee,&nbsp;S., Gajjar,&nbsp;V., et al. (7 authors), <i>4&ndash;8&nbsp;GHz Spectrotemporal Emission from the Galactic Center Magnetar PSR J1745&mdash;2900</i>, [2021 ApJ 921 101](https://doi.org/10.3847/1538-4357/ac1d45).
+
+4. <b>Suresh,&nbsp;A.</b>, Chatterjee,&nbsp;S., Cordes,&nbsp;J.&nbsp;M., & Crawford,&nbsp;F., <i>An Arecibo Search for Fast Radio Transients
+from M87</i>, [2021 ApJ 920 16](https://doi.org/10.3847/1538-4357/ac1672).
+
+5. <b>Suresh,&nbsp;A.</b>, Chatterjee,&nbsp;S., Cordes,&nbsp;J.&nbsp;M., Bastian,&nbsp;T.&nbsp;S. & Hallinan,&nbsp;G., <i>Detection of 2&ndash;4 GHz Continuum Emission from $\epsilon$&nbsp;Eridani</i>, [2020 ApJ 904 138](https://doi.org/10.3847/1538-4357/abc004).
+
+6. <b>Suresh,&nbsp;A.</b>, & Cordes,&nbsp;J.&nbsp;M., <i>Induced Polarization from Birefringent Pulse Splitting in Magnetoionic Media</i>, [2019 ApJ 870 29](https://doi.org/10.3847/1538-4357/aaf004).
+
+7. <b>Suresh,&nbsp;A.</b>, Sharma,&nbsp;R., Oberoi,&nbsp;D., et al. (39 authors), <i>Wavelet-based Characterization of Small-scale Solar Emission Features at Low Radio Frequencies</i>, [2017 ApJ 843 19](https://doi.org/10.3847/1538-4357/aa774a).
+
+8. Gajjar,&nbsp;V., et al. (22&nbsp;authors including <b>Suresh,&nbsp;A.</b>), <i>Searching for Broadband Pulsed Beacons from 1883&nbsp;Stars Using Neural Networks</i>, [2022 ApJ 932 81](https://doi.org/10.3847/1538-4357/ac6dd5).
+
+9. Gajjar,&nbsp;V., et al. (26&nbsp;authors including <b>Suresh,&nbsp;A.</b>), <i>The Breakthrough Listen Search For Intelligent Life Near the Galactic Center&nbsp;I</i>, [2021 AJ 162 33](https://doi.org/10.3847/1538-3881/abfd36).
+
+### {{< fa person-chalkboard >}} Conference Proceedings
+
+1. Vaillancourt,&nbsp;P.&nbsp;Z., et al. (9 authors including <b>Suresh,&nbsp;A.</b>), <i>Reproducible and Portable Workflows for Scientific Computing and HPC in the Cloud</i>, [PEARC 2020](https://doi.org/10.1145/3311790.3396659).
+
+2. Oberoi,&nbsp;D., et al. (10 authors including <b>Suresh,&nbsp;A.</b>), <i>Solar Science at Metric Radio Wavelengths: Coming of Age</i>, [IAU Symposium 340, 2018](https://doi.org/10.1017/S1743921318001400).
+
+3. Sharma,&nbsp;R., Oberoi,&nbsp;D., <b>Suresh,&nbsp;A.</b>, & Arjunwardkar,&nbsp;M., <i>Quantifying Weak Non-thermal Meterwave Solar Emission Using Non-imaging Techniques</i>, [IAU Symposium 340, 2018](https://doi.org/10.1017/S1743921318002004).
+
+### {{< fa book-journal-whills >}} Dissertations
+
+1. [PhD thesis:](https://www.proquest.com/openview/f1f1994542a49158f66b814d9b470cf3/1) <b>Suresh,&nbsp;A.</b>, <i>Radio Transient Searches from Millisecond to Hour-long Time Scales</i>, Cornell University, USA, 2023.
+
+2. [MS thesis:](http://dr.iiserpune.ac.in:8080/xmlui/handle/123456789/800) <b>Suresh,&nbsp;A.</b>, <i>Investigation of Small Scale Weak Solar Emissions at Low Radio Frequencies</i>, IISER Pune, India, 2017.

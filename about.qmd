@@ -1,40 +1,119 @@
 ---
 title: "About Me"
+format: html
+lightbox: auto
+toc: true
 ---
 ---
 
-### {{< fa user-tie >}} Professional Experience
+### {{< fa user-tie >}} Research Experience
+<table class="table table-borderless table-hover w-auto" >
+    <!-- Row 1 -->
+    <tr>
+        <td><b>10/2023 &ndash; Present<b></td>
+        <td>Freelance AI Researcher<br>
+            <button class="btn btn-outline-secondary" disabled>Upskilling</button>
+        </td><br>
+    </tr>
+    <!-- Row 2 -->
+    <tr>
+        <td><b>08/2017 &ndash; 06/2023<b></td>
+        <td>Graduate Researcher, Cornell University, Ithaca, NY, USA<br>
+            <i>AI and Signal Processing for Automated Astrophysical Event Discovery</i><br>
+            <button class="btn btn-outline-secondary" disabled>Deep Learning</button>
+            <button class="btn btn-outline-secondary" disabled>Signal Processing</button>
+            <button class="btn btn-outline-secondary" disabled>Python</button>
+            <button class="btn btn-outline-secondary" disabled>Pytorch</button>
+            <button class="btn btn-outline-secondary" disabled>Radio Astronomy</button><br>
+        </td>
+    </tr>
+    <!-- Row 3 -->
+    <tr>
+        <td><b>06/2022 &ndash; 08/2022<b>
+        </td>
+        <td>Machine Learning Researcher, Frontier Development Lab USA<br>
+            <i>Time Series Forecast of Earthquake Rates from Underground Carbon Storage</i><br>
+            <button class="btn btn-outline-secondary" disabled>Time Series Forecasting</button>
+            <button class="btn btn-outline-secondary" disabled>LSTM</button>
+            <button class="btn btn-outline-secondary" disabled>Pytorch</button>
+            <button class="btn btn-outline-secondary" disabled>Teamwork</button>
+            <button class="btn btn-outline-secondary" disabled>Climate Adaptation</button><br>
+        </td>
+    </tr>
+    <!-- Row 4 -->
+    <tr>
+        <td><b>09/2021 &ndash; 06/2022<b></td>
+        <td>Visiting Researcher, University of California, Berkeley, USA<br>
+            <i>Software Development for Radar Detection from Alien Worlds</i><br>
+            <button class="btn btn-outline-secondary" disabled>Production Code Development</button>
+            <button class="btn btn-outline-secondary" disabled>Python</button>
+            <button class="btn btn-outline-secondary" disabled>Search for Extraterrestrial Intelligence</button>
+        </td>
+    </tr>            
+</table>
 
-:::: {.columns}
-
-::: {.column width="40%"}
-contents...
-:::
-
-::: {.column width="60%"}
-contents...
-:::
-
-::::
-
-```{=html}
-<div class="container">
-    <div class="row">
-        <div class="column" width=15%>
-            08/2017 &ndash; 06/2023
-        </div>
-        <div class="column" width=85%>
-            Graduate Research & Teaching Assistant <br>
-            <i>Cornell University, USA</i>
-    </div>    
-</div>
-```
+### {{< fa gears >}} Technical Skills
+<table class="table table-borderless table-hover w-auto" style="width:100%">
+    <!-- Row 1: Programming Skills -->
+    <tr>
+        <td><b>Programming</b></td>
+        <td>
+            Python (pytorch, scikit-learn, numpy, pandas, matplotlib, plotly), bash scripting, SQL, $\LaTeX$, HTML
+        </td>
+    </tr>
+    <!-- Row 2: Machine Learning techniques -->
+    <tr>
+        <td><b>Machine learning</b></td>
+        <td>
+            <ul>
+                <li>Supervised learning:
+                    <ul class="a">
+                        <li>Linear regression, lasso & ridge regularization</li>
+                        <li>Decision trees, random forest</li>
+                        <li>Support vector machine (SVM)</li>
+                        <li>k-nearest neighbors (kNN)</li>
+                        <li>Convolutional neural networks (CNN)</li>
+                        <li>Recurrent neural networks (RNN)</li>
+                        <li>Long short-term memory networks (LSTM)</li>
+                    </ul></li>
+                <li>Unsupervised learning:
+                    <ul class="a">
+                        <li>k-means clustering</li>
+                        <li>Gaussian mixture models (GMM)</li>
+                    </ul></li>
+                <li>Principal component analysis (PCA)</li>
+                <li>Stochastic gradient descent (SGD)</li>
+                <li>Adam optimization</li>
+            </ul>
+        </td>    
+    </tr>
+    <!-- Row 3: Software engineering skills -->
+    <tr>
+        <td><b>Software Engineering<b></td>
+        <td>Production code development, high performance computing (HPC)</td>
+    </tr>    
+    <!-- Row 4: Cloud computing experience-->
+    <tr>
+        <td><b>Cloud Computing</b></td>
+        <td>Google Cloud Platform (GCP), Amazon Web Services (AWS)</td>
+    </tr>
+    <!-- Row 5: Operating ststems-->
+    <tr>
+        <td><b>Operating Systems<b></td>
+        <td>Linux, iOS</td>
+    </tr>
+    <!-- Row 6: Other software -->
+    <tr>
+        <td><b>Other Software<b></td>
+        <td>Microsoft Office</td>
+    </tr>    
+</table>
+<br>
 
 ### {{< fa solid user-graduate >}} Education 
 ```{=html}
 <!-- Empty vertical space -->
  <br>
-
 <!-- MS & PhD, Cornell University, 2017 – 2023 --> 
 <div class="box">
     <div class="card border-primary mb-3" style="max-width: 36.5rem;">
@@ -42,7 +121,7 @@ contents...
             <img src="images/cornell_logo_simple_black.svg" height=75 alt="Cornell University, USA">
         </div>
     <div class="card-body bg-light">
-        <h4 style="margin-top: -5px; text-align:left">MS & Ph.D.
+        <h4 style="margin-top: -5px; text-align:left">MS & PhD
             <span style="float:right;"> 2017 &ndash; 2023 </span>
         </h4>
         <p class="card-text">
@@ -55,10 +134,8 @@ contents...
         Cranson & Edna B. Shelley Outstanding Teaching Assistant Award (2019)  
     </div>
 </div>    
-
 <!-- Empty horizontal space -->
 <div class="horizontalgap" style="width:2rem"></div>  
-
 <!-- BS & MS, IISER Pune, 2012 – 2017 -->
 <div class="box"> 
     <div class="card border-primary mb-3" style="max-width: 36.5rem;">
@@ -67,7 +144,7 @@ contents...
             &nbsp; Indian Institute of Science Education & Research, Pune
         </div>
     <div class="card-body bg-light">
-        <h4 class="card-title" style="margin-top: -5px; text-align:left">BS & MS
+        <h4 class="card-title" style="margin-top: -5px; text-align:left">BS & MS with Distinction
             <span style="float:right;"> 2012 &ndash; 2017 </span>
         </h4>
         <p class="card-text">
@@ -83,5 +160,36 @@ contents...
 ```
 
 ### {{< fa certificate >}} Licenses & Certifications
+<table class="table table-borderless w-auto" style="width:100%">
+    <tr>
+        <!-- Erdos Institute Data Visualization Minicourse -->
+        <td>04/2023</td>
+        <td><a href="https://www.erdosinstitute.org/certificates/spring-2023/data-visualization-mini-course/akshay-suresh" target="_blank">Erd&ouml;s Institute Data Visualization Mini-course</a>
+        </td>
+    </tr>
+    <tr>
+        <!-- Erdos Institute Data Science Bootcamp -->
+        <td>06/2022</td>
+        <td><a href="https://www.erdosinstitute.org/certificates/spring-2022/akshay-suresh" target="_blank">Erd&ouml;s Institute Data Science Bootcamp</a>
+        </td>    
+    </tr>
+</table>
 
 ### {{< fa mountain-sun >}} Recreational Activities
+* Hailing from Chennai in southern India, I grew up an avid cricket follower. Whenever possible, I attempt to attend major cricketing events throughout the world. A cricketing highlight for me was attending the World T20 final 2022 at the Melbourne Cricket Ground.
+
+::: {layout-ncol=3}
+![](images/MCG_2022/mcg_1.png)
+
+![](images/MCG_2022/mcg_2.png)
+
+![](images/MCG_2022/mcg_3.png)
+
+
+:::
+
+* I enjoy destressing from work through board/card games and food. My favorite board game cafes include [Gameistry Entertainment (Chennai, India)](https://www.gameistry.in/) and [Victory Point Cafe (Berkeley, CA, USA)](https://www.victorypointcafe.com/). I maintain [here](boardgames.qmd) a growing list of board games I have played since 2020. Hoping to expand this list further in the coming years!
+
+
+
+

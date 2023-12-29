@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://akshaysuresh1.com/about.html</loc>
-    <lastmod>2023-12-14T18:12:24.651Z</lastmod>
+    <loc>https://akshaysuresh1.com/index.html</loc>
+    <lastmod>2023-12-29T19:02:58.765Z</lastmod>
   </url>
   <url>
-    <loc>https://akshaysuresh1.com/index.html</loc>
-    <lastmod>2023-12-14T18:12:24.180Z</lastmod>
+    <loc>https://akshaysuresh1.com/about.html</loc>
+    <lastmod>2023-12-29T19:22:59.963Z</lastmod>
+  </url>
+  <url>
+    <loc>https://akshaysuresh1.com/boardgames.html</loc>
+    <lastmod>2023-12-29T19:01:35.267Z</lastmod>
+  </url>
+  <url>
+    <loc>https://akshaysuresh1.com/publications.html</loc>
+    <lastmod>2023-12-29T19:03:03.164Z</lastmod>
   </url>
 </urlset>

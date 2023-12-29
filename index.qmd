@@ -9,8 +9,11 @@ about:
   image-width: 14em
   links:
     - icon: filetype-pdf
-      text: "Resume (last updated: Dec 4, 2023)"
+      text: "Resume (last updated: Jan 2, 2024)"
       href: pdfs/AkshaySuresh_Resume.pdf
+    - icon: book
+      text: Publications
+      href: publications.qmd
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/akshaysureshas1

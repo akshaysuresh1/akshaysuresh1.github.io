@@ -46,6 +46,7 @@ format:
       sidebar-width: 200px
       margin-width: 200px
     theme: styles.scss
-    # css: styles.css
     mainfont: Montserrat
     toc: true
+    toc_float: true
+    toc_highlight: true    
