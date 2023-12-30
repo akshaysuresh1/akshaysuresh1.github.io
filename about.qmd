@@ -1,7 +1,10 @@
 ---
 title: "About Me"
 format: html
-lightbox: auto
+filters:
+   - lightbox
+lightbox:
+      match: auto
 toc: true
 ---
 ---
@@ -105,7 +108,7 @@ toc: true
     <!-- Row 6: Other software -->
     <tr>
         <td><b>Other Software<b></td>
-        <td>Microsoft Office</td>
+        <td>Microsoft 365 Suite</td>
     </tr>    
 </table>
 <br>
@@ -176,19 +179,14 @@ toc: true
 </table>
 
 ### {{< fa mountain-sun >}} Recreational Activities
-* Hailing from Chennai in southern India, I grew up an avid cricket follower. Whenever possible, I attempt to attend major cricketing events throughout the world. A cricketing highlight for me was attending the World T20 final 2022 at the Melbourne Cricket Ground.
-
-::: {layout-ncol=3}
-![](images/MCG_2022/mcg_1.png)
-
-![](images/MCG_2022/mcg_2.png)
-
-![](images/MCG_2022/mcg_3.png)
-
-
+* I have been an avid cricket fan since my teenage years. Whenever feasible, I attempt to witness major cricketing events live in stadiums worldwide. A personal cricketing highlight for me was attending the World T20 final 2022 at the magnificient Melbourne Cricket Ground.
+::: {layout_ncol=3}
+![](images/MCG_2022/mcg_1.png){width=30%, group="my-gallery"}
+![](images/MCG_2022/mcg_2.png){width=30%, group="my-gallery"}
+![](images/MCG_2022/mcg_3.png){width=30%, group="my-gallery"}
 :::
 
-* I enjoy destressing from work through board/card games and food. My favorite board game cafes include [Gameistry Entertainment (Chennai, India)](https://www.gameistry.in/) and [Victory Point Cafe (Berkeley, CA, USA)](https://www.victorypointcafe.com/). I maintain [here](boardgames.qmd) a growing list of board games I have played since 2020. Hoping to expand this list further in the coming years!
+* I enjoy destressing from work through board games and food. My favorite board game haunts include [Gameistry Entertainment (Chennai, India)](https://www.gameistry.in/) and [Victory Point Cafe (Berkeley, CA, USA)](https://www.victorypointcafe.com/). I maintain [here](boardgames.qmd) a growing list of board games I have played since 2020. Hoping to expand this list further in the coming years!
 
 
 

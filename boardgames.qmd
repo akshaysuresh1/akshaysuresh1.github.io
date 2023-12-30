@@ -1,9 +1,10 @@
 ---
-title: "Board Game Listing"
+title: "Board Game Listing (2020 &ndash; Present)"
 toc: false
 ---
 ---
 
+* [Anomia](https://boardgamegeek.com/boardgame/67877/anomia)
 * [Azul](https://boardgamegeek.com/boardgame/230802/azul)
 * [Biblios](https://boardgamegeek.com/boardgame/34219/biblios)
 * [Carcassonne](https://boardgamegeek.com/boardgame/822/carcassonne)
@@ -16,6 +17,8 @@ toc: false
 * [Lanterns: The Harvest Festival](https://boardgamegeek.com/boardgame/160851/lanterns-harvest-festival)
 * [Modern Art](https://boardgamegeek.com/boardgame/118/modern-art)
 * [Perudo](https://boardgamegeek.com/boardgame/45/perudo)
+* [Scarabya](https://boardgamegeek.com/boardgame/244330/scarabya)
+* [Scrabble](https://boardgamegeek.com/boardgame/320/scrabble)
 * [Sequence](https://boardgamegeek.com/boardgame/2375/sequence)
 * [Suspend](https://boardgamegeek.com/boardgame/127784/suspend)
 * [Ticket to Ride: Europe](https://boardgamegeek.com/boardgame/14996/ticket-ride-europe)

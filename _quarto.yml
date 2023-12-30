@@ -49,4 +49,4 @@ format:
     mainfont: Montserrat
     toc: true
     toc_float: true
-    toc_highlight: true    
+    toc_highlight: true
