@@ -179,7 +179,7 @@ toc: true
 </table>
 
 ### {{< fa mountain-sun >}} Recreational Activities
-* I have been an avid cricket fan since my teenage years. Whenever feasible, I attempt to witness major cricketing events live in stadiums worldwide. A personal cricketing highlight for me was attending the World T20 final 2022 at the magnificient Melbourne Cricket Ground.
+* I have been an avid cricket fan since my teenage years. Whenever feasible, I make every effort to watch major cricketing matches live in stadiums worldwide. A personal cricketing highlight for me was attending the World T20 final 2022 at the magnificient Melbourne Cricket Ground in Australia.
 ::: {layout_ncol=3}
 ![](images/MCG_2022/mcg_1.png){width=30%, group="my-gallery"}
 ![](images/MCG_2022/mcg_2.png){width=30%, group="my-gallery"}
