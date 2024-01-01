@@ -1,10 +1,6 @@
 ---
 title: "About Me"
 format: html
-filters:
-   - lightbox
-lightbox:
-      match: auto
 toc: true
 ---
 ---
@@ -111,7 +107,6 @@ toc: true
         <td>Microsoft 365 Suite</td>
     </tr>    
 </table>
-<br>
 
 ### {{< fa solid user-graduate >}} Education 
 ```{=html}
@@ -179,15 +174,115 @@ toc: true
 </table>
 
 ### {{< fa mountain-sun >}} Recreational Activities
-* I have been an avid cricket fan since my teenage years. Whenever feasible, I make every effort to watch major cricketing matches live in stadiums worldwide. A personal cricketing highlight for me was attending the World T20 final 2022 at the magnificient Melbourne Cricket Ground in Australia.
-::: {layout_ncol=3}
-![](images/MCG_2022/mcg_1.png){width=30%, group="my-gallery"}
-![](images/MCG_2022/mcg_2.png){width=30%, group="my-gallery"}
-![](images/MCG_2022/mcg_3.png){width=30%, group="my-gallery"}
-:::
+* I have been an avid cricket fan since my teenage years. When possible, I attempt to experience major cricketing matches live in stadiums worldwide. Attending the World T20 final 2022 at the Melbourne Cricket Ground is most cherished cricketing memory to date.
 
-* I enjoy destressing from work through board games and food. My favorite board game haunts include [Gameistry Entertainment (Chennai, India)](https://www.gameistry.in/) and [Victory Point Cafe (Berkeley, CA, USA)](https://www.victorypointcafe.com/). I maintain [here](boardgames.qmd) a growing list of board games I have played since 2020. Hoping to expand this list further in the coming years!
+```{=html}
+<!-- MCG photos in Bootstrap image carousel -->
+<div id="MCGcarousel" class="carousel slide mx-auto" style="width:85%">
+    <!-- Indicators at the bottom of the carousel -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#MCGcarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#MCGcarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#MCGcarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#MCGcarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#MCGcarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#MCGcarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    </div>
+    
+    <div class="carousel-inner">
+        <!-- Photo 1 -->
+        <div class="carousel-item active">
+            <img src="images/MCG_2022/mcg_1.png" class="d-block w-75 center-img" alt="Slide 1">
+        </div>
+        <!-- Photo 2 -->
+        <div class="carousel-item">
+            <img src="images/MCG_2022/mcg_2.png" class="d-block w-75 center-img" alt="Slide 2">
+        </div>
+        <!-- Photo 3 -->
+        <div class="carousel-item">
+            <img src="images/MCG_2022/mcg_3.png" class="d-block w-75 center-img" alt="Slide 3">
+        </div>
+        <!-- Photo 4 -->
+        <div class="carousel-item">
+            <img src="images/MCG_2022/mcg_4.png" class="d-block w-75 center-img" alt="Slide 4">
+        </div>
+        <!-- Photo 5 -->
+        <div class="carousel-item">
+            <img src="images/MCG_2022/mcg_5.png" class="d-block w-75 center-img" alt="Slide 5">
+        </div>
+        <!-- Photo 6 -->
+        <div class="carousel-item">
+            <img src="images/MCG_2022/mcg_6.png" class="d-block w-75 center-img" alt="Slide 6">
+        </div>                
+    </div>
+    
+    <!-- Left arrow -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#MCGcarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    
+    <!-- Right arrow -->
+    <button class="carousel-control-next" type="button" data-bs-target="#MCGcarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<br>
+```
 
+* I enjoy destressing from work through board games and food. [Gameistry Entertainment (Chennai, India)](https://www.gameistry.in/) and [Victory Point Cafe (Berkeley, CA, USA)](https://www.victorypointcafe.com/) are two personal favorite board game destinations. I maintain [here](boardgames.qmd) a growing list of board games I have played since 2020. Hoping to expand this list further in the coming years!
+
+* I love taking time out from my schedule to appreciate the Earth's natural wonders. Witnessing the dance of the Aurora Borealis (aka the Northern Lights) in interior Alaska was a dream come true in 2022.
+```{=html}
+<!-- Aurora Borealis photos in Bootstrap image carousel -->
+<div id="AuroraCarousel" class="carousel slide mx-auto" style="width:85%">
+    <!-- Indicators at the bottom of the carousel -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#AuroraCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#AuroraCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#AuroraCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#AuroraCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#AuroraCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    </div>
+    
+    <div class="carousel-inner">
+        <!-- Photo 1 -->
+        <div class="carousel-item active">
+            <img src="images/Aurora_2022/aurora_1.jpg" class="d-block w-50 center-img" alt="Slide 1">
+        </div>
+        <!-- Photo 2 -->
+        <div class="carousel-item">
+            <img src="images/Aurora_2022/aurora_2.jpg" class="d-block w-50 center-img" alt="Slide 2">
+        </div>
+        <!-- Photo 3 -->
+        <div class="carousel-item">
+            <img src="images/Aurora_2022/aurora_3.jpg" class="d-block w-50 center-img" alt="Slide 3">
+        </div>
+        <!-- Photo 4 -->
+        <div class="carousel-item">
+            <img src="images/Aurora_2022/aurora_4.jpg" class="d-block w-50 center-img" alt="Slide 4">
+        </div>
+        <!-- Photo 5 -->
+        <div class="carousel-item">
+            <img src="images/Aurora_2022/aurora_5.jpg" class="d-block w-50 center-img" alt="Slide 5">
+        </div>             
+    </div>
+    
+    <!-- Left arrow -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#AuroraCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    
+    <!-- Right arrow -->
+    <button class="carousel-control-next" type="button" data-bs-target="#AuroraCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<br>
+```
 
 
 

@@ -239,3 +239,14 @@ div.horizontalgap {
 .table-borderless > thead > tr > th {
     border: none !important;
 }
+
+// Flip carousel indicator arrow colors.
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}
+
+// Add frame border to image carousel.
+.carousel img{
+  border:2px solid black 
+}

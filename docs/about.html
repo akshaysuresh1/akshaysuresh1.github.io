@@ -40,9 +40,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -326,7 +323,6 @@ Microsoft 365 Suite
 </tr>
 
 </tbody></table>
-<p><br></p>
 </section>
 <section id="fa-solid-user-graduate-education" class="level3">
 <h3 class="anchored" data-anchor-id="fa-solid-user-graduate-education"><i class="fa-solid fa-user-graduate" aria-label="user-graduate"></i> Education</h3>
@@ -404,9 +400,111 @@ Microsoft 365 Suite
 <section id="fa-mountain-sun-recreational-activities" class="level3">
 <h3 class="anchored" data-anchor-id="fa-mountain-sun-recreational-activities"><i class="fa-solid fa-mountain-sun" aria-label="mountain-sun"></i> Recreational Activities</h3>
 <ul>
-<li><p>I have been an avid cricket fan since my teenage years. Whenever feasible, I make every effort to watch major cricketing matches live in stadiums worldwide. A personal cricketing highlight for me was attending the World T20 final 2022 at the magnificient Melbourne Cricket Ground in Australia. ::: {layout_ncol=3} <a href="images/MCG_2022/mcg_1.png" class="lightbox" data-gallery="my-gallery"><img src="images/MCG_2022/mcg_1.png" class="img-fluid"></a> <a href="images/MCG_2022/mcg_2.png" class="lightbox" data-gallery="my-gallery"><img src="images/MCG_2022/mcg_2.png" class="img-fluid"></a> <a href="images/MCG_2022/mcg_3.png" class="lightbox" data-gallery="my-gallery"><img src="images/MCG_2022/mcg_3.png" class="img-fluid"></a> :::</p></li>
-<li><p>I enjoy destressing from work through board games and food. My favorite board game haunts include <a href="https://www.gameistry.in/">Gameistry Entertainment (Chennai, India)</a> and <a href="https://www.victorypointcafe.com/">Victory Point Cafe (Berkeley, CA, USA)</a>. I maintain <a href="./boardgames.html">here</a> a growing list of board games I have played since 2020. Hoping to expand this list further in the coming years!</p></li>
+<li>I have been an avid cricket fan since my teenage years. When possible, I attempt to experience major cricketing matches live in stadiums worldwide. Attending the World T20 final 2022 at the Melbourne Cricket Ground is most cherished cricketing memory to date.</li>
 </ul>
+<!-- MCG photos in Bootstrap image carousel -->
+<div id="MCGcarousel" class="carousel slide mx-auto" style="width:85%">
+    <!-- Indicators at the bottom of the carousel -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#MCGcarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#MCGcarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#MCGcarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#MCGcarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#MCGcarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#MCGcarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    </div>
+    
+    <div class="carousel-inner">
+        <!-- Photo 1 -->
+        <div class="carousel-item active">
+            <img src="images/MCG_2022/mcg_1.png" class="d-block w-75 center-img" alt="Slide 1">
+        </div>
+        <!-- Photo 2 -->
+        <div class="carousel-item">
+            <img src="images/MCG_2022/mcg_2.png" class="d-block w-75 center-img" alt="Slide 2">
+        </div>
+        <!-- Photo 3 -->
+        <div class="carousel-item">
+            <img src="images/MCG_2022/mcg_3.png" class="d-block w-75 center-img" alt="Slide 3">
+        </div>
+        <!-- Photo 4 -->
+        <div class="carousel-item">
+            <img src="images/MCG_2022/mcg_4.png" class="d-block w-75 center-img" alt="Slide 4">
+        </div>
+        <!-- Photo 5 -->
+        <div class="carousel-item">
+            <img src="images/MCG_2022/mcg_5.png" class="d-block w-75 center-img" alt="Slide 5">
+        </div>
+        <!-- Photo 6 -->
+        <div class="carousel-item">
+            <img src="images/MCG_2022/mcg_6.png" class="d-block w-75 center-img" alt="Slide 6">
+        </div>                
+    </div>
+    
+    <!-- Left arrow -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#MCGcarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    
+    <!-- Right arrow -->
+    <button class="carousel-control-next" type="button" data-bs-target="#MCGcarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<br>
+<ul>
+<li><p>I enjoy destressing from work through board games and food. <a href="https://www.gameistry.in/">Gameistry Entertainment (Chennai, India)</a> and <a href="https://www.victorypointcafe.com/">Victory Point Cafe (Berkeley, CA, USA)</a> are two personal favorite board game destinations. I maintain <a href="./boardgames.html">here</a> a growing list of board games I have played since 2020. Hoping to expand this list further in the coming years!</p></li>
+<li><p>I love taking time out from my schedule to appreciate the Earth’s natural wonders. Witnessing the dance of the Aurora Borealis (aka the Northern Lights) in interior Alaska was a dream come true in 2022.</p></li>
+</ul>
+<!-- Aurora Borealis photos in Bootstrap image carousel -->
+<div id="AuroraCarousel" class="carousel slide mx-auto" style="width:85%">
+    <!-- Indicators at the bottom of the carousel -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#AuroraCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#AuroraCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#AuroraCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#AuroraCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#AuroraCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    </div>
+    
+    <div class="carousel-inner">
+        <!-- Photo 1 -->
+        <div class="carousel-item active">
+            <img src="images/Aurora_2022/aurora_1.jpg" class="d-block w-50 center-img" alt="Slide 1">
+        </div>
+        <!-- Photo 2 -->
+        <div class="carousel-item">
+            <img src="images/Aurora_2022/aurora_2.jpg" class="d-block w-50 center-img" alt="Slide 2">
+        </div>
+        <!-- Photo 3 -->
+        <div class="carousel-item">
+            <img src="images/Aurora_2022/aurora_3.jpg" class="d-block w-50 center-img" alt="Slide 3">
+        </div>
+        <!-- Photo 4 -->
+        <div class="carousel-item">
+            <img src="images/Aurora_2022/aurora_4.jpg" class="d-block w-50 center-img" alt="Slide 4">
+        </div>
+        <!-- Photo 5 -->
+        <div class="carousel-item">
+            <img src="images/Aurora_2022/aurora_5.jpg" class="d-block w-50 center-img" alt="Slide 5">
+        </div>             
+    </div>
+    
+    <!-- Left arrow -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#AuroraCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    
+    <!-- Right arrow -->
+    <button class="carousel-control-next" type="button" data-bs-target="#AuroraCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<br>
 
 
 </section>
@@ -655,7 +753,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">Website built with <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","loop":true,"closeEffect":"zoom","openEffect":"zoom"});</script>
 
 
 
