@@ -10,7 +10,7 @@ toc: true
     <!-- Row 1 -->
     <tr>
         <td><b>10/2023 &ndash; Present<b></td>
-        <td>Freelance AI Researcher<br>
+        <td>Independent Study & Research<br>
             <button class="btn btn-outline-secondary" disabled>Upskilling</button>
         </td><br>
     </tr>
@@ -231,7 +231,7 @@ toc: true
 <br>
 ```
 
-* I enjoy destressing from work through board games and food. [Gameistry Entertainment (Chennai, India)](https://www.gameistry.in/) and [Victory Point Cafe (Berkeley, CA, USA)](https://www.victorypointcafe.com/) are two personal favorite board game destinations. I maintain [here](boardgames.qmd) a growing list of board games I have played since 2020. Hoping to expand this list further in the coming years!
+* I enjoy destressing from work through board games and food. [Gameistry Entertainment (Chennai, India)](https://www.gameistry.in/) and [Victory Point Cafe (Berkeley, CA, USA)](https://www.victorypointcafe.com/) are two personal favorite board game destinations. I maintain [here](boardgames.qmd) a list of board games I have played since 2020. Hoping to grow this list further in the coming years!
 
 * I love taking time out from my schedule to appreciate the Earth's natural wonders. Witnessing the dance of the Aurora Borealis (aka the Northern Lights) in interior Alaska was a dream come true in 2022.
 ```{=html}
