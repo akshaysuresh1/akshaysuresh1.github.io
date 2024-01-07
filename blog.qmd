@@ -1,11 +1,12 @@
 ---
-title: "My Projects"
+title: "Blog"
+subtitle: "<i>Personal takeaways from research paper readings, concept reviews & more...</i>"
 listing:
-  contents: projects
+  contents: blogposts
   sort: "date desc"
   type: default
   image-align: right
-  max-description-length: 200
+  max-description-length: 400
   date-format: medium
   categories: true
   sort-ui: true

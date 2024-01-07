@@ -16,6 +16,7 @@ $gray: #c7c7c7;
 $light-gray: #ededed; 
 $purple: #B319F2;
 $black: #000000;
+$light-orange: #f5cba7;
 $burnt-orange: #ad7237;
 $azure: #e4fcfc;
 $baby-blue: #89CFF0;
@@ -262,10 +263,20 @@ div.horizontalgap {
 // Change color of left border of callout-note.
 div.callout-note.callout {
   border-left-color: $dark-blue;
-  background-color: $azure;
+  background-color: $cream;
 }
 
 // Update callout-note header color.
 div.callout-note.callout-style-default>.callout-header {
   background-color: $baby-blue;
+}
+
+// Change background color of left border of callout-caution.
+div.callout-caution.callout {
+  background-color: hsl(27, 60%, 94%) ;
+}
+
+// Update callout-caution header color.
+div.callout-caution.callout-style-default>.callout-header {
+  background-color: $light-orange;
 }
