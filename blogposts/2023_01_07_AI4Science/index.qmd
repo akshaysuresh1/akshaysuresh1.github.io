@@ -3,14 +3,14 @@ title: "Scientific Discovery in the Age of Artificial Intelligence"
 author: Akshay Suresh
 date: 2023-01-07
 image: fig1.png
-description: AI techniques, with their power to accelerate discovery, are becoming increasingly integrated into all stages of scientific research, including hypothesis formulation, data annotation, system modeling, and insight generation. This paper reviews key scientific breakthroughs from the past decade in the application of AI for science. Here, I touch upon a selection of AI advancements that are of specific interest to me. 
+description: AI techniques, with their power to accelerate scientific discovery, are becoming increasingly integrated into all stages of scientific research, including hypothesis testing, data annotation, system modeling, and insight generation. This paper reviews key scientific breakthroughs from the past decade in the application of AI for science. Here, I touch upon a selection of AI advancements that are of specific interest to me. 
 categories: [Paper, AI for Science]
 ---
 ---
 
 :::{.callout-note}
 # Review Paper
-Wang, H., Fu, T., Du, Y. et al. *Scientific discovery in the age of artificial intelligence*. [Nature 620, 47–60 (2023)](https://doi.org/10.1038/s41586-023-06221-2). 
+Wang, H., Fu, T., Du, Y. et al. *"Scientific Discovery in The Age of Artificial Intelligence"*, [Nature 620, 47–60 (2023)](https://doi.org/10.1038/s41586-023-06221-2). 
 :::
 <br>
 
@@ -20,6 +20,45 @@ Wang, H., Fu, T., Du, Y. et al. *Scientific discovery in the age of artificial i
 * Detailed overview of different machine learning techniques.
 :::
 
-## Data Annotation
+## Learning Meaningful Representations of Scientific Data
+Applications of AI analyses to tackle science problems are often limited by the scarcity of high-quality curated datasets for exploration. Frequently, real-world datasets are incomplete, contain inaccurate observations, and come at variable sample resolutions. Moreover, even in situations where homogeneous data are aplenty, data labeling for supervised learning presents a laborious time investment. Here is where self-supervised learning comes to the rescue.
 
-## 
+**Self-supervised learning (SSL)** is a machine learning paradigm that enables a model to automatically generate labels for unstructured data, thereby eliminating the need for large pre-labeled datasets. Building upon a small set of accurate human-annotated data, SSL algorithms learn latent representations of the input data through an iterative procedure. The labels generated in the first iteration are treated as the ground truth in the second iteration and so on. 
+
+Generative SSL tries to predict masked portions of raw data (text, images, audio, or video) from unmasked segments by learning embeddings of their underlying shared information. On the other hand, contrastive SSL techniques involves defining positive and negative versions of an "anchor" (say, the concept of what a dog looks like). Using a notion of distance in feature space, the algorithm then looks to align positives (e.g., images of dogs) to the anchor while simultaneously repelling the negatives (e.g., images of cats).
+
+::: {.callout-tip}
+## Resources on Self-supervised Learning
+* [A Beginner's Guide to Self-supervised Learning](https://www.v7labs.com/blog/self-supervised-learning-guide#what-is-self-supervised-learning) by Rohit Kundu
+* [FDL 2022 Live Showcase video: Self-Supervised Learning for Change Detection in Synthetic Aperture Radar Data](https://youtu.be/igAUTJwbmsY?si=itG8Xu6b9DWjmaIi)
+:::
+
+## Neural Operators
+Scientific experiments typically involve discrete measurements of intrinsically continuous quantities. For example, consider wind velocity in flight dynamics or magnetic field strength in tokamak nuclear fusion reactors. Conventional neural networks assume a fixed data discretization and are hence, inflexible at handling raw data sampled at varying resolutions. Neural operators, in contrast, learn mappings between function spaces of the input and output data to allow discretization-invariant predictions. Once these operators are trained, they can be evaluated at any data resolution without a need for model retraining.
+
+::: {.callout-tip}
+## Resources on Neural Operators and Their Applications
+* [Neural Operators in PyTorch](https://neuraloperator.github.io/neuraloperator/dev/index.html)
+* Video: Anima Anandkumar, [Neural operator: A new paradigm for learning PDEs](https://youtu.be/Bd4KvlmGbY4).
+* FDL 2021 Live Showcase video: [Digital Twin Earth: Coasts](https://youtu.be/7wjtcJxRjKk?si=PFurJnKEr6y2M7dJ). 
+* Kovachki, N., Li, Z., et al., *"Neural Operator: Learning Maps Between Function Spaces"*, [JMLR, 4(89):1−97, 2023](https://arxiv.org/abs/2108.08481).
+:::
+
+## Reinforcement Learning for Navigating Large Hypothesis Spaces
+The prospect of sampling through all possible competing hypotheses agreeable with the data can seem intimidating at first. Reinforcement learning (RL) instead recasts the problem as an endeavor to find a single good solution that fits the data.
+
+RL can be thought of as the science and framework of learning to make decisions through interaction. Core concepts of the RL formalism include:
+
+* An environment (governs the dynamics of the problem)
+* A scalar reward signal (specifies the goal)
+* An agent comprising necessarily of an agent state and a policy (mapping from agent states to actions).
+
+At every time step $t$, the agent makes an observation of the environment and perceives a reward (or a penalty). Based on the instantaneous reward, the agent estimates its rewards into the future and decides its next action based on an internal policy. By defining AI policies that maximize rewards in the direction of increased fit between model parameters and the data, RL can drive systems towards optimal solutions. Further, by introducing inductive biases in AI policies, one can incorporate prior scientific knowledge to steer searches towards realistically feasible solutions, thereby enhancing model trust and interpretability.
+
+Note that the AI policy must allow adequate exploration of the search parameter space so as to not get trapped in a local optimum during the quest to globally maximize the cumulative reward.
+
+::: {.callout-tip}
+# Resources on Reinforcement Learning
+* [Google DeepMind 2021 Reinforcement Learning Course, University College London](https://www.youtube.com/playlist?list=PLqYmG7hTraZDVH599EItlEWsUOsJbAodm)
+* [Coursera: Reinforcement Learning Specialization](https://www.coursera.org/specializations/reinforcement-learning)
+:::

@@ -280,3 +280,13 @@ div.callout-caution.callout {
 div.callout-caution.callout-style-default>.callout-header {
   background-color: $light-orange;
 }
+
+// Change background color of left border of callout-tip.
+div.callout-tip.callout {
+  background-color: rgb(233, 249, 228) ;
+}
+
+// Update callout-tio header color.
+div.callout-tip.callout-style-default>.callout-header {
+  background-color: rgb(134, 212, 154);
+}
