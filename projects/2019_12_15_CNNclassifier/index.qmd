@@ -2,7 +2,7 @@
 title: "Convolutional Neural Networks for Signal Classification in Radio Astronomy"
 author: Akshay Suresh
 date: 2019-12-15
-image: layer6_2.png
+image: media/layer6_2.png
 description: Radio waves from human technologies frequently interfere with searches for exotic astrophysical phenomena, yielding hordes of false positives in downstream signal detection pipelines. Discerning astronomical signals of interest from a pile of false positives presents a “needle in a haystack” challenge demanding significant human time investment. Implementing interference blocking at telescope sites offers a bypass that shuts out streams of false positives, allowing the creation of clean datasets for scientific exploration. However, the execution of such methods relies on prior knowledge of the diverse structures exhibited by interference signals in radio telescope data. Convolutional neural networks (CNNs) can efficiently capture local structures in images and group related structural shapes into common classification categories. Here, as a proof of principle, we train CNNs of different depths to classify interference signals into one of four categories based on their observed spectrotemporal morphology.
 categories: [Computer Vision, Deep Learning, Supervised Learning]
 ---
@@ -16,10 +16,69 @@ categories: [Computer Vision, Deep Learning, Supervised Learning]
 - **Skills:** Deep learning, Supervised learning, Radio astronomy
 :::
 
-## Data Generation
+## Data Prep
+We generated simulated data for our study to circumvent the need to manually label thousands of real-world data chunks for supervised learning. As a first pass, we defined the following five classes for our signal classification task, including four categories of interference signals.
+
+* ``llbb``: Long-lived broadband interference + background Gaussian noise
+* ``llnb``: Long-lived narrowband interference + background Gaussian noise
+* ``slbb``: Short-lived broadband interference + background Gaussian noise
+* ``slnb``: Short-lived narrowband interference + background Gaussian noise
+* ``noise``: Background Gaussian noise only
+
+For each of the above classes, we simulated 1200 images of size 128&nbsp;pixels $\times$ 128&nbsp;pixels. From these, we randomly selected and set aside 200 images per category as validation data. The remaining images (1000 per category) formed our training dataset. 
+
+<img class="center-img" src="media/signal_classes.png" width=65%
+alt="Sample frequency-time images of signals belonging to the ``llbb`` (top left), ``llnb`` (top right), ``slbb`` (bottom left) and ``slnb`` (bottom right) output classes." >
+
+::: {.figure-caption}
+Sample frequency-time images of signals belonging to the ``llbb`` (top left), ``llnb`` (top right), ``slbb`` (bottom left) and ``slnb`` (bottom right) output classes.
+::: 
+
+Since our training data are balanced across all output classes, we adopt the accuracy metric to quantify our model performance. During model training, we observed how the category-integrated model accuracy (defined below) varied with training epoch for our training and validation data.
+$$
+{\rm Network \ accuracy \ across \ all \ classes} = \frac{\rm No.\  of\  images \ 
+ correctly \ classified}{\rm Total \ no. \ of \ images} \times 100\%
+$$
+We also investigated confusion matrices built using category-specific model accuracies. We encourage interested readers to consult our [project report](https://github.com/akshaysuresh1/RFI-classifier/blob/master/RFI_classifier.pdf) for relevant details.
 
 ## Model Architecture
+Neural net architectures for various applications are often arrived at through trial and error. In our study, we experimented with toy CNNs of different depths, studying their maximum achieved accuracy when optimally trained.
 
-## Training Results
+::: {.callout-tip}
+# Naming convention
+A neural network is said to be an N-layer network if it contains N layers excluding its input layer. A 1-layer network, by definition, then contains zero hidden layers between its input and output layers.
+:::
+
+Our base network is a 6-layer model whose hidden layers include two convolutional layers, two max-pooling layers, and one fully connected (or dense) layer. We sandwiched [ReLU](https://builtin.com/machine-learning/relu-activation-function) activation functions between our convolutional and max-pooling layers to enable our model to learn non-linear behaviors. Finally, the outputs of our flattened dense layer are normalized to probabilities using a [softmax](https://en.wikipedia.org/wiki/Softmax_function) activation function.
+
+<img class="center-img" src="media/layer6_1.png" width=55% alt="6-layer network" >
+
+::: {.figure-caption}
+Our base 6-layer CNN model
+::: 
+
+We build models of greater depth by inserting additional convolutional and max-pooling layers ahead of our dense hidden layer. We refer readers to Figures 7&ndash;10 of our [project report](https://github.com/akshaysuresh1/RFI-classifier/blob/master/RFI_classifier.pdf) for architecture diagrams of our deeper models.
+
+
+## Model Training & Results
+We trained all of our models using the [categorical cross-entropy (CE) loss function](https://www.v7labs.com/blog/cross-entropy-loss-guide) to perform multiclass classification. Further, we uniformly applied the [Adam optimizer](https://arxiv.org/abs/1412.6980) for model backpropagation with an initial learning rate of $10^{-5}$.
+
+<img class="center-img" src="media/accuracy_6to10.png" width=65% alt="Network accuracy curves" >
+
+::: {.figure-caption}
+Accuracy curves for CNN models of different depths (various colors). Dotted and solid curves represent network performannces on the training and validation data respectively.
+::: 
+
+Starting with our base network (blue curves), we notice that our model performance grows monotonically on the training data (dotted curve) with increasing epoch. However, the network accuracy on the validation data (solid curve) drops after epoch&nbsp;3, suggesting that the model has now begun to overfit the training data. These trends then suggest that we need to load our saved model weights from epoch&nbsp;3 to obtain robust predictions on our validation data. Note that our base model, even at epoch&nbsp;3, only reaches a maximum accuracy of $85\%$ on the validation data.
+
+Training CNNs of increasing depth, we observe a growth in the maximum network accuracy achieved under conditions of a robust fit. However, the incremental gain in network accuracy diminishes with every added layer. Setting a 95% accuracy threshold, we find that an 8/9-layer CNN model seems adequate for our classification problem.
 
 ## Areas for Improvement
+
+1. Our definition of interference signal classes is overly simplistic to allow ready extension to real-world data. Interference signals in radio telescope data often exhibit complex spectrotemporal characteristics that do not fall neatly into any of our predefined output classes. For instance, consider the below sawtooth interference signal (some sort of radar?) seen in data from the [Green Bank Telescope](https://greenbankobservatory.org/science/telescopes/gbt/) in West Viriginia, USA.
+<img class="center-img" src="media/sawtooth_rfi.png" width=45% 
+alt="Sawtooth interference signal detected in data from the Green Bank Telescope" >
+
+2. Our models do not account for scenarios where multiple signal classes are present in a single frequency-time snippet. For instance, what if a weak astrophysical signal of interest happens to coincide in time with two bright interference signals of different bandwidths?
+- Perhaps multilabel classification is worth an exercise.
+- Alternatively, image segmentation routines may present a path forward.

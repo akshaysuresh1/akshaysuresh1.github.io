@@ -73,10 +73,12 @@ gtag('js', new Date());
 gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <meta property="og:title" content="Convolutional Neural Networks for Signal Classification in Radio Astronomy">
 <meta property="og:description" content="Radio waves from human technologies frequently interfere with searches for exotic astrophysical phenomena, yielding hordes of false positives in downstream signal detection pipelines. Discerning astronomical signals of interest from a pile of false positives presents a “needle in a haystack” challenge demanding significant human time investment. Implementing interference blocking at telescope sites offers a bypass that shuts out streams of false positives, allowing the creation of clean datasets for scientific exploration. However, the execution of such methods relies on prior knowledge of the diverse structures exhibited by interference signals in radio telescope data. Convolutional neural networks (CNNs) can efficiently capture local structures in images and group related structural shapes into common classification categories. Here, as a proof of principle, we train CNNs of different depths to classify interference signals into one of four categories based on their observed spectrotemporal morphology.">
-<meta property="og:image" content="https://akshaysuresh1.com/projects/2019_12_15_CNNclassifier/layer6_2.png">
+<meta property="og:image" content="https://akshaysuresh1.com/projects/2019_12_15_CNNclassifier/media/layer6_2.png">
 <meta property="og:image:height" content="1985">
 <meta property="og:image:width" content="3315">
 </head>
@@ -145,9 +147,9 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#data-generation" id="toc-data-generation" class="nav-link active" data-scroll-target="#data-generation">Data Generation</a></li>
+  <li><a href="#data-prep" id="toc-data-prep" class="nav-link active" data-scroll-target="#data-prep">Data Prep</a></li>
   <li><a href="#model-architecture" id="toc-model-architecture" class="nav-link" data-scroll-target="#model-architecture">Model Architecture</a></li>
-  <li><a href="#training-results" id="toc-training-results" class="nav-link" data-scroll-target="#training-results">Training Results</a></li>
+  <li><a href="#model-training-results" id="toc-model-training-results" class="nav-link" data-scroll-target="#model-training-results">Model Training &amp; Results</a></li>
   <li><a href="#areas-for-improvement" id="toc-areas-for-improvement" class="nav-link" data-scroll-target="#areas-for-improvement">Areas for Improvement</a></li>
   </ul>
 </nav>
@@ -214,17 +216,69 @@ Note
 </ul>
 </div>
 </div>
-<section id="data-generation" class="level2">
-<h2 class="anchored" data-anchor-id="data-generation">Data Generation</h2>
+<section id="data-prep" class="level2">
+<h2 class="anchored" data-anchor-id="data-prep">Data Prep</h2>
+<p>We generated simulated data for our study to circumvent the need to manually label thousands of real-world data chunks for supervised learning. As a first pass, we defined the following five classes for our signal classification task, including four categories of interference signals.</p>
+<ul>
+<li><code>llbb</code>: Long-lived broadband interference + background Gaussian noise</li>
+<li><code>llnb</code>: Long-lived narrowband interference + background Gaussian noise</li>
+<li><code>slbb</code>: Short-lived broadband interference + background Gaussian noise</li>
+<li><code>slnb</code>: Short-lived narrowband interference + background Gaussian noise</li>
+<li><code>noise</code>: Background Gaussian noise only</li>
+</ul>
+<p>For each of the above classes, we simulated 1200 images of size 128&nbsp;pixels <span class="math inline">\(\times\)</span> 128&nbsp;pixels. From these, we randomly selected and set aside 200 images per category as validation data. The remaining images (1000 per category) formed our training dataset.</p>
+<p><img class="center-img" src="media/signal_classes.png" width="65%" alt="Sample frequency-time images of signals belonging to the ``llbb`` (top left), ``llnb`` (top right), ``slbb`` (bottom left) and ``slnb`` (bottom right) output classes."></p>
+<div class="figure-caption">
+<p>Sample frequency-time images of signals belonging to the <code>llbb</code> (top left), <code>llnb</code> (top right), <code>slbb</code> (bottom left) and <code>slnb</code> (bottom right) output classes.</p>
+</div>
+<p>Since our training data are balanced across all output classes, we adopt the accuracy metric to quantify our model performance. During model training, we observed how the category-integrated model accuracy (defined below) varied with training epoch for our training and validation data. <span class="math display">\[
+{\rm Network \ accuracy \ across \ all \ classes} = \frac{\rm No.\  of\  images \
+correctly \ classified}{\rm Total \ no. \ of \ images} \times 100\%
+\]</span> We also investigated confusion matrices built using category-specific model accuracies. We encourage interested readers to consult our <a href="https://github.com/akshaysuresh1/RFI-classifier/blob/master/RFI_classifier.pdf">project report</a> for relevant details.</p>
 </section>
 <section id="model-architecture" class="level2">
 <h2 class="anchored" data-anchor-id="model-architecture">Model Architecture</h2>
+<p>Neural net architectures for various applications are often arrived at through trial and error. In our study, we experimented with toy CNNs of different depths, studying their maximum achieved accuracy when optimally trained.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Naming convention
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A neural network is said to be an N-layer network if it contains N layers excluding its input layer. A 1-layer network, by definition, then contains zero hidden layers between its input and output layers.</p>
+</div>
+</div>
+<p>Our base network is a 6-layer model whose hidden layers include two convolutional layers, two max-pooling layers, and one fully connected (or dense) layer. We sandwiched <a href="https://builtin.com/machine-learning/relu-activation-function">ReLU</a> activation functions between our convolutional and max-pooling layers to enable our model to learn non-linear behaviors. Finally, the outputs of our flattened dense layer are normalized to probabilities using a <a href="https://en.wikipedia.org/wiki/Softmax_function">softmax</a> activation function.</p>
+<p><img class="center-img" src="media/layer6_1.png" width="55%" alt="6-layer network"></p>
+<div class="figure-caption">
+<p>Our base 6-layer CNN model</p>
+</div>
+<p>We build models of greater depth by inserting additional convolutional and max-pooling layers ahead of our dense hidden layer. We refer readers to Figures 7–10 of our <a href="https://github.com/akshaysuresh1/RFI-classifier/blob/master/RFI_classifier.pdf">project report</a> for architecture diagrams of our deeper models.</p>
 </section>
-<section id="training-results" class="level2">
-<h2 class="anchored" data-anchor-id="training-results">Training Results</h2>
+<section id="model-training-results" class="level2">
+<h2 class="anchored" data-anchor-id="model-training-results">Model Training &amp; Results</h2>
+<p>We trained all of our models using the <a href="https://www.v7labs.com/blog/cross-entropy-loss-guide">categorical cross-entropy (CE) loss function</a> to perform multiclass classification. Further, we uniformly applied the <a href="https://arxiv.org/abs/1412.6980">Adam optimizer</a> for model backpropagation with an initial learning rate of <span class="math inline">\(10^{-5}\)</span>.</p>
+<p><img class="center-img" src="media/accuracy_6to10.png" width="65%" alt="Network accuracy curves"></p>
+<div class="figure-caption">
+<p>Accuracy curves for CNN models of different depths (various colors). Dotted and solid curves represent network performannces on the training and validation data respectively.</p>
+</div>
+<p>Starting with our base network (blue curves), we notice that our model performance grows monotonically on the training data (dotted curve) with increasing epoch. However, the network accuracy on the validation data (solid curve) drops after epoch&nbsp;3, suggesting that the model has now begun to overfit the training data. These trends then suggest that we need to load our saved model weights from epoch&nbsp;3 to obtain robust predictions on our validation data. Note that our base model, even at epoch&nbsp;3, only reaches a maximum accuracy of <span class="math inline">\(85\%\)</span> on the validation data.</p>
+<p>Training CNNs of increasing depth, we observe a growth in the maximum network accuracy achieved under conditions of a robust fit. However, the incremental gain in network accuracy diminishes with every added layer. Setting a 95% accuracy threshold, we find that an 8/9-layer CNN model seems adequate for our classification problem.</p>
 </section>
 <section id="areas-for-improvement" class="level2">
 <h2 class="anchored" data-anchor-id="areas-for-improvement">Areas for Improvement</h2>
+<ol type="1">
+<li><p>Our definition of interference signal classes is overly simplistic to allow ready extension to real-world data. Interference signals in radio telescope data often exhibit complex spectrotemporal characteristics that do not fall neatly into any of our predefined output classes. For instance, consider the below sawtooth interference signal (some sort of radar?) seen in data from the <a href="https://greenbankobservatory.org/science/telescopes/gbt/">Green Bank Telescope</a> in West Viriginia, USA. <img class="center-img" src="media/sawtooth_rfi.png" width="45%" alt="Sawtooth interference signal detected in data from the Green Bank Telescope"></p></li>
+<li><p>Our models do not account for scenarios where multiple signal classes are present in a single frequency-time snippet. For instance, what if a weak astrophysical signal of interest happens to coincide in time with two bright interference signals of different bandwidths?</p></li>
+</ol>
+<ul>
+<li>Perhaps multilabel classification is worth an exercise.</li>
+<li>Alternatively, image segmentation routines may present a path forward.</li>
+</ul>
 
 
 </section>
