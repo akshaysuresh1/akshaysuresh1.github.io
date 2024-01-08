@@ -2,14 +2,24 @@
 title: "Convolutional Neural Networks for Signal Classification in Radio Astronomy"
 author: Akshay Suresh
 date: 2019-12-15
-image: model_architecture.png
-description: There is an arms race of large language models (LLMs) in industry where companies use different approaches and techniques. Anthropic claims to adopt a more cautious approach that minimizes harm by LLMs than others. Let's look into *constitutional AI*, the core  algorithm of their LLM, to understand how this harm mitigation works.
+image: layer6_2.png
+description: Radio waves from human technologies frequently interfere with searches for exotic astrophysical phenomena, yielding hordes of false positives in downstream signal detection pipelines. Discerning astronomical signals of interest from a pile of false positives presents a “needle in a haystack” challenge demanding significant human time investment. Implementing interference blocking at telescope sites offers a bypass that shuts out streams of false positives, allowing the creation of clean datasets for scientific exploration. However, the execution of such methods relies on prior knowledge of the diverse structures exhibited by interference signals in radio telescope data. Convolutional neural networks (CNNs) can efficiently capture local structures in images and group related structural shapes into common classification categories. Here, as a proof of principle, we train CNNs of different depths to classify interference signals into one of four categories based on their observed spectrotemporal morphology.
 categories: [Computer Vision, Deep Learning, Supervised Learning]
 ---
 ---
 
 :::{.callout-note}
-- Github code: [RFI-classifier](https://github.com/akshaysuresh1/RFI-classifier)
-- Project Lead: [Akshay Suresh](https://www.linkedin.com/in/akshaysureshas1/)
-- Key Contributors: [Ryan J. Hill](https://www.linkedin.com/in/ryan-james-hill/) & [Ethan S. Bair](https://blogs.bu.edu/esb265).
+- **Project contributors:** [Akshay Suresh](https://www.linkedin.com/in/akshaysureshas1/) (lead), [Ryan J. Hill](https://www.linkedin.com/in/ryan-james-hill/) & [Ethan S. Bair](https://blogs.bu.edu/esb265)
+- **Github code:** [RFI-classifier](https://github.com/akshaysuresh1/RFI-classifier)
+- **Project report:** [PDF](https://github.com/akshaysuresh1/RFI-classifier/blob/master/RFI_classifier.pdf)
+- **Programming language:** PyTorch
+- **Skills:** Deep learning, Supervised learning, Radio astronomy
 :::
+
+## Data Generation
+
+## Model Architecture
+
+## Training Results
+
+## Areas for Improvement

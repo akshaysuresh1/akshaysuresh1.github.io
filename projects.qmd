@@ -5,7 +5,7 @@ listing:
   sort: "date desc"
   type: default
   image-align: right
-  max-description-length: 200
+  max-description-length: 400
   date-format: medium
   categories: true
   sort-ui: true

@@ -8,7 +8,7 @@
 
 <meta name="author" content="Akshay Suresh">
 <meta name="dcterms.date" content="2019-12-15">
-<meta name="description" content="There is an arms race of large language models (LLMs) in industry where companies use different approaches and techniques. Anthropic claims to adopt a more cautious approach that minimizes harm by LLMs than others. Let’s look into constitutional AI, the core algorithm of their LLM, to understand how this harm mitigation works.">
+<meta name="description" content="Radio waves from human technologies frequently interfere with searches for exotic astrophysical phenomena, yielding hordes of false positives in downstream signal detection pipelines. Discerning astronomical signals of interest from a pile of false positives presents a “needle in a haystack” challenge demanding significant human time investment. Implementing interference blocking at telescope sites offers a bypass that shuts out streams of false positives, allowing the creation of clean datasets for scientific exploration. However, the execution of such methods relies on prior knowledge of the diverse structures exhibited by interference signals in radio telescope data. Convolutional neural networks (CNNs) can efficiently capture local structures in images and group related structural shapes into common classification categories. Here, as a proof of principle, we train CNNs of different depths to classify interference signals into one of four categories based on their observed spectrotemporal morphology.">
 
 <title>Convolutional Neural Networks for Signal Classification in Radio Astronomy</title>
 <style>
@@ -75,10 +75,10 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 
 
 <meta property="og:title" content="Convolutional Neural Networks for Signal Classification in Radio Astronomy">
-<meta property="og:description" content="There is an arms race of large language models (LLMs) in industry where companies use different approaches and techniques. Anthropic claims to adopt a more cautious approach that minimizes harm by LLMs than others. Let’s look into constitutional AI, the core algorithm of their LLM, to understand how this harm mitigation works.">
-<meta property="og:image" content="https://akshaysuresh1.com/projects/2019_12_15_CNNclassifier/model_architecture.png">
-<meta property="og:image:height" content="1207">
-<meta property="og:image:width" content="2057">
+<meta property="og:description" content="Radio waves from human technologies frequently interfere with searches for exotic astrophysical phenomena, yielding hordes of false positives in downstream signal detection pipelines. Discerning astronomical signals of interest from a pile of false positives presents a “needle in a haystack” challenge demanding significant human time investment. Implementing interference blocking at telescope sites offers a bypass that shuts out streams of false positives, allowing the creation of clean datasets for scientific exploration. However, the execution of such methods relies on prior knowledge of the diverse structures exhibited by interference signals in radio telescope data. Convolutional neural networks (CNNs) can efficiently capture local structures in images and group related structural shapes into common classification categories. Here, as a proof of principle, we train CNNs of different depths to classify interference signals into one of four categories based on their observed spectrotemporal morphology.">
+<meta property="og:image" content="https://akshaysuresh1.com/projects/2019_12_15_CNNclassifier/layer61.png">
+<meta property="og:image:height" content="1985">
+<meta property="og:image:width" content="3935">
 </head>
 
 <body class="nav-fixed">
@@ -140,11 +140,20 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-generation" id="toc-data-generation" class="nav-link active" data-scroll-target="#data-generation">Data Generation</a></li>
+  <li><a href="#model-architecture" id="toc-model-architecture" class="nav-link" data-scroll-target="#model-architecture">Model Architecture</a></li>
+  <li><a href="#training-results" id="toc-training-results" class="nav-link" data-scroll-target="#training-results">Training Results</a></li>
+  <li><a href="#areas-for-improvement" id="toc-areas-for-improvement" class="nav-link" data-scroll-target="#areas-for-improvement">Areas for Improvement</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -158,7 +167,7 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 
 <div>
   <div class="description">
-    There is an arms race of large language models (LLMs) in industry where companies use different approaches and techniques. Anthropic claims to adopt a more cautious approach that minimizes harm by LLMs than others. Let’s look into <em>constitutional AI</em>, the core algorithm of their LLM, to understand how this harm mitigation works.
+    Radio waves from human technologies frequently interfere with searches for exotic astrophysical phenomena, yielding hordes of false positives in downstream signal detection pipelines. Discerning astronomical signals of interest from a pile of false positives presents a “needle in a haystack” challenge demanding significant human time investment. Implementing interference blocking at telescope sites offers a bypass that shuts out streams of false positives, allowing the creation of clean datasets for scientific exploration. However, the execution of such methods relies on prior knowledge of the diverse structures exhibited by interference signals in radio telescope data. Convolutional neural networks (CNNs) can efficiently capture local structures in images and group related structural shapes into common classification categories. Here, as a proof of principle, we train CNNs of different depths to classify interference signals into one of four categories based on their observed spectrotemporal morphology.
   </div>
 </div>
 
@@ -197,14 +206,28 @@ Note
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Github code: <a href="https://github.com/akshaysuresh1/RFI-classifier">RFI-classifier</a></li>
-<li>Project Lead: <a href="https://www.linkedin.com/in/akshaysureshas1/">Akshay Suresh</a></li>
-<li>Key Contributors: <a href="https://www.linkedin.com/in/ryan-james-hill/">Ryan J. Hill</a> &amp; <a href="https://blogs.bu.edu/esb265">Ethan S. Bair</a>.</li>
+<li><strong>Project contributors:</strong> <a href="https://www.linkedin.com/in/akshaysureshas1/">Akshay Suresh</a> (lead), <a href="https://www.linkedin.com/in/ryan-james-hill/">Ryan J. Hill</a> &amp; <a href="https://blogs.bu.edu/esb265">Ethan S. Bair</a></li>
+<li><strong>Github code:</strong> <a href="https://github.com/akshaysuresh1/RFI-classifier">RFI-classifier</a></li>
+<li><strong>Project report:</strong> <a href="https://github.com/akshaysuresh1/RFI-classifier/blob/master/RFI_classifier.pdf">PDF</a></li>
+<li><strong>Programming language:</strong> PyTorch</li>
+<li><strong>Skills:</strong> Deep learning, Supervised learning, Radio astronomy</li>
 </ul>
 </div>
 </div>
+<section id="data-generation" class="level2">
+<h2 class="anchored" data-anchor-id="data-generation">Data Generation</h2>
+</section>
+<section id="model-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="model-architecture">Model Architecture</h2>
+</section>
+<section id="training-results" class="level2">
+<h2 class="anchored" data-anchor-id="training-results">Training Results</h2>
+</section>
+<section id="areas-for-improvement" class="level2">
+<h2 class="anchored" data-anchor-id="areas-for-improvement">Areas for Improvement</h2>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
