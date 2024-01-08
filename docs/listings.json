@@ -1,0 +1,14 @@
+[
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/blogposts/2023_01_07_AI4Science/index.html"
+    ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/2019_12_15_CNNclassifier/index.html"
+    ]
+  }
+]
