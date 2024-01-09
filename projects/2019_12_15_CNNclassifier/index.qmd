@@ -4,7 +4,7 @@ author: Akshay Suresh
 date: 2019-12-15
 image: media/layer6_2.png
 description: Radio waves from human technologies frequently interfere with searches for exotic astrophysical phenomena, yielding hordes of false positives in downstream signal detection pipelines. Discerning astronomical signals of interest from a pile of false positives presents a “needle in a haystack” challenge demanding significant human time investment. Implementing interference blocking at telescope sites offers a bypass that shuts out streams of false positives, allowing the creation of clean datasets for scientific exploration. However, the execution of such methods relies on prior knowledge of the diverse structures exhibited by interference signals in radio telescope data. Convolutional neural networks (CNNs) can efficiently capture local structures in images and group related structural shapes into common classification categories. Here, as a proof of principle, we train CNNs of different depths to classify interference signals into one of four categories based on their observed spectrotemporal morphology.
-categories: [Computer Vision, Deep Learning, Supervised Learning]
+categories: [Computer Vision, Deep Learning, Supervised Learning, Astronomy]
 ---
 ---
 

@@ -58,7 +58,7 @@ toc: true
     <tr>
         <td><b>Programming</b></td>
         <td>
-            Python (pytorch, scikit-learn, numpy, pandas, matplotlib, plotly), bash scripting, SQL, $\LaTeX$, HTML
+            Python (pytorch, scikit-learn, numpy, pandas, matplotlib, seaborn, plotly), bash scripting, SQL, $\LaTeX$, HTML
         </td>
     </tr>
     <!-- Row 2: Machine Learning techniques -->
@@ -71,14 +71,14 @@ toc: true
                         <li>Linear regression, lasso & ridge regularization</li>
                         <li>Decision trees, random forest</li>
                         <li>Support vector machine (SVM)</li>
-                        <li>k-nearest neighbors (kNN)</li>
+                        <li>$k$-nearest neighbors (kNN)</li>
                         <li>Convolutional neural networks (CNN)</li>
                         <li>Recurrent neural networks (RNN)</li>
                         <li>Long short-term memory networks (LSTM)</li>
                     </ul></li>
                 <li>Unsupervised learning:
                     <ul class="a">
-                        <li>k-means clustering</li>
+                        <li>$k$-means clustering</li>
                         <li>Gaussian mixture models (GMM)</li>
                     </ul></li>
                 <li>Principal component analysis (PCA)</li>

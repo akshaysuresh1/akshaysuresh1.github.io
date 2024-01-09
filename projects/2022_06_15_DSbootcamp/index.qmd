@@ -1,0 +1,87 @@
+---
+title: "Predicting Fertilizer Input for Rice Cultivation in India"
+author: Akshay Suresh
+date: 2022-06-15
+image: media/clusters.png
+description: Home to over 1.38 billion people, India is tackling a severe hunger crisis. Though the country has achieved self-sufficiency in grain production, nearly 14% of the population is still undernourished. India's agricultural landscape is primarily rural, where widespread poverty, low literacy rates, and poor infrastructure lead to questions over its sustainability. Indiscriminate use of fertilizers has led to significant irregularity in crop production despite consistent agricultural subsidies. With the current global shortage of fertilizers, precision farming is vital to eliminate redundant costs and streamline resources to ensure equitable food access for all communities. Here, we assist policy-makers in their decisions through models predicting the fertilizer consumption (nitrogen, phosphorus, and potash) required to obtain a specific rice yield in different cultivation environments. 
+categories: [Data Science, Geospatial Data Science, Supervised Learning, Unsupervised Learning, AI for Agriculture]
+---
+---
+
+:::{.callout-note}
+- **Project team members:** [Akshay Suresh](https://www.linkedin.com/in/akshaysureshas1/) (lead), [Arman Darbinyan](https://www.linkedin.com/in/armandarbin/), [Dmitry Shcherbakov](https://www.linkedin.com/in/dmitry-osu/), [Emilio Codecido](https://www.linkedin.com/in/emilio-codecido/) & [Leonardo Santana](https://www.linkedin.com/in/leonardo-santana-4455594b/)
+- **Mentor:** [James Bramante](https://www.linkedin.com/in/jamesbramante/)
+- **Github repo:** [may22-barrel](https://github.com/akshaysuresh1/may22-barrel)
+- **5-minutes video presentation**: [YouTube link](https://youtu.be/cnvDkXEwUp4)
+- **Presentation slides**: [PDF](https://github.com/akshaysuresh1/may22-barrel/blob/main/media/may22-barrel_slides.pdf)
+- **Executive summary:** [PDF](https://raw.githubusercontent.com/akshaysuresh1/may22-barrel/main/media/May22-barrel_execsummary.pdf)
+- **Programming language:** Python (numpy, pandas, scikit-learn, geopandas, matplotlib seaborn)
+- **Supervised machine learning (ML) techniques:** Linear regression, random forest, support vector machine
+- **Unsupervised ML algorithms**: $k$-means clustering, hierarchical clustering
+:::
+
+## Project Context
+This project was completed as part of the Erd&ouml;s Institute Data Science Bootcamp, Spring&nbsp;2022. Within a hard 2-week deadline, team members were required to define their project goal, identify target stakeholders, and execute data analyses. The following deliverables were due at the end of the 2-week project work time.
+
+* 1-page executive summary
+* 5-minutes video presentation
+* Presentation slides
+* Annotated Github repository
+
+Links to our submitted deliverables are provided in a note near the top of this page.
+
+## Project Workflow
+
+<img class="center-img" src="media/workflow.png" width=75% alt="Project workflow" >
+
+::: {.figure-caption}
+Project workflow diagram 
+::: 
+
+**Objective:** Predict mean NPK (nitrogen, phosophorous and potash) fertilizer inputs to achieve specific rice yields in different cultivation environments across India.
+
+**Target stakeholders:** Agriculture policy makers in India
+
+**Data sources:**
+
+1. District-level database (1990&ndash;2016) maintained by the [International Crops Research Institute for the Semi-Arid Tropics (ICRISAT)](http://data.icrisat.org/dld/src/crops.html):
+    - Rice cultivation data: cropped area, yield, irrigated area
+    - Seasonality and temperature
+    - Water cycle data: precipitation, surface runoff, and evapotranspiration
+    - Wind speed
+    - Historical NPK fertilizer usage
+2. Shapefile of Indian districts from [Kaggle](https://www.kaggle.com/imdevskp/india-district-wise-shape-files)
+
+## Modeling and Results
+Rice is a hardy crop capable of thriving in a variety of soils, including loams, silts, and gravel. Collating up to 26 years of district-level rice cultivation (cropped area, yield, irrigated area) and environment data (temperature, precipitation, wind speed, evapotranspiration), our analysis involved three steps.
+
+1. Firstly, we grouped districts with similar ecological parameters into clusters. To do so, we experimented with two unsupervised learning approaches, namely, $k$-means and hierarchical clustering. Both methods favored the grouping of Indian districts into 6 rice cultivation clusters.
+
+<img class="center-img" src="media/clusters.png" width=30% alt="Clustering results" >
+
+::: {.figure-caption}
+Optimal clustering of Indian districts based on application of hierarchical clustering to our environmental data (temperature, precipitation, wind speed, evapotranspiration). Note that the above map bears some visual resemblance to the [Koppen-Geiger climate classification map of India](https://en.wikipedia.org/wiki/Climate_of_India#/media/File:Koppen-Geiger_Map_IND_present.svg). However, we caution readers against performing meticulous comparisons between these maps as our algorithms additionally incorporate soil-dependent features such as surface runoff and evapotranspiration. 
+::: 
+
+2. Over independent clusters, we regressed the historical NPK consumption data against rice yield. Here, we trialed simple linear regression, random forest regression, and support vector regression. 
+<img class="center-img" src="media/svr_results.png" width=75% alt="Results from support vector regression of historical NPK usage against rice yield" >
+
+::: {.figure-caption}
+Results from application of support vector regression to cluster&nbsp;1 data. Our fit residuals to the potash data (bottom row) look reasonably flat and structure-free. However, the same cannot be said for our nitrogen (top row) and phosphorous (middle row) fit residuals, possibly hinting at either some confounding variable or some parameter cross-correlations unaccounted for in our analyses.
+::: 
+
+3. The [symmetric mean absolute percent error (SMAPE)](https://en.wikipedia.org/wiki/Symmetric_mean_absolute_percentage_error) offers a convenient difference-based relative measure for comparing model performances across clusters with unequal number of data points.
+
+$$
+{\rm SMAPE} = \left( \frac{100\%}{N_{\rm observations}} \right) \sum_{\rm observations} \left(\frac{|{\rm True \ value} - {\rm Predicted \ value}|}{(|{\rm True \ value}| + |{\rm Predicted \ value}|)/2} \right)
+$$
+
+For a perfect model (true value = predicted value), ${\rm SMAPE} = 0\%$. Meanwhile, a null prediction (predicted value = 0) entails ${\rm SMAPE} = 200\%$. 
+
+<img class="center-img" src="media/smape_performance.png" width=75% alt="SMAPE results" >
+
+Studying the above SMAPE barplots, we note that support vector regression marginally outperforms other regression models. However, in general, our regression models are not sufficiently accurate, yielding median SMAPE values of about 50% for N and P, and nearly 75% for K.
+
+## Areas for Improvement
+1. Consider incorporating data on soil nutrient content, soil type and texture, and solar irradiance to improve the accuracy of model fits.
+2. Assess the impact of crop rotation and off-season farming practices on the sustainability of a desired crop yield.  
