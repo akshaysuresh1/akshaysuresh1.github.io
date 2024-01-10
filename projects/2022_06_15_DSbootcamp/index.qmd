@@ -4,7 +4,7 @@ author: Akshay Suresh
 date: 2022-06-15
 image: media/clusters.png
 description: Home to over 1.38 billion people, India is tackling a severe hunger crisis. Though the country has achieved self-sufficiency in grain production, nearly 14% of the population is still undernourished. India's agricultural landscape is primarily rural, where widespread poverty, low literacy rates, and poor infrastructure lead to questions over its sustainability. Indiscriminate use of fertilizers has led to significant irregularity in crop production despite consistent agricultural subsidies. With the current global shortage of fertilizers, precision farming is vital to eliminate redundant costs and streamline resources to ensure equitable food access for all communities. Here, we assist policy-makers in their decisions through models predicting the fertilizer consumption (nitrogen, phosphorus, and potash) required to obtain a specific rice yield in different cultivation environments. 
-categories: [Data Science, Geospatial Data Science, Supervised Learning, Unsupervised Learning, AI for Agriculture]
+categories: [AI for Agriculture, Data Science, Geospatial Data Science, Supervised Learning, Unsupervised Learning]
 ---
 ---
 

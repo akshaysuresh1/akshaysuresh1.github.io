@@ -18,7 +18,7 @@ toc: true
     <tr>
         <td><b>08/2017 &ndash; 06/2023<b></td>
         <td>Graduate Researcher, Cornell University, Ithaca, NY, USA<br>
-            <i>AI and Signal Processing for Automated Astrophysical Event Discovery</i><br>
+            <a href="../projects/2019_12_15_CNNclassifier/"><i>AI and Signal Processing for Automated Astrophysical Event Discovery</i></a><br>
             <button class="btn btn-outline-secondary" disabled>Deep Learning</button>
             <button class="btn btn-outline-secondary" disabled>Signal Processing</button>
             <button class="btn btn-outline-secondary" disabled>Python</button>
@@ -31,7 +31,7 @@ toc: true
         <td><b>06/2022 &ndash; 08/2022<b>
         </td>
         <td>Machine Learning Researcher, Frontier Development Lab USA<br>
-            <i>Time Series Forecast of Earthquake Rates from Underground Carbon Storage</i><br>
+            <a href="../projects/2022_08_31_FDL_CO2/"><i>Time Series Forecast of Earthquake Rates from Underground Carbon Storage</i></a><br>
             <button class="btn btn-outline-secondary" disabled>Time Series Forecasting</button>
             <button class="btn btn-outline-secondary" disabled>LSTM</button>
             <button class="btn btn-outline-secondary" disabled>Pytorch</button>
@@ -58,7 +58,7 @@ toc: true
     <tr>
         <td><b>Programming</b></td>
         <td>
-            Python (pytorch, scikit-learn, numpy, pandas, matplotlib, seaborn, plotly), bash scripting, SQL, $\LaTeX$, HTML
+            Python (PyTorch, scikit-learn, numpy, pandas, matplotlib, seaborn, plotly), bash scripting, SQL, $\LaTeX$, HTML
         </td>
     </tr>
     <!-- Row 2: Machine Learning techniques -->
