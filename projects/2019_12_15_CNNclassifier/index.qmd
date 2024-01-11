@@ -57,7 +57,7 @@ Our base network is a 6-layer model whose hidden layers include two convolutiona
 Our base 6-layer CNN model
 ::: 
 
-We build models of greater depth by inserting additional convolutional and max-pooling layers ahead of our dense hidden layer. We refer readers to Figures 7&ndash;10 of our [project report](https://github.com/akshaysuresh1/RFI-classifier/blob/master/RFI_classifier.pdf) for architecture diagrams of our deeper models.
+We built models of greater depth by inserting additional convolutional and max-pooling layers ahead of our dense layer. We refer readers to Figures 7&ndash;10 of our [project report](https://github.com/akshaysuresh1/RFI-classifier/blob/master/RFI_classifier.pdf) for architecture diagrams of our deeper models.
 
 
 ## Model Training & Results
@@ -66,12 +66,12 @@ We trained all of our models using the [categorical cross-entropy (CE) loss func
 <img class="center-img" src="media/accuracy_6to10.png" width=65% alt="Network accuracy curves" >
 
 ::: {.figure-caption}
-Accuracy curves for CNN models of different depths (various colors). Dotted and solid curves represent network performannces on the training and validation data respectively.
+Accuracy curves for CNN models of different depths (various colors). Dotted and solid curves represent network performances on the training and validation data respectively.
 ::: 
 
-Starting with our base network (blue curves), we notice that our model performance grows monotonically on the training data (dotted curve) with increasing epoch. However, the network accuracy on the validation data (solid curve) drops after epoch&nbsp;3, suggesting that the model has now begun to overfit the training data. These trends then suggest that we need to load our saved model weights from epoch&nbsp;3 to obtain robust predictions on our validation data. Note that our base model, even at epoch&nbsp;3, only reaches a maximum accuracy of $85\%$ on the validation data.
+Starting with our base network (blue curves), we notice that our model performance grows monotonically on the training data (dotted curve) with increasing epoch. However, the network accuracy on the validation data (solid curve) drops after epoch&nbsp;3, suggesting that the model has now begun to overfit the training data. Based on these trends, we reloaded our saved model weights from epoch&nbsp;3 to obtain robust predictions using our 6-layer network. Note that our 6-layer model, even at epoch&nbsp;3, only reaches a maximum accuracy of $85\%$ on the validation data.
 
-Training CNNs of increasing depth, we observe a growth in the maximum network accuracy achieved under conditions of a robust fit. However, the incremental gain in network accuracy diminishes with every added layer. Setting a 95% accuracy threshold, we find that an 8/9-layer CNN model seems adequate for our classification problem.
+Training CNNs of increasing depth, we observe a growth in the maximum network accuracy achieved under conditions of a robust fit. However, the incremental gain in network accuracy diminishes with every added layer. Setting a 95% accuracy threshold, we find that an 8/9-layer CNN model is adequate for our classification problem.
 
 ## Areas for Improvement
 

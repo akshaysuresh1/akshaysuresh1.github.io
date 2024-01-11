@@ -49,16 +49,16 @@ Forecasts of induced seismicity are essential to permit bulk underground storage
 alt="Occurrence of earthquakes tied to underground wastewater disposal in Oklahoma" >
 
 ::: {.figure-caption}
-Time series of cumulative earthquake counts (black) observed in Canterbury, New Zealand between 2010 &ndash; 2012. Vertical lines label main quakes with magnitudes exceeding 5.9. Colored curves correspond to various models that have been fit to the data. Shaded areas around the colored curves denote Poisson errors on forecasted earthquake counts. Reference: [Cattania et al. (2018)](https://doi.org/10.1785/0220180033).
+Time series of cumulative earthquake counts (black) observed in Canterbury, New Zealand between 2010 &ndash; 2012. Vertical lines label main quakes with magnitudes exceeding 5.9. Colored curves correspond to various models that have been fit to the data. Shaded areas around colored curves denote Poisson errors on forecasted earthquake counts. Reference: [Cattania et al. (2018)](https://doi.org/10.1785/0220180033).
 :::
 
 Altogether, equipping CRS models with enhanced speed and accessibility can go a long way towards enabling rapid, accurate induced seismicity forecasts for safe carbon sequestration.
 
 ::: {.callout-tip}
-## CRS model
+## Coupled Coulomb Rate-State (CRS) model
 
 **What does a CRS model take as input?**
-A spatiotemporal grid of subsurface fluid pore pressures and pressurization rates constructed from a map of injection wells and time series of fluid injection volume rates at each well.
+Spatiotemporal grids of subsurface fluid pore pressure and pressurization rate. These grids are computed using knowledge of the spatial distribution of injection wells and time series of fluid injection volume rates at each well.
 
 **What does a CRS model output?**
 Time series of cumulative earthquake counts in a specific locality or region of space. Precise locations of earthquake epicenters are not predicted.
@@ -68,9 +68,9 @@ Time series of cumulative earthquake counts in a specific locality or region of 
 ::: {.callout-tip}
 ## ML-ready data products on Zenodo
 
-| Location (USA) | Spatial earthquake footprint | No. of injection wells | Assumed no. of causally connected earthquake clusters | Cause of induced earthquakes |
+| Location (USA) | Area covered by earthquakes | No. of injection wells | Assumed no. of causally connected earthquake clusters | Cause of induced earthquakes |
 |---------|:-----|------:|:------:|:------:|
-| Decatur, Illinois | 4 km $\times$ 5 km | 1 | 1 | Subsurface $CO_2$ injection |
+| Decatur, Illinois | 4 km $\times$ 5 km | 1 | 1 | Subsurface CO$_2$ injection |
 | Cushing, Oklahoma | 4 km $\times$ 6 km | 1 | 1 | Underground wastewater disposal |
 | Kansas | 60 km $\times$ 45 km | 102 | 8 | Underground wastewater disposal |
 
@@ -110,7 +110,7 @@ Original CRS model (not scalable):
 $$
 \frac{{\rm 30,000 } \times {\rm 1 \ day} }{\rm 5 \ days } = {\rm 6000 \ analysts \ from \ a \ pool \ of \ 10,000 \ seismiology \ PhDs}
 $$
-This would require restructuring the academic seismological community to do repetitive meaningful tasks and stop working on other pressing issues. Also, achieving safety with forecasts would be expensive
+This would require restructuring the academic seismological community to do repetitive tasks and stop working on other pressing issues. Also, achieving safety with forecasts would be expensive.
 
 Streamlined CRS model:
 $$
@@ -120,5 +120,5 @@ $$
 **Note:**
 
 1. In the above calculations, we asummed a gap of 5 days between successive model runs.
-2. Though our streamlined CRS implementation comes with a training time of only 3 minutes, we assumed a generous modeling time of about 2&nbsp;hours to account for any hardware maintenance that may be needed during runs.
+2. Though our streamlined CRS implementation comes with a training time of only 3 minutes, we assumed a generous modeling time of about 2&nbsp;hours to account for any hardware setup that may be needed before runs.
 
