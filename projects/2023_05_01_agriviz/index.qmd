@@ -1,8 +1,8 @@
 ---
-title: "Mapping Historical Crop Yields in India"
+title: "Mapping Historical Crop Yields across India"
 author: Akshay Suresh
 date: 2023-05-01
-image: media/map2.png
+image: media/map.png
 description: Maps offer an intuitive means to represent the spatial distribution of data, helping users understand the geographic context and relationships between different locations. With human-induced climate change a reality, understanding evolutionary patterns in nationwide crop yields is essential to ensure food sustainability. India is the world's second-largest producer of rice, wheat, sugarcane, groundnut, and cotton. Using Python, I built an interactive dashboard to visualize district-level yield distributions of these crops across India between 1990 &ndash; 2017. This dashboard (presently offline) was hosted on the Amazon Web Services EC2 server.
 categories: [Data Visualization]
 ---
@@ -18,7 +18,7 @@ categories: [Data Visualization]
 
 This project was completed as part of the Erd&ouml;s Institute Data Visualization Mini-course, Spring&nbsp;2023.
 
-## Applications features
+## Application features
 I included a live walkthrough of the dashboard in my [2-minutes project presentation video](https://youtu.be/x6f5EpSTQ7c), showcasing the following interactive features.
 
 - User option to zoom in/out of the map
