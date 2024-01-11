@@ -10,7 +10,7 @@ categories: [Time Series Forecasting, Physics-informed AI, Supervised Learning, 
 
 :::{.callout-note}
 - **Researchers:** [Giuseppe Castiglione](https://www.linkedin.com/in/giuseppe-dot-ai/), [Alexandre Chen](https://www.linkedin.com/in/alexandre-chen-81a31490), **[Akshay Suresh](https://www.linkedin.com/in/akshaysureshas1/)** & [Han Xiao](https://www.linkedin.com/in/han-xiao-ucsb)
-- **Lead mentors:** [Kayla Kroll](https://people.llnl.gov/kroll5), [Christopher Sherman](https://www.linkedin.com/in/christopher-sherman-6617b776) & [Constantin Weisser](https://www.linkedin.com/in/constantin-weisser)
+- **Lead faculty:** [Kayla Kroll](https://people.llnl.gov/kroll5), [Christopher Sherman](https://www.linkedin.com/in/christopher-sherman-6617b776) & [Constantin Weisser](https://www.linkedin.com/in/constantin-weisser)
 - **Live showcase**: [YouTube link](https://youtu.be/HHDdsYTuKUs)
 - **Technical report:** Pages 210&ndash;226 of [PDF](https://www.calameo.com/read/0055032805743f9fd8bf6)
 - **Machine learning (ML) ready induced seismicity datasets:** [Zenodo link](https://zenodo.org/records/6957214)
