@@ -1,0 +1,39 @@
+---
+title: "Mapping Historical Crop Yields in India"
+author: Akshay Suresh
+date: 2023-05-01
+image: media/map2.png
+description: Maps offer an intuitive means to represent the spatial distribution of data, helping users understand the geographic context and relationships between different locations. With human-induced climate change a reality, understanding evolutionary patterns in nationwide crop yields is essential to ensure food sustainability. India is the world's second-largest producer of rice, wheat, sugarcane, groundnut, and cotton. Using Python, I built an interactive dashboard to visualize district-level yield distributions of these crops across India between 1990 &ndash; 2017. This dashboard (presently offline) was hosted on the Amazon Web Services EC2 server.
+categories: [Data Visualization]
+---
+---
+
+:::{.callout-note}
+- **Github repo:** [agriyield_viz](https://github.com/akshaysuresh1/agriyield_viz)
+- **2-minutes video presentation:** [YouTube link](https://youtu.be/x6f5EpSTQ7c)
+- **Presentation slides:** [PDF](https://github.com/akshaysuresh1/agriyield_viz/blob/main/media/agriviz_slides.pdf)
+- **Programming language:** Python (geopandas, plotly), Dash
+- **App hosting platform:** Amazon Web Services EC2
+:::
+
+This project was completed as part of the Erd&ouml;s Institute Data Visualization Mini-course, Spring&nbsp;2023.
+
+## Applications features
+I included a live walkthrough of the dashboard in my [2-minutes project presentation video](https://youtu.be/x6f5EpSTQ7c), showcasing the following interactive features.
+
+- User option to zoom in/out of the map
+- Cursor hover displaying values of the plotted quantity for the selected district.
+- Dropdown menu for selecting the quantity to visualize. Options include `yield (kg/ha)`, `harvested area (1000 ha)`, and `production (1000 tonnes)`.
+- Dropdown menu for selecting a crop of interest. Here, the available menu options are `Rice`, `Wheat`, `Sugarcane`, `Cotton`, and `Groundnut`.
+- Slider to select a year between 1990 and 2017.
+
+<img class="center-img" src="media/screenshot.png" width=75% alt="Dashboard screenshot" >
+
+::: {.figure-caption}
+Screenshot of interactive dashboard
+:::
+
+## Project Workflow
+
+<img class="center-img" src="media/workflow.png" width=75% alt="Application workflow" >
+
