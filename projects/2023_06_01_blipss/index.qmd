@@ -1,0 +1,66 @@
+---
+title: "Detecting Repeating Radar-like Signals from Alien Worlds"
+author: Akshay Suresh
+date: 2023-06-01
+image: media/artificial_pulsar.jpg
+description: The Search for Extraterrestrial Intelligence (SETI) endeavors to find evidence of advanced alien life in the Universe through signatures of their technologies. Historically, SETI programs have focused mainly on the discovery and follow-up of one-off narrowband ($\sim$&nbsp;1&nbsp;Hz bandwidth), hard-to-explain events. In contrast, repeating broadband signals analogous to radar offer an energy-efficient mode of signal transmission detectable across vast interstellar distances. Here, we released an open-source CPU-based Python package <i>blipss</i> to enable frequent SETI explorations for repeating signals. Our software detects the uniform spacing between a sequence of pulses using the fast folding algorithm, a phase-folding technique first proposed by David H.&nbsp;Staelin in 1969.
+categories: [Astronomy, Production Code Development]
+---
+---
+
+:::{.callout-note}
+- **Github repo:** [blipss](https://github.com/UCBerkeleySETI/blipss)
+- **Journal publication:** [link](https://doi.org/10.3847/1538-3881/acccf0)
+- **Reuters press release:** [link](https://www.reuters.com/science/scientists-expand-search-signs-intelligent-alien-life-2023-05-31/) 
+- **Looking Up Podcast:** [link](https://www.wvxu.org/podcast/looking-up/2023-08-11/listening-for-aliens-with-dr-akshay-suresh)
+- **Programming language:** Python (numpy, pandas, scipy, matplotlib)
+:::
+
+## Pulse Folding
+Consider the challenge of finding a regularly spaced sequence of pulses buried in noisy data. Ideally, one would like each pulse to be bright and easily discernible above the noise floor. However, that scenario is rare when receiving signals from alien worlds several light years away. Even individual pulses from repeating natural astronomical sources, such as [pulsars](https://www.cv.nrao.edu/~sransom/web/Ch6.html), are barely distinguishable from noisy fluctuations. How, then, can one detect trains of pulses? Can one exploit the intrinsic regularity of such pulse transmissions to their advantage?
+
+One solution would be to break up a noisy time series into finite-length segments and then stack the segments so that individual pulses line up. By lining up and averaging $N_{p}$ single pulses, one builds an average profile with signal-to-ratio elevated by a factor of $\sqrt{N_{p}}$. An alternate method for periodicity detection would be to use a [Fast Fourier Transform](https://mathworld.wolfram.com/FastFourierTransform.html). The fast folding algorithm (FFA) belongs to the former category of approaches. A key unknown with such techniques is the segment length or the signal periodicity, i.e., the spacing between the pulses.
+
+<img class="center-img" src="media/pulse_folding.png" width=35% alt="Pulse folding" >
+
+::: {.figure-caption}
+Illustration of pulse folding. Given a trial folding period $P$, a noisy time series (top panel) of length $N$ is broken into $\lfloor N/P \rfloor$ segments (middle panels). These segments are then stacked up. If the chosen trial period $P$ approaches the true period of a repeating signal buried in the data, the stacking operation yields a significant pulse-averaged profile (bottom panel). Figure credit: [Ryan S.&nbsp;Lynch, Pulsar Search Collaboratory](https://www.physics.mcgill.ca/~rlynch/Outreach/PSC_search_guide.pdf).
+::: 
+
+Without prior knowledge of the true pulse spacing, one's best bet is to try out numerous trial periods and hope that one of the trials lands close to the actual signal periodicity. Here, the FFA speeds up searches by intelligently selecting trial periods that minimize redundant operations accounting for the discrete sample resolution of an input time series. Once the true signal period has been found, the pulse-averaged signal profile can be constructed. The width of the pulse-averaged profile can then be estimated using a matched filter.
+
+In summary, FFA coupled with matched filtering yields estimates of the following two quantities.
+
+1. Pulse spacing or periodicity
+2. Average width of the pulse-averaged signal profile 
+
+:::{.callout-tip}
+# Resources on the Fast Folding Algorithm
+1. Staelin,&nbsp;D.&nbsp;H., *Fast Folding Algorithm for Detection of Periodic Pulse Trains*, [1969 IEEE Proceedings 57 724](https://doi.org/10.1109/PROC.1969.7051).
+2. Morello,&nbsp;V., et al., *Optimal Periodicity Searching: Revisiting the Fast Folding Algorithm for Large-scale Pulsar Surveys*, [2020 MNRAS 497 4654](https://doi.org/10.1093/mnras/staa2291). 
+:::
+
+## <i>blipss</i> Workflow
+[Breakthrough Listen](https://breakthroughinitiatives.org/initiative/1) is a 10-year initiative (2015 &ndash; 2025) to conduct the most comprehensive searches of the Universe for signs of alien technology. Our software [*blipss*](https://github.com/UCBerkeleySETI/blipss), expanded as the "Breakthrough Listen Investigation for Periodic Spectral Signals", utilizes the FFA routine from [riptide](https://github.com/v-morello/riptide) to conduct searches for channel-wide repeating signals in radio dynamic spectra.
+
+:::{.callout-tip} 
+# Dynamic Spectra
+In astronomy, a spectrum characterizes the variation of light intensity with color. A dynamic spectrum, as the name suggests, captures the time variation of a spectrum. Therefore, dynamic spectra are 2D maps of radiation intensity, with one axis being frequency (or color) and the second axis being time. 
+
+Radio telescopes output discrete samples of their incident radiation intensity at a finite number of radio frequencies. Consequently, dynamic spectra in practice are 2D grids with shape ``(No. of frequency channels, No. of time samples)``.
+:::
+
+<img class="center-img" src="media/blipss_fig.png" width=75% alt="Pulse folding" >
+
+::: {.figure-caption}
+Illustration of the *blipss* workflow. Consider a dynamic spectrum (left panel) containing in its central channel, a repeating signal with 30&nbsp;s periodicity. Performing a per-channel FFA, *blipss* transforms the input dynamic spectrum into a frequency-trial folding period diagram. The repeating signal shows up as clusters of hits at multiples and submultiples of the signal period. The largest signal-to-noise is recorded at the true signal periodicity of 30&nbsp;s. Image reference: Figure&nbsp;1 of [Suresh et al., 2023](https://doi.org/10.3847/1538-3881/acccf0).
+:::
+
+## Surveying the Galactic Center
+The line-of-sight towards the center of the Milky Way offers the highest stellar density of any direction in the sky. By extension from the [Drake equation](https://exoplanets.nasa.gov/news/1350/are-we-alone-in-the-universe-revisiting-the-drake-equation/), the Galactic Center then harbors the greatest potential for hosting technologically advanced alien life in the galaxy. Surveying the central 50 light years of the Milky Way with the [Green Bank Telescope](https://greenbankobservatory.org/science/telescopes/gbt/), we conducted a pilot search for extraterrestrial radar-like transmissions using *blipss*.
+
+As part of our survey, we observed known pulsars to verify the integrity of our data processing. Our data analyses successfully detected all observed pulsars. Searching for channel-wide repeating transmissions with periods between 11&ndash;100&nbsp;seconds and duty cycles (ratio of the average profile width to the pulse period) between 10&ndash;50$\%$, our data revealed no evidence of extraterrestrial signal to within $7\sigma$ significance. In the process, we constrained the abundance of extraterrestrial transmitters with properties detectable by our analyses to fewer than one in about 600,000 stars at the Galactic Center.
+
+We encourage interested readers to read our journal publication for technical details.
+
+

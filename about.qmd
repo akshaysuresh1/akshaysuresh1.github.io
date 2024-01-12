@@ -43,7 +43,7 @@ toc: true
     <tr>
         <td><b>09/2021 &ndash; 06/2022<b></td>
         <td>Visiting Researcher, University of California, Berkeley, USA<br>
-            <i>Software Development for Radar Detection from Alien Worlds</i><br>
+            <a href="../projects/2023_06_01_blipss/"><i>Software Development for Radar Detection from Alien Worlds</i></a><br>
             [<a href="https://www.reuters.com/science/scientists-expand-search-signs-intelligent-alien-life-2023-05-31/">Reuters press release</a>] [<a href="https://www.wvxu.org/podcast/looking-up/2023-08-11/listening-for-aliens-with-dr-akshay-suresh">NPR Podcast</a>]<br>
             <button class="btn btn-outline-secondary" disabled>Production Code Development</button>
             <button class="btn btn-outline-secondary" disabled>Python</button>

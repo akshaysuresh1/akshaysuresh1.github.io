@@ -10,7 +10,7 @@ categories: [Paper, AI for Science]
 
 :::{.callout-note}
 # Review Paper
-Wang, H., Fu, T., Du, Y. et al. *"Scientific Discovery in The Age of Artificial Intelligence"*, [Nature 620, 47–60 (2023)](https://doi.org/10.1038/s41586-023-06221-2). 
+Wang, H., Fu, T., Du, Y. et al. *Scientific Discovery in The Age of Artificial Intelligence*, [2023 Nature 620 47–60](https://doi.org/10.1038/s41586-023-06221-2). 
 :::
 <br>
 
@@ -41,7 +41,7 @@ Scientific experiments typically involve discrete measurements of intrinsically 
 * [Neural Operators in PyTorch](https://neuraloperator.github.io/neuraloperator/dev/index.html)
 * Video: Anima Anandkumar, [Neural operator: A new paradigm for learning PDEs](https://youtu.be/Bd4KvlmGbY4).
 * FDL 2021 Live Showcase video: [Digital Twin Earth: Coasts](https://youtu.be/7wjtcJxRjKk?si=PFurJnKEr6y2M7dJ). 
-* Kovachki, N., Li, Z., et al., *"Neural Operator: Learning Maps Between Function Spaces"*, [JMLR, 4(89):1−97, 2023](https://arxiv.org/abs/2108.08481).
+* Kovachki, N., Li, Z., et al., *Neural Operator: Learning Maps Between Function Spaces*, [2023 JMLR 4(89):1−97](https://arxiv.org/abs/2108.08481).
 :::
 
 ## Reinforcement Learning for Navigating Large Hypothesis Spaces

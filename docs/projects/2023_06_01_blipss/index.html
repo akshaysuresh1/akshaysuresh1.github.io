@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Akshay Suresh">
-<meta name="dcterms.date" content="2024-01-07">
-<meta name="description" content="AI techniques, with their power to accelerate scientific discovery, are becoming increasingly integrated into all stages of scientific research, including hypothesis testing, data annotation, system modeling, and insight generation. This paper reviews key scientific breakthroughs from the past decade in the application of AI for science. Here, I touch upon a selection of AI advancements that are of specific interest to me.">
+<meta name="dcterms.date" content="2023-06-01">
+<meta name="description" content="The Search for Extraterrestrial Intelligence (SETI) endeavors to find evidence of advanced alien life in the Universe through signatures of their technologies. Historically, SETI programs have focused mainly on the discovery and follow-up of one-off narrowband (\sim&nbsp;1&nbsp;Hz bandwidth), hard-to-explain events. In contrast, repeating broadband signals analogous to radar offer an energy-efficient mode of signal transmission detectable across vast interstellar distances. Here, we released an open-source CPU-based Python package blipss to enable frequent SETI explorations for repeating signals. Our software detects the uniform spacing between a sequence of pulses using the fast folding algorithm, a phase-folding technique first proposed by David H.&nbsp;Staelin in 1969.">
 
-<title>Scientific Discovery in the Age of Artificial Intelligence</title>
+<title>Detecting Repeating Radar-like Signals from Alien Worlds</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -76,11 +76,9 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Scientific Discovery in the Age of Artificial Intelligence">
-<meta property="og:description" content="AI techniques, with their power to accelerate scientific discovery, are becoming increasingly integrated into all stages of scientific research, including hypothesis testing, data annotation, system modeling, and insight generation. This paper reviews key scientific breakthroughs from the past decade in the application of AI for science. Here, I touch upon a selection of AI advancements that are of specific interest to me.">
-<meta property="og:image" content="https://akshaysuresh1.com/blogposts/2024_01_07_AI4Science/fig1.png">
-<meta property="og:image:height" content="1390">
-<meta property="og:image:width" content="1092">
+<meta property="og:title" content="Detecting Repeating Radar-like Signals from Alien Worlds">
+<meta property="og:description" content="The Search for Extraterrestrial Intelligence (SETI) endeavors to find evidence of advanced alien life in the Universe through signatures of their technologies. Historically, SETI programs have focused mainly on the discovery and follow-up of one-off narrowband (\(\sim\)&nbsp;1&nbsp;Hz bandwidth), hard-to-explain events. In contrast, repeating broadband signals analogous to radar offer an energy-efficient mode of signal transmission detectable across vast interstellar distances. Here, we released an open-source CPU-based Python package blipss to enable frequent SETI explorations for repeating signals. Our software detects the uniform spacing between a sequence of pulses using the fast folding algorithm, a phase-folding technique first proposed by David H.&nbsp;Staelin in 1969.">
+<meta property="og:image" content="https://akshaysuresh1.com/projects/2023_06_01_blipss/media/artificial_pulsar.jpg">
 </head>
 
 <body class="nav-fixed">
@@ -147,9 +145,9 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#learning-meaningful-representations-of-scientific-data" id="toc-learning-meaningful-representations-of-scientific-data" class="nav-link active" data-scroll-target="#learning-meaningful-representations-of-scientific-data">Learning Meaningful Representations of Scientific Data</a></li>
-  <li><a href="#neural-operators" id="toc-neural-operators" class="nav-link" data-scroll-target="#neural-operators">Neural Operators</a></li>
-  <li><a href="#reinforcement-learning-for-navigating-large-hypothesis-spaces" id="toc-reinforcement-learning-for-navigating-large-hypothesis-spaces" class="nav-link" data-scroll-target="#reinforcement-learning-for-navigating-large-hypothesis-spaces">Reinforcement Learning for Navigating Large Hypothesis Spaces</a></li>
+  <li><a href="#pulse-folding" id="toc-pulse-folding" class="nav-link active" data-scroll-target="#pulse-folding">Pulse Folding</a></li>
+  <li><a href="#blipss-workflow" id="toc-blipss-workflow" class="nav-link" data-scroll-target="#blipss-workflow"><i>blipss</i> Workflow</a></li>
+  <li><a href="#surveying-the-galactic-center" id="toc-surveying-the-galactic-center" class="nav-link" data-scroll-target="#surveying-the-galactic-center">Surveying the Galactic Center</a></li>
   </ul>
 </nav>
     </div>
@@ -158,16 +156,16 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Scientific Discovery in the Age of Artificial Intelligence</h1>
+<h1 class="title">Detecting Repeating Radar-like Signals from Alien Worlds</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Paper</div>
-    <div class="quarto-category">AI for Science</div>
+    <div class="quarto-category">Astronomy</div>
+    <div class="quarto-category">Production Code Development</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    AI techniques, with their power to accelerate scientific discovery, are becoming increasingly integrated into all stages of scientific research, including hypothesis testing, data annotation, system modeling, and insight generation. This paper reviews key scientific breakthroughs from the past decade in the application of AI for science. Here, I touch upon a selection of AI advancements that are of specific interest to me.
+    The Search for Extraterrestrial Intelligence (SETI) endeavors to find evidence of advanced alien life in the Universe through signatures of their technologies. Historically, SETI programs have focused mainly on the discovery and follow-up of one-off narrowband (<span class="math inline">\(\sim\)</span>&nbsp;1&nbsp;Hz bandwidth), hard-to-explain events. In contrast, repeating broadband signals analogous to radar offer an energy-efficient mode of signal transmission detectable across vast interstellar distances. Here, we released an open-source CPU-based Python package <i>blipss</i> to enable frequent SETI explorations for repeating signals. Our software detects the uniform spacing between a sequence of pulses using the fast folding algorithm, a phase-folding technique first proposed by David H.&nbsp;Staelin in 1969.
   </div>
 </div>
 
@@ -184,7 +182,7 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 7, 2024</p>
+      <p class="date">June 1, 2023</p>
     </div>
   </div>
   
@@ -201,101 +199,77 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Review Paper
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Wang, H., Fu, T., Du, Y. et al.&nbsp;<em>Scientific Discovery in The Age of Artificial Intelligence</em>, <a href="https://doi.org/10.1038/s41586-023-06221-2">2023 Nature 620 47–60</a>.</p>
-</div>
-</div>
-<p><br></p>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-This blogpost is NOT a
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Comprehensive summary of topics discussed in the original publication</li>
-<li>Detailed overview of different machine learning techniques.</li>
+<li><strong>Github repo:</strong> <a href="https://github.com/UCBerkeleySETI/blipss">blipss</a></li>
+<li><strong>Journal publication:</strong> <a href="https://doi.org/10.3847/1538-3881/acccf0">link</a></li>
+<li><strong>Reuters press release:</strong> <a href="https://www.reuters.com/science/scientists-expand-search-signs-intelligent-alien-life-2023-05-31/">link</a></li>
+<li><strong>Looking Up Podcast:</strong> <a href="https://www.wvxu.org/podcast/looking-up/2023-08-11/listening-for-aliens-with-dr-akshay-suresh">link</a></li>
+<li><strong>Programming language:</strong> Python (numpy, pandas, scipy, matplotlib)</li>
 </ul>
 </div>
 </div>
-<section id="learning-meaningful-representations-of-scientific-data" class="level2">
-<h2 class="anchored" data-anchor-id="learning-meaningful-representations-of-scientific-data">Learning Meaningful Representations of Scientific Data</h2>
-<p>Applications of AI analyses to tackle science problems are often limited by the scarcity of high-quality curated datasets for exploration. Frequently, real-world datasets are incomplete, contain inaccurate observations, and come at variable sample resolutions. Moreover, even in situations where homogeneous data are aplenty, data labeling for supervised learning presents a laborious time investment. Here is where self-supervised learning comes to the rescue.</p>
-<p><strong>Self-supervised learning (SSL)</strong> is a machine learning paradigm that enables a model to automatically generate labels for unstructured data, thereby eliminating the need for large pre-labeled datasets. Building upon a small set of accurate human-annotated data, SSL algorithms learn latent representations of the input data through an iterative procedure. The labels generated in the first iteration are treated as the ground truth in the second iteration and so on.</p>
-<p>Generative SSL tries to predict masked portions of raw data (text, images, audio, or video) from unmasked segments by learning embeddings of their underlying shared information. On the other hand, contrastive SSL techniques involves defining positive and negative versions of an “anchor” (say, the concept of what a dog looks like). Using a notion of distance in feature space, the algorithm then looks to align positives (e.g., images of dogs) to the anchor while simultaneously repelling the negatives (e.g., images of cats).</p>
+<section id="pulse-folding" class="level2">
+<h2 class="anchored" data-anchor-id="pulse-folding">Pulse Folding</h2>
+<p>Consider the challenge of finding a regularly spaced sequence of pulses buried in noisy data. Ideally, one would like each pulse to be bright and easily discernible above the noise floor. However, that scenario is rare when receiving signals from alien worlds several light years away. Even individual pulses from repeating natural astronomical sources, such as <a href="https://www.cv.nrao.edu/~sransom/web/Ch6.html">pulsars</a>, are barely distinguishable from noisy fluctuations. How, then, can one detect trains of pulses? Can one exploit the intrinsic regularity of such pulse transmissions to their advantage?</p>
+<p>One solution would be to break up a noisy time series into finite-length segments and then stack the segments so that individual pulses line up. By lining up and averaging <span class="math inline">\(N_{p}\)</span> single pulses, one builds an average profile with signal-to-ratio elevated by a factor of <span class="math inline">\(\sqrt{N_{p}}\)</span>. An alternate method for periodicity detection would be to use a <a href="https://mathworld.wolfram.com/FastFourierTransform.html">Fast Fourier Transform</a>. The fast folding algorithm (FFA) belongs to the former category of approaches. A key unknown with such techniques is the segment length or the signal periodicity, i.e., the spacing between the pulses.</p>
+<p><img class="center-img" src="media/pulse_folding.png" width="35%" alt="Pulse folding"></p>
+<div class="figure-caption">
+<p>Illustration of pulse folding. Given a trial folding period <span class="math inline">\(P\)</span>, a noisy time series (top panel) of length <span class="math inline">\(N\)</span> is broken into <span class="math inline">\(\lfloor N/P \rfloor\)</span> segments (middle panels). These segments are then stacked up. If the chosen trial period <span class="math inline">\(P\)</span> approaches the true period of a repeating signal buried in the data, the stacking operation yields a significant pulse-averaged profile (bottom panel). Figure credit: <a href="https://www.physics.mcgill.ca/~rlynch/Outreach/PSC_search_guide.pdf">Ryan S.&nbsp;Lynch, Pulsar Search Collaboratory</a>.</p>
+</div>
+<p>Without prior knowledge of the true pulse spacing, one’s best bet is to try out numerous trial periods and hope that one of the trials lands close to the actual signal periodicity. Here, the FFA speeds up searches by intelligently selecting trial periods that minimize redundant operations accounting for the discrete sample resolution of an input time series. Once the true signal period has been found, the pulse-averaged signal profile can be constructed. The width of the pulse-averaged profile can then be estimated using a matched filter.</p>
+<p>In summary, FFA coupled with matched filtering yields estimates of the following two quantities.</p>
+<ol type="1">
+<li>Pulse spacing or periodicity</li>
+<li>Average width of the pulse-averaged signal profile</li>
+</ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Resources on Self-supervised Learning
+Resources on the Fast Folding Algorithm
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ul>
-<li><a href="https://www.v7labs.com/blog/self-supervised-learning-guide#what-is-self-supervised-learning">A Beginner’s Guide to Self-supervised Learning</a> by Rohit Kundu</li>
-<li><a href="https://youtu.be/igAUTJwbmsY?si=itG8Xu6b9DWjmaIi">FDL 2022 Live Showcase video: Self-Supervised Learning for Change Detection in Synthetic Aperture Radar Data</a></li>
-</ul>
+<ol type="1">
+<li>Staelin,&nbsp;D.&nbsp;H., <em>Fast Folding Algorithm for Detection of Periodic Pulse Trains</em>, <a href="https://doi.org/10.1109/PROC.1969.7051">1969 IEEE Proceedings 57 724</a>.</li>
+<li>Morello,&nbsp;V., et al., <em>Optimal Periodicity Searching: Revisiting the Fast Folding Algorithm for Large-scale Pulsar Surveys</em>, <a href="https://doi.org/10.1093/mnras/staa2291">2020 MNRAS 497 4654</a>.</li>
+</ol>
 </div>
 </div>
 </section>
-<section id="neural-operators" class="level2">
-<h2 class="anchored" data-anchor-id="neural-operators">Neural Operators</h2>
-<p>Scientific experiments typically involve discrete measurements of intrinsically continuous quantities. For example, consider wind velocity in flight dynamics or magnetic field strength in tokamak nuclear fusion reactors. Conventional neural networks assume a fixed data discretization and are hence, inflexible at handling raw data sampled at varying resolutions. Neural operators, in contrast, learn mappings between function spaces of the input and output data to allow discretization-invariant predictions. Once these operators are trained, they can be evaluated at any data resolution without a need for model retraining.</p>
+<section id="blipss-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="blipss-workflow"><i>blipss</i> Workflow</h2>
+<p><a href="https://breakthroughinitiatives.org/initiative/1">Breakthrough Listen</a> is a 10-year initiative (2015 – 2025) to conduct the most comprehensive searches of the Universe for signs of alien technology. Our software <a href="https://github.com/UCBerkeleySETI/blipss"><em>blipss</em></a>, expanded as the “Breakthrough Listen Investigation for Periodic Spectral Signals”, utilizes the FFA routine from <a href="https://github.com/v-morello/riptide">riptide</a> to conduct searches for channel-wide repeating signals in radio dynamic spectra.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Resources on Neural Operators and Their Applications
+Dynamic Spectra
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ul>
-<li><a href="https://neuraloperator.github.io/neuraloperator/dev/index.html">Neural Operators in PyTorch</a></li>
-<li>Video: Anima Anandkumar, <a href="https://youtu.be/Bd4KvlmGbY4">Neural operator: A new paradigm for learning PDEs</a>.</li>
-<li>FDL 2021 Live Showcase video: <a href="https://youtu.be/7wjtcJxRjKk?si=PFurJnKEr6y2M7dJ">Digital Twin Earth: Coasts</a>.</li>
-<li>Kovachki, N., Li, Z., et al., <em>Neural Operator: Learning Maps Between Function Spaces</em>, <a href="https://arxiv.org/abs/2108.08481">2023 JMLR 4(89):1−97</a>.</li>
-</ul>
+<p>In astronomy, a spectrum characterizes the variation of light intensity with color. A dynamic spectrum, as the name suggests, captures the time variation of a spectrum. Therefore, dynamic spectra are 2D maps of radiation intensity, with one axis being frequency (or color) and the second axis being time.</p>
+<p>Radio telescopes output discrete samples of their incident radiation intensity at a finite number of radio frequencies. Consequently, dynamic spectra in practice are 2D grids with shape <code>(No. of frequency channels, No. of time samples)</code>.</p>
 </div>
+</div>
+<p><img class="center-img" src="media/blipss_fig.png" width="75%" alt="Pulse folding"></p>
+<div class="figure-caption">
+<p>Illustration of the <em>blipss</em> workflow. Consider a dynamic spectrum (left panel) containing in its central channel, a repeating signal with 30&nbsp;s periodicity. Performing a per-channel FFA, <em>blipss</em> transforms the input dynamic spectrum into a frequency-trial folding period diagram. The repeating signal shows up as clusters of hits at multiples and submultiples of the signal period. The largest signal-to-noise is recorded at the true signal periodicity of 30&nbsp;s. Image reference: Figure&nbsp;1 of <a href="https://doi.org/10.3847/1538-3881/acccf0">Suresh et al., 2023</a>.</p>
 </div>
 </section>
-<section id="reinforcement-learning-for-navigating-large-hypothesis-spaces" class="level2">
-<h2 class="anchored" data-anchor-id="reinforcement-learning-for-navigating-large-hypothesis-spaces">Reinforcement Learning for Navigating Large Hypothesis Spaces</h2>
-<p>The prospect of sampling through all possible competing hypotheses agreeable with the data can seem intimidating at first. Reinforcement learning (RL) instead recasts the problem as an endeavor to find a single good solution that fits the data.</p>
-<p>RL can be thought of as the science and framework of learning to make decisions through interaction. Core concepts of the RL formalism include:</p>
-<ul>
-<li>An environment (governs the dynamics of the problem)</li>
-<li>A scalar reward signal (specifies the goal)</li>
-<li>An agent comprising necessarily of an agent state and a policy (mapping from agent states to actions).</li>
-</ul>
-<p>At every time step <span class="math inline">\(t\)</span>, the agent makes an observation of the environment and perceives a reward (or a penalty). Based on the instantaneous reward, the agent estimates its rewards into the future and decides its next action based on an internal policy. By defining AI policies that maximize rewards in the direction of increased fit between model parameters and the data, RL can drive systems towards optimal solutions. Further, by introducing inductive biases in AI policies, one can incorporate prior scientific knowledge to steer searches towards realistically feasible solutions, thereby enhancing model trust and interpretability.</p>
-<p>Note that the AI policy must allow adequate exploration of the search parameter space so as to not get trapped in a local optimum during the quest to globally maximize the cumulative reward.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Resources on Reinforcement Learning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><a href="https://www.youtube.com/playlist?list=PLqYmG7hTraZDVH599EItlEWsUOsJbAodm">Google DeepMind 2021 Reinforcement Learning Course, University College London</a></li>
-<li><a href="https://www.coursera.org/specializations/reinforcement-learning">Coursera: Reinforcement Learning Specialization</a></li>
-</ul>
-</div>
-</div>
+<section id="surveying-the-galactic-center" class="level2">
+<h2 class="anchored" data-anchor-id="surveying-the-galactic-center">Surveying the Galactic Center</h2>
+<p>The line-of-sight towards the center of the Milky Way offers the highest stellar density of any direction in the sky. By extension from the <a href="https://exoplanets.nasa.gov/news/1350/are-we-alone-in-the-universe-revisiting-the-drake-equation/">Drake equation</a>, the Galactic Center then harbors the greatest potential for hosting technologically advanced alien life in the galaxy. Surveying the central 50 light years of the Milky Way with the <a href="https://greenbankobservatory.org/science/telescopes/gbt/">Green Bank Telescope</a>, we conducted a pilot search for extraterrestrial radar-like transmissions using <em>blipss</em>.</p>
+<p>As part of our survey, we observed known pulsars to verify the integrity of our data processing. Our data analyses successfully detected all observed pulsars. Searching for channel-wide repeating transmissions with periods between 11–100&nbsp;seconds and duty cycles (ratio of the average profile width to the pulse period) between 10–50<span class="math inline">\(\%\)</span>, our data revealed no evidence of extraterrestrial signal to within <span class="math inline">\(7\sigma\)</span> significance. In the process, we constrained the abundance of extraterrestrial transmitters with properties detectable by our analyses to fewer than one in about 600,000 stars at the Galactic Center.</p>
+<p>We encourage interested readers to read our journal publication for technical details.</p>
 
 
 </section>
