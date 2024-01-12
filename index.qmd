@@ -9,7 +9,7 @@ about:
   image-width: 14em
   links:
     - icon: filetype-pdf
-      text: "Resume (last updated: Jan 2, 2024)"
+      text: "Resume (last updated: Jan 12, 2024)"
       href: pdfs/AkshaySuresh_Resume.pdf
     - icon: book
       text: Publications
