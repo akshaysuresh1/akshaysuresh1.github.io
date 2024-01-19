@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Akshay Suresh">
-<meta name="dcterms.date" content="2023-06-01">
-<meta name="description" content="The Search for Extraterrestrial Intelligence (SETI) endeavors to find evidence of advanced alien life in the Universe through signatures of their technologies. Historically, SETI programs have focused mainly on the discovery and follow-up of one-off narrowband (\sim&nbsp;1&nbsp;Hz bandwidth), hard-to-explain events. In contrast, repeating broadband signals analogous to radar offer an energy-efficient mode of signal transmission detectable across vast interstellar distances. Here, we released an open-source CPU-based Python package blipss to enable frequent SETI explorations for repeating signals. Our software detects the uniform spacing between a sequence of pulses using the fast folding algorithm, a phase-folding technique first proposed by David H.&nbsp;Staelin in 1969.">
+<meta name="dcterms.date" content="2024-01-19">
+<meta name="description" content="As AI-powered systems gain increased traction in society, a key concern to address is the climate cost of deploying such powerful models at scale. Depending on the model complexity and the intended applications, AI can accelerate or decrease greenhouse gas (GHG) emissions. Though AI systems accounted for \leq 1.4\% of global GHG emissions in 2020, the growing demand for billion-parameter foundational models may lead to an explosive surge in GHG emissions unless carefully quantified and accounted for. Here, I summarize my learnings from the framework devised by Kaack et al.&nbsp;(2022) for evaluating the GHG emissions impact of machine learning (ML) systems.">
 
-<title>Detecting Repeating Radar-like Signals from Alien Worlds</title>
+<title>Aligning AI with Climate Change Mitigation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -76,9 +76,11 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Detecting Repeating Radar-like Signals from Alien Worlds">
-<meta property="og:description" content="The Search for Extraterrestrial Intelligence (SETI) endeavors to find evidence of advanced alien life in the Universe through signatures of their technologies. Historically, SETI programs have focused mainly on the discovery and follow-up of one-off narrowband (\(\sim\)&nbsp;1&nbsp;Hz bandwidth), hard-to-explain events. In contrast, repeating broadband signals analogous to radar offer an energy-efficient mode of signal transmission detectable across vast interstellar distances. Here, we released an open-source CPU-based Python package blipss to enable frequent SETI explorations for repeating signals. Our software detects the uniform spacing between a sequence of pulses using the fast folding algorithm, a phase-folding technique first proposed by David H.&nbsp;Staelin in 1969.">
-<meta property="og:image" content="https://akshaysuresh1.com/projects/2023_06_01_blipss/media/artificial_pulsar.jpg">
+<meta property="og:title" content="Aligning AI with Climate Change Mitigation">
+<meta property="og:description" content="As AI-powered systems gain increased traction in society, a key concern to address is the climate cost of deploying such powerful models at scale. Depending on the model complexity and the intended applications, AI can accelerate or decrease greenhouse gas (GHG) emissions. Though AI systems accounted for \(\leq 1.4\%\) of global GHG emissions in 2020, the growing demand for billion-parameter foundational models may lead to an explosive surge in GHG emissions unless carefully quantified and accounted for. Here, I summarize my learnings from the framework devised by Kaack et al.&nbsp;(2022) for evaluating the GHG emissions impact of machine learning (ML) systems.">
+<meta property="og:image" content="https://akshaysuresh1.com/blogposts/2024_01_19_AIigningAIwithClimate/media/AI_emissions.png">
+<meta property="og:image:height" content="824">
+<meta property="og:image:width" content="1260">
 </head>
 
 <body class="nav-fixed">
@@ -140,32 +142,24 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#pulse-folding" id="toc-pulse-folding" class="nav-link active" data-scroll-target="#pulse-folding">Pulse Folding</a></li>
-  <li><a href="#blipss-workflow" id="toc-blipss-workflow" class="nav-link" data-scroll-target="#blipss-workflow"><i>blipss</i> Workflow</a></li>
-  <li><a href="#surveying-the-galactic-center" id="toc-surveying-the-galactic-center" class="nav-link" data-scroll-target="#surveying-the-galactic-center">Surveying the Galactic Center</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Detecting Repeating Radar-like Signals from Alien Worlds</h1>
+<h1 class="title">Aligning AI with Climate Change Mitigation</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Astronomy</div>
-    <div class="quarto-category">Production Code Development</div>
+    <div class="quarto-category">Paper</div>
+    <div class="quarto-category">AI for Climate</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    The Search for Extraterrestrial Intelligence (SETI) endeavors to find evidence of advanced alien life in the Universe through signatures of their technologies. Historically, SETI programs have focused mainly on the discovery and follow-up of one-off narrowband (<span class="math inline">\(\sim\)</span>&nbsp;1&nbsp;Hz bandwidth), hard-to-explain events. In contrast, repeating broadband signals analogous to radar offer an energy-efficient mode of signal transmission detectable across vast interstellar distances. Here, we released an open-source CPU-based Python package <i>blipss</i> to enable frequent SETI explorations for repeating signals. Our software detects the uniform spacing between a sequence of pulses using the fast folding algorithm, a phase-folding technique first proposed by David H.&nbsp;Staelin in 1969.
+    As AI-powered systems gain increased traction in society, a key concern to address is the climate cost of deploying such powerful models at scale. Depending on the model complexity and the intended applications, AI can accelerate or decrease greenhouse gas (GHG) emissions. Though AI systems accounted for <span class="math inline">\(\leq 1.4\%\)</span> of global GHG emissions in 2020, the growing demand for billion-parameter foundational models may lead to an explosive surge in GHG emissions unless carefully quantified and accounted for. Here, I summarize my learnings from the framework devised by <a href="https://doi.org/10.1038/s41558-022-01377-7">Kaack et al.&nbsp;(2022)</a> for evaluating the GHG emissions impact of machine learning (ML) systems.
   </div>
 </div>
 
@@ -182,7 +176,7 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 1, 2023</p>
+      <p class="date">January 19, 2024</p>
     </div>
   </div>
   
@@ -199,80 +193,38 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><strong>Github repo:</strong> <a href="https://github.com/UCBerkeleySETI/blipss">blipss</a></li>
-<li><strong>Journal publication:</strong> <a href="https://doi.org/10.3847/1538-3881/acccf0">link</a></li>
-<li><strong>Reuters press release:</strong> <a href="https://www.reuters.com/science/scientists-expand-search-signs-intelligent-alien-life-2023-05-31/">link</a></li>
-<li><strong>Looking Up Podcast:</strong> <a href="https://www.wvxu.org/podcast/looking-up/2023-08-11/listening-for-aliens-with-dr-akshay-suresh">link</a></li>
-<li><strong>Programming language:</strong> Python (numpy, pandas, scipy, matplotlib)</li>
-</ul>
-</div>
-</div>
-<section id="pulse-folding" class="level2">
-<h2 class="anchored" data-anchor-id="pulse-folding">Pulse Folding</h2>
-<p>Consider the challenge of finding a regularly spaced sequence of pulses buried in noisy data. Ideally, one would like each pulse to be bright and easily discernible above the noise floor. However, that scenario is rare when receiving signals from alien worlds several light years away. Even individual pulses from repeating natural astronomical sources, such as <a href="https://www.cv.nrao.edu/~sransom/web/Ch6.html">pulsars</a>, are barely distinguishable from noisy fluctuations. How, then, can one detect trains of pulses? Can one exploit the intrinsic regularity of such pulse transmissions to their advantage?</p>
-<p>One solution would be to break up a noisy time series into finite-length segments and then stack the segments so that individual pulses line up. By lining up and averaging <span class="math inline">\(N_{p}\)</span> single pulses, one builds an average profile with signal-to-ratio elevated by a factor of <span class="math inline">\(\sqrt{N_{p}}\)</span>. An alternate method for periodicity detection would be to use a <a href="https://mathworld.wolfram.com/FastFourierTransform.html">Fast Fourier Transform</a>. The fast folding algorithm (FFA) belongs to the former category of approaches. A key unknown with such techniques is the segment length or the signal periodicity, i.e., the spacing between the pulses.</p>
-<p><img class="center-img" src="media/pulse_folding.png" width="35%" alt="Pulse folding"></p>
-<div class="figure-caption">
-<p>Illustration of pulse folding. Given a trial folding period <span class="math inline">\(P\)</span>, a noisy time series (top panel) of length <span class="math inline">\(N\)</span> is broken into <span class="math inline">\(\lfloor N/P \rfloor\)</span> segments (middle panels). These segments are then stacked up. If the chosen trial period <span class="math inline">\(P\)</span> approaches the true period of a repeating signal buried in the data, the stacking operation yields a significant pulse-averaged profile (bottom panel). Figure credit: <a href="https://www.physics.mcgill.ca/~rlynch/Outreach/PSC_search_guide.pdf">Ryan S.&nbsp;Lynch, Pulsar Search Collaboratory</a>.</p>
-</div>
-<p>Without prior knowledge of the true pulse spacing, one’s best bet is to try out numerous trial periods and hope that one of the trials lands close to the actual signal periodicity. Here, the FFA speeds up searches by intelligently selecting trial periods that minimize redundant operations accounting for the discrete sample resolution of an input time series. Once the true signal period has been found, the pulse-averaged signal profile can be constructed. The width of the pulse-averaged profile can then be estimated using a matched filter.</p>
-<p>In summary, FFA coupled with matched filtering yields estimates of the following two quantities.</p>
-<ol type="1">
-<li>Pulse spacing or periodicity</li>
-<li>Average width of the pulse-averaged signal profile</li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Resources on the Fast Folding Algorithm
+References
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li>Staelin,&nbsp;D.&nbsp;H., <em>Fast Folding Algorithm for Detection of Periodic Pulse Trains</em>, <a href="https://doi.org/10.1109/PROC.1969.7051">1969 IEEE Proceedings 57 724</a>.</li>
-<li>Morello,&nbsp;V., et al., <em>Optimal Periodicity Searching: Revisiting the Fast Folding Algorithm for Large-scale Pulsar Surveys</em>, <a href="https://doi.org/10.1093/mnras/staa2291">2020 MNRAS 497 4654</a>.</li>
+<li>Kaack, L. H., et al., <em>Aligning Artificial Intelligence with Climate Change Mitigation</em>, <a href="https://doi.org/10.1038/s41558-022-01377-7">2022 Nature Climate Change 518–527</a>.</li>
+<li>Dodge, J., et al., <em>Measuring the Carbon Intensity of AI in Cloud Instances</em>, 2022 ACM Conference on Fairness, Accountability, and Transparency 1877–1894, <a href="https://arxiv.org/abs/2206.05229">arXiv:2206.05229</a>.</li>
 </ol>
 </div>
 </div>
-</section>
-<section id="blipss-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="blipss-workflow"><i>blipss</i> Workflow</h2>
-<p><a href="https://breakthroughinitiatives.org/initiative/1">Breakthrough Listen</a> is a 10-year initiative (2015 – 2025) to conduct the most comprehensive searches of the Universe for signs of alien technology. Our software <a href="https://github.com/UCBerkeleySETI/blipss"><em>blipss</em></a>, expanded as the “Breakthrough Listen Investigation for Periodic Spectral Signals”, utilizes the FFA routine from <a href="https://github.com/v-morello/riptide">riptide</a> to conduct searches for channel-wide repeating signals in radio dynamic spectra.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Dynamic Spectra
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In astronomy, a spectrum characterizes the variation of light intensity with color. A dynamic spectrum, as the name suggests, captures the time variation of a spectrum. Therefore, dynamic spectra are 2D maps of radiation intensity, with one axis being frequency (or color) and the second axis being time.</p>
-<p>Radio telescopes output discrete samples of their incident radiation intensity at a finite number of radio frequencies. Consequently, dynamic spectra in practice are 2D grids with shape <code>(No. of frequency channels, No. of time samples)</code>.</p>
-</div>
-</div>
-<p><img class="center-img" src="media/blipss_fig.png" width="75%" alt="Pulse folding"></p>
+<p><br></p>
+<p><a href="https://doi.org/10.1038/s41558-022-01377-7">Kaack et al.&nbsp;(2022)</a> proposed a three-category framework for assessing the climate impact of ML.</p>
+<ol class="example" type="1">
+<li><strong>Computing-related impacts</strong> cover GHG emissions arising from electricity consumption for ML computations and embodied emissions associated with computing hardware.</li>
+</ol>
+<p>Regarding electricity usage, it is essential to distinguish between the various life-cycle stages involved in ML model production. Model development is the most energy-intensive stage, requiring the identification of a suitable network architecture through trial-and-error training of several models. Once a specific model configuration has been chosen, model training and hyperparameter tuning are next. This stage isn’t as energy-demanding as model development but may need to be performed more frequently in practice.</p>
+<p><img class="center-img" src="media/AI_emissions.png" width="45%" alt="Pulse folding"></p>
 <div class="figure-caption">
-<p>Illustration of the <em>blipss</em> workflow. Consider a dynamic spectrum (left panel) containing in its central channel, a repeating signal with 30&nbsp;s periodicity. Performing a per-channel FFA, <em>blipss</em> transforms the input dynamic spectrum into a frequency-trial folding period diagram. The repeating signal shows up as clusters of hits at multiples and submultiples of the signal period. The largest signal-to-noise is recorded at the true signal periodicity of 30&nbsp;s. Image reference: Figure&nbsp;1 of <a href="https://doi.org/10.3847/1538-3881/acccf0">Suresh et al., 2023</a>.</p>
+<p>Boxplot showing equivalent carbon intensities from training 11 different AI models in cloud instances. The y-axis (log-scale) measures electricity consumption in MWh translated into equivalent grams of CO<span class="math inline">\(_2\)</span> emissions generated. The x-axis corresponds to various trialed models, including two BERT experiments (finetuning and language model pretraining), partial training of a 6.1&nbsp;billion-parameter transformer model, three sizes of dense (or fully connected) neural networks, and five sizes of vision transformers. Light blue bars for each model mark the ranges of their respective equivalent emissions, where the top of the bar represents the maximum estimate and the bottom labels the minimum emissions. The heights of the dark blue rectangles contained in the light blue boxes measure interquartile ranges in equivalent emissions. The solid black lines in the dark blue rectangles for various models demarcate their respective average equivalent emissions (or energy consumption).</p>
 </div>
-</section>
-<section id="surveying-the-galactic-center" class="level2">
-<h2 class="anchored" data-anchor-id="surveying-the-galactic-center">Surveying the Galactic Center</h2>
-<p>The line-of-sight towards the center of the Milky Way offers the highest stellar density of any direction in the sky. By extension from the <a href="https://exoplanets.nasa.gov/news/1350/are-we-alone-in-the-universe-revisiting-the-drake-equation/">Drake equation</a>, the Galactic Center then harbors the greatest potential for hosting technologically advanced alien life in the galaxy. Surveying the central 50 light years of the Milky Way with the <a href="https://greenbankobservatory.org/science/telescopes/gbt/">Green Bank Telescope</a>, we conducted a pilot search for extraterrestrial radar-like transmissions using <em>blipss</em>.</p>
-<p>As part of our survey, we observed known pulsars to verify the integrity of our data processing. Our data analyses successfully detected all observed pulsars. Searching for channel-wide repeating transmissions with periods between 11–100&nbsp;seconds and duty cycles (ratio of the average profile width to the pulse period) between 10–50<span class="math inline">\(\%\)</span>, our data revealed no evidence of extraterrestrial signal to within <span class="math inline">\(7\sigma\)</span> significance. In the process, we constrained the abundance of extraterrestrial transmitters with properties detectable by our analyses to fewer than one in about 600,000 stars at the Galactic Center.</p>
-<p>We encourage interested readers to read our journal publication for technical details.</p>
+<p><a href="https://arxiv.org/abs/2206.05229">Dodge et al.&nbsp;(2022)</a> measured the electricity consumption from training 11 different models covering natural language processing and computer vision applications. Notably, partial training (up to 13%) of a 6.1&nbsp;billion-parameter transformer on 256&nbsp;NVIDIA A100 GPUs for 8&nbsp;hours used up an astounding 13.8&nbsp;MWh of energy, i.e., equivalent to the annual electricity requirement of an average US home. Examining the above figure, the equivalent carbon emissions intensity of ML exhibits positive correlations with both the model size and the model complexity. <strong>Since foundation models with billions of trainable parameters are energetically expensive to build and train, one way to mitigate climate change is to adapt pretrained, open-source models (when possible) to custom domains via transfer learning or by using parameter-efficient tuning methods.</strong></p>
+<p>After model training, we have model inference, i.e., obtaining predictions on test data using a trained model. A single model inference task bears a negligible energy load. However, a model may need to be called thousands of times during deployment, leading to a cumulative energy budget for inference that can exceed those of model development and tuning. For instance, see numbers for Meta in Figure&nbsp;4 of <a href="https://arxiv.org/abs/2111.00364">Wu et al.&nbsp;(2022)</a>.</p>
+<p>As data centers and power systems shift increasingly to using renewable energy sources, emissions arising from ML computations are expected to diminish over time. Embodied emissions from computer infrastructure manufacturing, raw material transport, and end-of-life operations can then acquire increased relevance as a source of GHG emissions. For large data centers, embodied emissions comprise less than 10% of their total GHG emissions. Such centers typically replace servers every 3–4&nbsp;years to maintain high operational efficiency. A potential downside to keeping new server lifespans short is that it may, in turn, spur growth in server manufacturing demand, thereby contributing to GHG emissions as an offset to gains in operational efficiency. These emissions can be mitigated by reusing old servers and equipment for small to mid-scale ML inference tasks.</p>
+<ol start="2" class="example" type="1">
+<li><p><strong>Immediate application impacts</strong> encompass direct GHG emissions linked to short-term results of ML applications. Specifically, based on the use case, ML may increase or reduce GHG emissions. For instance, computer vision algorithms have helped combat deforestation by enabling enhanced tracking of forest land cover in satellite imagery (<a href="https://doi.org/10.1126/science.aat1203">Finer et al., 2018</a>). On the contrary, ML-assisted improvements to mining can speed up excavation of oil and natural gas reserves, leading to positive GHG emissions from accelerated fossil fuel exploitation.</p></li>
+<li><p><strong>System-level impacts</strong> refer to potential societal implications that could arise from long-term applications of ML. This category includes both rebound effects and the phenomenon of “lock-in”.</p></li>
+</ol>
+<p>Rebound effects can occur when ML increases the efficiency of a service, thereby encouraging growth in the production of the same goods. For instance, ML-enabled autonomous driving can improve fuel efficiency. Still, it may lead to higher personal vehicle ownership rates, which can then increase GHG emissions unless such vehicles are shared or electrified.</p>
+<p>The lock-in phenomenon is when an ML-enabled product reaches markets first and deters competitors from entering viable market spaces. Returning to our example of autonomous driving, demand for personal autonomous vehicles may result in a drop in private investment in mass public transit systems such as rail and buses, leading to more cars on the road.</p>
+<p>Finally, ML may also influence society by altering the demand for goods and services. For example, a recommender system designed to increase profits for a company may boost the growth of products with embodied GHG emissions. Mandating GHG emissions monitoring and reporting for ML use cases will be essential to shape the design of climate policies governing the development, training, and large-scale deployment of AI models.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

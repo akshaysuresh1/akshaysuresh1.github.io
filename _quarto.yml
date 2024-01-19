@@ -34,7 +34,7 @@ website:
 
   page-footer: 
     background: light
-    left: Copyright 2023, Akshay Suresh.
+    left: Copyright 2024, Akshay Suresh.
     right: Website built with [Quarto](https://quarto.org/).
 
 format:

@@ -2,7 +2,7 @@
 title: "Scientific Discovery in the Age of Artificial Intelligence"
 author: Akshay Suresh
 date: 2024-01-07
-image: fig1.png
+image: media/fig1.png
 description: AI techniques, with their power to accelerate scientific discovery, are becoming increasingly integrated into all stages of scientific research, including hypothesis testing, data annotation, system modeling, and insight generation. This paper reviews key scientific breakthroughs from the past decade in the application of AI for science. Here, I touch upon a selection of AI advancements that are of specific interest to me. 
 categories: [Paper, AI for Science]
 ---

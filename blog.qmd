@@ -1,6 +1,6 @@
 ---
 title: "Blog"
-subtitle: "<i>Personal takeaways from research paper readings, concept reviews & more...</i>"
+subtitle: "<i>Personal takeaways from research paper readings, concept reviews & more. Views my own.</i>"
 listing:
   contents: blogposts
   sort: "date desc"
