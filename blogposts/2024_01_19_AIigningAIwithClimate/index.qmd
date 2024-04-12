@@ -4,7 +4,7 @@ author: Akshay Suresh
 date: 2024-01-19
 image: media/AI_emissions.png
 description: As AI-powered systems gain increased traction in society, a key concern to address is the climate cost of deploying such powerful models at scale. Depending on the model complexity and the intended applications, AI can accelerate or decrease greenhouse gas (GHG) emissions. Though AI systems accounted for $\leq 1.4\%$ of global GHG emissions in 2020, the growing demand for billion-parameter foundational models may lead to an explosive surge in GHG emissions unless carefully quantified and accounted for. Here, I summarize my learnings from the framework devised by [Kaack et al. (2022)](https://doi.org/10.1038/s41558-022-01377-7) for evaluating the GHG emissions impact of machine learning (ML) systems.
-categories: [Paper, AI for Climate]
+categories: [Paper Recap, AI for Climate]
 ---
 ---
 
