@@ -9,9 +9,9 @@ toc: true
 <table class="table table-borderless table-hover w-auto" >
     <!-- Row 1 -->
     <tr>
-        <td><b>10/2023 &ndash; Present<b></td>
+        <td><b>01/2024 &ndash; Present<b></td>
         <td>Independent Study & Research<br>
-            <button class="btn btn-outline-secondary" disabled>Upskilling</button>
+            <button class="btn btn-outline-secondary" disabled>Computer Vision</button>
         </td><br>
     </tr>
     <!-- Row 2 -->
@@ -70,32 +70,31 @@ toc: true
                     <ul class="a">
                         <li>Linear regression, lasso & ridge regularization</li>
                         <li>Decision trees, random forest</li>
-                        <li>Support vector machine (SVM)</li>
-                        <li>$k$-nearest neighbors (kNN)</li>
-                        <li>Convolutional neural networks (CNN)</li>
-                        <li>Recurrent neural networks (RNN)</li>
-                        <li>Long short-term memory networks (LSTM)</li>
+                        <li>Support vector machine</li>
+                        <li>$K$-nearest neighbors</li>
+                        <li>Convolutional neural networks</li>
+                        <li>Recurrent neural networks</li>
+                        <li>Long short-term memory networks</li>
                     </ul></li>
                 <li>Unsupervised learning:
                     <ul class="a">
                         <li>$k$-means clustering</li>
-                        <li>Gaussian mixture models (GMM)</li>
+                        <li>Gaussian mixture models</li>
                     </ul></li>
-                <li>Principal component analysis (PCA)</li>
-                <li>Stochastic gradient descent (SGD)</li>
-                <li>Adam optimization</li>
+                <li>Principal component analysis</li>
+                <li>Batch and stochastic gradient descent, Adam optimization</li>
             </ul>
         </td>    
     </tr>
     <!-- Row 3: Software engineering skills -->
     <tr>
         <td><b>Software Engineering<b></td>
-        <td>Production code development, high performance computing (HPC)</td>
+        <td>Production code development, high performance computing</td>
     </tr>    
     <!-- Row 4: Cloud computing experience-->
     <tr>
         <td><b>Cloud Computing</b></td>
-        <td>Google Cloud Platform (GCP), Amazon Web Services (AWS)</td>
+        <td>Google Cloud Platform, Amazon Web Services</td>
     </tr>
     <!-- Row 5: Operating ststems-->
     <tr>
