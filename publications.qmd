@@ -1,15 +1,19 @@
 ---
-title: "Refereed Publications"
+title: "Publications"
 toc: true
 ---
 ---
 [<i class="fa-brands fa-orcid"></i> 0000-0002-5389-7806](https://orcid.org/0000-0002-5389-7806)
 
-### {{< fa receipt >}} Journal articles
+### {{< fa newspaper >}} Technical Memo (AI for Climate)
+
+1. Castiglione,&nbsp;G., Chen,&nbsp;A., <b>Suresh,&nbsp;A.</b>, Xiao,&nbsp;H., Kroll,&nbsp;K., Sherman,&nbsp;C., & Weisser,&nbsp;C., <i>Geomechanics for CO$_2$ Sequestration</i>, [Frontier Development Lab USA 2022 Technical Results and Findings, pp. 210--226](https://www.calameo.com/read/0055032805743f9fd8bf6).
+
+### {{< fa receipt >}} Refereed Journal Articles
 
 <u>Astronomy:</u> 9 publications during 2016 &ndash; 2023 (7 first-author, 2 co-author).
 
-1. [[Reuters press release](https://www.reuters.com/science/scientists-expand-search-signs-intelligent-alien-life-2023-05-31/)] <b>Suresh,&nbsp;A.</b>, Gajjar,&nbsp;V., Nagarajan,&nbsp;P., Sheikh,&nbsp;S.&nbsp;Z., et al., (9 authors), <i>A 4&ndash;8&nbsp;GHz Galactic Center Search for Periodic Technosignatures</i>, [2023 AJ 165 255](https://doi.org/10.3847/1538-3881/acccf0).
+1. <b>Suresh,&nbsp;A.</b>, Gajjar,&nbsp;V., Nagarajan,&nbsp;P., Sheikh,&nbsp;S.&nbsp;Z., et al., (9 authors), <i>A 4&ndash;8&nbsp;GHz Galactic Center Search for Periodic Technosignatures</i>, [2023 AJ 165 255](https://doi.org/10.3847/1538-3881/acccf0). [[Reuters press release](https://www.reuters.com/science/scientists-expand-search-signs-intelligent-alien-life-2023-05-31/)]
 
 2. <b>Suresh,&nbsp;A.</b>, Cordes,&nbsp;J.&nbsp;M., Chatterjee,&nbsp;S., Gajjar,&nbsp;V., et al. (9 authors), <i>4&ndash;8&nbsp;GHz Fourier-domain Searches for Galactic Center Pulsars</i>, [2022 ApJ 933 121](https://doi.org/10.3847/1538-4357/ac74c0).
 
@@ -28,7 +32,7 @@ from M87</i>, [2021 ApJ 920 16](https://doi.org/10.3847/1538-4357/ac1672).
 
 9. Gajjar,&nbsp;V., et al. (26&nbsp;authors including <b>Suresh,&nbsp;A.</b>), <i>The Breakthrough Listen Search For Intelligent Life Near the Galactic Center&nbsp;I</i>, [2021 AJ 162 33](https://doi.org/10.3847/1538-3881/abfd36).
 
-### {{< fa person-chalkboard >}} Conference Proceedings
+### {{< fa person-chalkboard >}} Peer-reviewed Conference Proceedings
 
 1. Vaillancourt,&nbsp;P.&nbsp;Z., et al. (9 authors including <b>Suresh,&nbsp;A.</b>), <i>Reproducible and Portable Workflows for Scientific Computing and HPC in the Cloud</i>, [PEARC 2020](https://doi.org/10.1145/3311790.3396659).
 
@@ -36,8 +40,8 @@ from M87</i>, [2021 ApJ 920 16](https://doi.org/10.3847/1538-4357/ac1672).
 
 3. Sharma,&nbsp;R., Oberoi,&nbsp;D., <b>Suresh,&nbsp;A.</b>, & Arjunwardkar,&nbsp;M., <i>Quantifying Weak Non-thermal Meterwave Solar Emission Using Non-imaging Techniques</i>, [IAU Symposium 340, 2018](https://doi.org/10.1017/S1743921318002004).
 
-### {{< fa book-journal-whills >}} Dissertations
+### {{< fa book-journal-whills >}} Dissertations/Theses
 
-1. [PhD thesis:](https://www.proquest.com/openview/f1f1994542a49158f66b814d9b470cf3/1) <b>Suresh,&nbsp;A.</b>, <i>Radio Transient Searches from Millisecond to Hour-long Time Scales</i>, Cornell University, USA, 2023.
+1. [PhD thesis:](https://doi.org/10.7298/wry4-y448) <b>Suresh,&nbsp;A.</b>, <i>Radio Transient Searches from Millisecond to Hour-long Time Scales</i>, Cornell University, USA, 2023.
 
 2. [MS thesis:](http://dr.iiserpune.ac.in:8080/xmlui/handle/123456789/800) <b>Suresh,&nbsp;A.</b>, <i>Investigation of Small Scale Weak Solar Emissions at Low Radio Frequencies</i>, IISER Pune, India, 2017.
