@@ -292,3 +292,24 @@ div.callout-tip.callout {
 div.callout-tip.callout-style-default>.callout-header {
   background-color: rgb(134, 212, 154);
 }
+
+// iFrame settings
+.iframe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%; /* Use a percentage value for responsiveness */
+  max-width: 800px; /* Limit maximum width for larger screens */
+  height: 600px; /* Fixed height for the container */
+  margin: 0 auto;
+  padding-top: 5px; /* 5px padding from the top */
+  padding-bottom: 10px; /* 5px padding from the bottom */  
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgb(239, 191, 191); 
+  margin: 0;
+  padding: 0;
+}

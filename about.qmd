@@ -10,9 +10,11 @@ toc: true
     <!-- Row 1 -->
     <tr>
         <td><b>01/2024 &ndash; Present<b></td>
-        <td>Independent Study & Research<br>
+        <td>Independent Researcher, AI for Climate<br>
             <button class="btn btn-outline-secondary" disabled>Computer Vision</button>
-        </td><br>
+            <button class="btn btn-outline-secondary" disabled>Geospatial Data</button>
+            <button class="btn btn-outline-secondary" disabled>Remote Sensing</button><br>
+        </td>
     </tr>
     <!-- Row 2 -->
     <tr>
@@ -28,8 +30,7 @@ toc: true
     </tr>
     <!-- Row 3 -->
     <tr>
-        <td><b>06/2022 &ndash; 08/2022<b>
-        </td>
+        <td><b>06/2022 &ndash; 08/2022<b></td>
         <td>Machine Learning Researcher, Frontier Development Lab USA<br>
             <a href="../projects/2022_08_31_FDL_CO2/"><i>Time Series Forecast of Earthquake Rates from Underground Carbon Storage</i></a><br>
             <button class="btn btn-outline-secondary" disabled>Time Series Forecasting</button>
@@ -96,12 +97,17 @@ toc: true
         <td><b>Cloud Computing</b></td>
         <td>Google Cloud Platform, Amazon Web Services</td>
     </tr>
-    <!-- Row 5: Operating ststems-->
+    <!-- Row 5: Operating systems-->
     <tr>
         <td><b>Operating Systems<b></td>
         <td>Linux, iOS</td>
     </tr>
-    <!-- Row 6: Other software -->
+    <!-- Row 7: Geospatial Data Processing software -->
+    <tr>
+        <td><b>Geospatial Software<b></td>
+        <td>ArcGIS Pro, QGIS</td>
+    </tr>    
+    <!-- Row 8: Other software -->
     <tr>
         <td><b>Other Software<b></td>
         <td>Microsoft 365 Suite</td>
