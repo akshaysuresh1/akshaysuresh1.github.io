@@ -59,7 +59,7 @@ toc: true
     <tr>
         <td><b>Programming</b></td>
         <td>
-            Python (PyTorch, scikit-learn, numpy, pandas, matplotlib, seaborn, plotly), bash scripting, SQL, $\LaTeX$, HTML
+            Python (PyTorch, scikit-learn, numpy, pandas, geopandas, xarray, matplotlib, seaborn, plotly), bash scripting, SQL, $\LaTeX$, HTML
         </td>
     </tr>
     <!-- Row 2: Machine Learning techniques -->
@@ -180,7 +180,7 @@ toc: true
 </table>
 
 ### {{< fa mountain-sun >}} Recreational Activities
-* I have been an avid cricket fan since my teenage years. When possible, I attempt to experience major cricketing matches live in stadiums worldwide. Attending the World T20 final 2022 at the Melbourne Cricket Ground is most cherished cricketing memory to date.
+* I have been an avid cricket fan since my teenage years. When possible, I attempt to experience major cricketing matches live in stadiums worldwide. Attending the World T20 final 2022 at the Melbourne Cricket Ground is my most cherished cricketing memory to date.
 
 ```{=html}
 <!-- MCG photos in Bootstrap image carousel -->
