@@ -10,7 +10,7 @@ toc: true
     <!-- Row 1 -->
     <tr>
         <td><b>01/2024 &ndash; Present<b></td>
-        <td>Independent Researcher, AI for Climate<br>
+        <td>Freelance Data Scientist, AI for Climate<br>
             <button class="btn btn-outline-secondary" disabled>Computer Vision</button>
             <button class="btn btn-outline-secondary" disabled>Geospatial Data</button>
             <button class="btn btn-outline-secondary" disabled>Remote Sensing</button><br>
@@ -24,7 +24,7 @@ toc: true
             <button class="btn btn-outline-secondary" disabled>Deep Learning</button>
             <button class="btn btn-outline-secondary" disabled>Signal Processing</button>
             <button class="btn btn-outline-secondary" disabled>Python</button>
-            <button class="btn btn-outline-secondary" disabled>Pytorch</button>
+            <button class="btn btn-outline-secondary" disabled>PyTorch</button>
             <button class="btn btn-outline-secondary" disabled>Radio Astronomy</button><br>
         </td>
     </tr>
@@ -35,7 +35,7 @@ toc: true
             <a href="../projects/2022_08_31_FDL_CO2/"><i>Time Series Forecast of Earthquake Rates from Underground Carbon Storage</i></a><br>
             <button class="btn btn-outline-secondary" disabled>Time Series Forecasting</button>
             <button class="btn btn-outline-secondary" disabled>LSTM</button>
-            <button class="btn btn-outline-secondary" disabled>Pytorch</button>
+            <button class="btn btn-outline-secondary" disabled>PyTorch</button>
             <button class="btn btn-outline-secondary" disabled>Teamwork</button>
             <button class="btn btn-outline-secondary" disabled>Climate Adaptation</button><br>
         </td>
@@ -59,7 +59,7 @@ toc: true
     <tr>
         <td><b>Programming</b></td>
         <td>
-            Python (PyTorch, scikit-learn, numpy, pandas, geopandas, xarray, matplotlib, seaborn, plotly), bash scripting, SQL, $\LaTeX$, HTML
+            Python (PyTorch, scikit-learn, NumPy, pandas, geopandas, xarray, matplotlib, seaborn, plotly), bash scripting, SQL, $\LaTeX$, HTML
         </td>
     </tr>
     <!-- Row 2: Machine Learning techniques -->
@@ -165,6 +165,12 @@ toc: true
 
 ### {{< fa certificate >}} Licenses & Certifications
 <table class="table table-borderless w-auto" style="width:100%">
+    <tr>
+        <!-- GIS Vision India: 3-months Advanced GIS and Remote Sensing Course -->
+        <td>05/2024</td>
+        <td><a href="pdfs/AkshaySuresh_GVITraining_certificate.pdf" target="_blank">Advanced GIS and Remote Sensing Certification, GIS Vision India</a>
+        </td>
+    </tr>
     <tr>
         <!-- Erdos Institute Data Visualization Minicourse -->
         <td>04/2023</td>

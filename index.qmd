@@ -1,5 +1,5 @@
 ---
-title: Akshay Suresh
+title: Akshay Suresh, PhD
 image: images/AkshaySuresh_2023_06.jpg
 resources: pdfs/AkshaySuresh_Resume.pdf
 toc: false
@@ -25,16 +25,15 @@ about:
       href: mailto:akshay721@gmail.com
 ---
 
-### AI Researcher | Data Scientist | Freelancer
+### Remote-sensing Data Scientist | AI Researcher 
 ---
 
-Hi there! I am Akshay Suresh. Professionally, I love developing artificial intelligence (AI) algorithms to tackle challenging real-world problems and generate sustainable benefit for humanity. 
+Hi there! I am Akshay Suresh. Presently, I am a freelance data scientist working on projects involving remote sensing and artificial intelligence (AI) for climate impact. In the past, I built and maintained software pipelines to search terabytes of astronomy data for exotic events, including plausible signs of inteligent life beyond the Earth.
 
-Building on my educational training in physics and data science, I am excited to make impactful contributions in the following domains.
+**Major project highlights:**
 
-* AI for climate change
-* AI for healthcare
-* Environment perception algorithms for autonomous vehicles
-* Pioneering safe artificial general intelligence
+* A LiDAR-based evaluation of rooftop solar feasibility, revealing that 53% of homeowners in DeLand, Florida, can save over $1000 annually by transitioning to solar-powered households. 
+* Developing a scalable tool for near real-time forecast of earthquakes induced from underground carbon storage, thereby enabling proactive measures to minimize the seismic hazard.
+* Designing a novel software to detect repeating radar-like transmissions from potential technologically advanced worlds residing in the Milky Way.
 
-Outside of work, I enjoy following cricket, playing board games, and exploring natural wonders. Visit my [About](about.qmd) and [Projects](projects.qmd) pages to hear of my experiences in and beyond the workplace.
+Check out my [About](about.qmd) and [Projects](projects.qmd) pages to learn about my educational background and workplace experiences. I also maintain a [blog](blog.qmd), where I occasionally post about readings that catch my interest. Outside of work, I enjoy following cricket, playing board games, and exploring natural wonders.
