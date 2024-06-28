@@ -28,7 +28,7 @@ about:
 ### Remote-sensing Data Scientist | AI Researcher 
 ---
 
-Hi there! I am Akshay Suresh. Presently, I am a freelance data scientist working on projects involving remote sensing and artificial intelligence (AI) for climate impact. In the past, I built and maintained software pipelines to search terabytes of astronomy data for exotic events, including plausible signs of intelligent life beyond the Earth.
+Hi there! I am Akshay Suresh. Presently, I am a freelance data scientist working on projects involving remote sensing and artificial intelligence (AI) for positive climate impact. In the past, I built and maintained software pipelines to search terabytes of astronomy data for exotic events, including plausible signs of intelligent life beyond the Earth.
 
 **Major project highlights:**
 
