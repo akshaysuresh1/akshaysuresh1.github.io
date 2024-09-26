@@ -10,7 +10,7 @@ toc: true
     <!-- Row 1 -->
     <tr>
         <td><b>01/2024 &ndash; Present<b></td>
-        <td>Freelance Data Scientist, AI for Climate<br>
+        <td>Freelance Data Scientist, AI for Positive Climate Action<br>
             <button class="btn btn-outline-secondary" disabled>Computer Vision</button>
             <button class="btn btn-outline-secondary" disabled>Geospatial Data</button>
             <button class="btn btn-outline-secondary" disabled>Remote Sensing</button><br>
@@ -82,6 +82,7 @@ toc: true
                         <li>$k$-means clustering</li>
                         <li>Gaussian mixture models</li>
                     </ul></li>
+                <li>Reinforcement learning</li>
                 <li>Principal component analysis</li>
                 <li>Batch and stochastic gradient descent, Adam optimization</li>
             </ul>
