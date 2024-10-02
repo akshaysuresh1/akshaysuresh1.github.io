@@ -5,7 +5,7 @@ toc: true
 ---
 ---
 
-### {{< fa user-tie >}} Research Experience
+### {{< fa user-tie >}} Work Experience
 <table class="table table-borderless table-hover w-auto" >
     <!-- Row 1 -->
     <tr>
