@@ -167,6 +167,12 @@ toc: true
 ### {{< fa certificate >}} Licenses & Certifications
 <table class="table table-borderless w-auto" style="width:100%">
     <tr>
+        <!--NPTEL Reinforcement Learning Certification -->
+        <td>11/2024</td>
+        <td><a href="https://archive.nptel.ac.in/content/noc/NOC24/SEM2/Ecertificates/106/noc24-cs102/Course/NPTEL24CS102S55250008003910155.pdf" target="_blank">NPTEL Online Certification (Elite + Gold): Reinforcement Learning </a>
+        </td>
+    </tr>
+    <tr>
         <!-- GIS Vision India: 3-months Advanced GIS and Remote Sensing Course -->
         <td>05/2024</td>
         <td><a href="pdfs/AkshaySuresh_GVITraining_certificate.pdf" target="_blank">Advanced GIS and Remote Sensing Certification, GIS Vision India</a>
