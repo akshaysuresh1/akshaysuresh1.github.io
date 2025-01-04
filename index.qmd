@@ -1,6 +1,6 @@
 ---
 title: Akshay Suresh, PhD
-image: images/AkshaySuresh_2023_06.jpg
+image: images/AkshaySuresh_2025_01.jpg
 resources: pdfs/AkshaySuresh_Resume.pdf
 toc: false
 about: 
@@ -9,7 +9,7 @@ about:
   image-width: 14em
   links:
     - icon: filetype-pdf
-      text: "Resume (last updated: Oct 7, 2024)"
+      text: "Resume (last updated: Jan 3, 2025)"
       href: pdfs/AkshaySuresh_Resume.pdf
     - icon: book
       text: Publications

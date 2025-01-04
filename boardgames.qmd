@@ -28,3 +28,4 @@ toc: false
 * [Top that!](https://boardgamegeek.com/boardgame/189160/top)
 * [Trails](https://boardgamegeek.com/boardgame/338628/trails)
 * [Trash Pandas](https://boardgamegeek.com/boardgame/216439/trash-pandas)
+* [War Chest](https://boardgamegeek.com/boardgame/249259/war-chest)
