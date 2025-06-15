@@ -162,10 +162,8 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 <h1 class="title">Predicting Fertilizer Input for Rice Cultivation in India</h1>
   <div class="quarto-categories">
     <div class="quarto-category">AI for Agriculture</div>
-    <div class="quarto-category">Data Science</div>
     <div class="quarto-category">Geospatial Data Science</div>
-    <div class="quarto-category">Supervised Learning</div>
-    <div class="quarto-category">Unsupervised Learning</div>
+    <div class="quarto-category">Traditional Machine Learning</div>
   </div>
   </div>
 
@@ -235,7 +233,7 @@ Note
 </section>
 <section id="project-workflow" class="level2">
 <h2 class="anchored" data-anchor-id="project-workflow">Project Workflow</h2>
-<p><img class="center-img" src="media/workflow.png" width="75%" alt="Project workflow"></p>
+<p><img class="center-img" src="media/workflow.png" width="75%" alt="Project workflow" style="border: 1px solid black;"></p>
 <div class="figure-caption">
 <p>Project workflow diagram</p>
 </div>
@@ -260,12 +258,12 @@ Note
 <ol type="1">
 <li>Firstly, we grouped districts with similar ecological parameters into clusters. To do so, we experimented with two unsupervised learning approaches, namely, <span class="math inline">\(k\)</span>-means and hierarchical clustering. Both methods favored the grouping of Indian districts into 6 rice cultivation clusters.</li>
 </ol>
-<p><img class="center-img" src="media/clusters.png" width="30%" alt="Clustering results"></p>
+<p><img class="center-img" src="media/clusters.png" width="30%" alt="Clustering results" style="border: 1px solid black;"></p>
 <div class="figure-caption">
 <p>Optimal clustering of Indian districts based on application of hierarchical clustering to our environmental data (temperature, precipitation, wind speed, evapotranspiration). Note that the above map bears some visual resemblance to the <a href="https://en.wikipedia.org/wiki/Climate_of_India#/media/File:Koppen-Geiger_Map_IND_present.svg">Koppen-Geiger climate classification map of India</a>. However, we caution readers against performing meticulous comparisons between these maps as our algorithms additionally incorporate soil-dependent features such as surface runoff and evapotranspiration.</p>
 </div>
 <ol start="2" type="1">
-<li>Over independent clusters, we regressed the historical NPK consumption data against rice yield. Here, we trialed simple linear regression, random forest regression, and support vector regression. <img class="center-img" src="media/svr_results.png" width="75%" alt="Results from support vector regression of historical NPK usage against rice yield"></li>
+<li>Over independent clusters, we regressed the historical NPK consumption data against rice yield. Here, we trialed simple linear regression, random forest regression, and support vector regression. <img class="center-img" src="media/svr_results.png" width="75%" alt="Results from support vector regression of historical NPK usage against rice yield" style="border: 1px solid black;"></li>
 </ol>
 <div class="figure-caption">
 <p>Results from application of support vector regression to cluster&nbsp;1 data. Our fit residuals to the potash data (bottom row) look reasonably flat and structure-free. However, the same cannot be said for our nitrogen (top row) and phosphorous (middle row) fit residuals, possibly hinting at either some confounding variable or some parameter cross-correlations unaccounted for in our analyses.</p>
@@ -277,7 +275,7 @@ Note
 {\rm SMAPE} = \left( \frac{100\%}{N_{\rm observations}} \right) \sum_{\rm observations} \left(\frac{|{\rm True \ value} - {\rm Predicted \ value}|}{(|{\rm True \ value}| + |{\rm Predicted \ value}|)/2} \right)
 \]</span></p>
 <p>For a perfect model (true value = predicted value), <span class="math inline">\({\rm SMAPE} = 0\%\)</span>. Meanwhile, a null prediction (predicted value = 0) entails <span class="math inline">\({\rm SMAPE} = 200\%\)</span>.</p>
-<p><img class="center-img" src="media/smape_performance.png" width="75%" alt="SMAPE results"></p>
+<p><img class="center-img" src="media/smape_performance.png" width="75%" alt="SMAPE results" style="border: 1px solid black;"></p>
 <p>Studying the above SMAPE barplots, we note that support vector regression marginally outperforms other regression models. However, in general, our regression models are not too accurate, yielding median SMAPE values of about 50% for N and P, and nearly 75% for K.</p>
 </section>
 <section id="areas-for-improvement" class="level2">

@@ -9,7 +9,7 @@ about:
   image-width: 14em
   links:
     - icon: filetype-pdf
-      text: "Resume (last updated: Jan 3, 2025)"
+      text: "Resume (last updated: June 15, 2025)"
       href: pdfs/AkshaySuresh_Resume.pdf
     - icon: book
       text: Publications
@@ -25,15 +25,17 @@ about:
       href: mailto:akshay721@gmail.com
 ---
 
-### Data Scientist | AI Researcher 
+### Data Scientist | Machine Learning Engineer 
 ---
 
-Hi there! I am Akshay Suresh. I am a freelance data scientist building artificial intelligence (AI) tools for positive climate impact. In the past, I engineered software pipelines to automate searches of terabytes of astronomy data for exotic events, including plausible signs of intelligent life beyond the Earth.
+I leverage data and artificial intelligence (AI) for positive human and climate impact. In the past, I engineered software pipelines to automate searches of radio astronomy data for time-variable events, including plausible signs of intelligent life beyond the Earth.
 
 **Major project highlights:**
 
-* A LiDAR-based evaluation of rooftop solar feasibility, revealing that 53% of homeowners in DeLand, Florida, can save over $1000 annually by transitioning to solar-powered households. 
-* Developing a scalable tool for near real-time forecast of earthquakes induced from underground carbon storage, thereby enabling proactive measures to minimize the seismic hazard.
-* Designing a novel open-source software to detect repeating radar-like transmissions from potential technologically advanced worlds residing in the Milky Way.
+* Implemented a segmentation model to detect Amazon rainforest cover in satellite imagery with a 97% true positive rate. 
 
-Check out my [About](about.qmd) and [Projects](projects.qmd) pages to learn about my educational background and workplace experiences. I also maintain a [blog](blog.qmd), where I occasionally post about readings that catch my interest. Outside of work, I enjoy following cricket, playing board games, and exploring natural wonders.
+* Evaluated rooftop solar viability through LiDAR data analysis, demonstrating that 53% of homeowners in DeLand, Florida, could save over $1,000 annually by transitioning to solar-powered households.
+
+* Developed a scalable tool for near real-time forecast of earthquakes induced from underground carbon storage, thereby enabling proactive measures to minimize the seismic hazard.
+
+Check out my [About](about.qmd) and [Projects](projects.qmd) pages to learn about my educational background and workplace experiences. I  maintain a [blog](blog.qmd), where I occasionally post about readings that catch my interest. Outside of work, I enjoy following cricket, playing board games, and going out on nature walks.

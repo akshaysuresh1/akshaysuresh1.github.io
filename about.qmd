@@ -13,7 +13,7 @@ toc: true
         <td>Freelance Data Scientist, AI for Positive Climate Action<br>
             <button class="btn btn-outline-secondary" disabled>Computer Vision</button>
             <button class="btn btn-outline-secondary" disabled>Geospatial Data</button>
-            <button class="btn btn-outline-secondary" disabled>Remote Sensing</button><br>
+            <button class="btn btn-outline-secondary" disabled>Time Series Forecasting</button>
         </td>
     </tr>
     <!-- Row 2 -->
@@ -167,6 +167,12 @@ toc: true
 ### {{< fa certificate >}} Licenses & Certifications
 <table class="table table-borderless w-auto" style="width:100%">
     <tr>
+        <!--ML Engineer Certification: AI for Wildfire Spread Prediction in Uttarakhand -->
+        <td>03/2025</td>
+        <td><a href="https://confirm.omdena.com/LCo--qb" target="_blank">Machine Learning Engineer, AI for Wildfire Spread Prediction in Uttarakhand, India (Omdena Dehradun Chapter) </a>
+        </td>
+    </tr>
+    <tr>
         <!--NPTEL Reinforcement Learning Certification -->
         <td>11/2024</td>
         <td><a href="https://archive.nptel.ac.in/content/noc/NOC24/SEM2/Ecertificates/106/noc24-cs102/Course/NPTEL24CS102S55250008003910155.pdf" target="_blank">NPTEL Online Certification (Elite + Gold): Reinforcement Learning </a>
@@ -193,7 +199,7 @@ toc: true
 </table>
 
 ### {{< fa mountain-sun >}} Recreational Activities
-* I have been an avid cricket fan since my teenage years. When possible, I attempt to experience major cricketing matches live in stadiums worldwide. Attending the World T20 final 2022 at the Melbourne Cricket Ground is my most cherished cricketing memory to date.
+* I have been an avid cricket fan since my teenage years. When possible, I attempt to experience major cricketing matches live in stadiums worldwide. My most cherished cricketing memory to date is attending the World T20 final 2022 at the Melbourne Cricket Ground.
 
 ```{=html}
 <!-- MCG photos in Bootstrap image carousel -->
@@ -250,9 +256,9 @@ toc: true
 <br>
 ```
 
-* I enjoy destressing from work through board games and food. [Gameistry Entertainment (Chennai, India)](https://www.gameistry.in/) and [Victory Point Cafe (Berkeley, CA, USA)](https://www.victorypointcafe.com/) are two personal favorite board game destinations. I maintain [here](boardgames.qmd) a list of board games I have played since 2020. Hoping to grow this list further in the coming years!
+* I enjoy destressing from work through board games and food. [Gameistry Entertainment (Chennai, India)](https://www.gameistry.in/) and [Victory Point Cafe (Berkeley, CA, USA)](https://www.victorypointcafe.com/) are two personal favorite board game destinations. I maintain [here](boardgames.qmd) a list of board games I have played since 2020. Hoping to grow this list over time!
 
-* I love taking time out from my schedule to appreciate the Earth's natural wonders. Witnessing the dance of the Aurora Borealis (aka the Northern Lights) in interior Alaska was a dream come true in 2022.
+* I love taking time out of my schedule to appreciate the Earth's natural wonders. A "dream come true" moment for me was witnessing the dance of the Aurora Borealis (aka the Northern Lights) in interior Alaska in 2022.
 ```{=html}
 <!-- Aurora Borealis photos in Bootstrap image carousel -->
 <div id="AuroraCarousel" class="carousel slide mx-auto" style="width:85%">

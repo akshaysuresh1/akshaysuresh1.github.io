@@ -27,7 +27,7 @@ I included a live walkthrough of the dashboard in my [2-minutes project presenta
 - Dropdown menu for selecting a crop of interest. Here, the available menu options are `Rice`, `Wheat`, `Sugarcane`, `Cotton`, and `Groundnut`.
 - Slider to select a year between 1990 and 2017.
 
-<img class="center-img" src="media/screenshot.png" width=75% alt="Dashboard screenshot" >
+<img class="center-img" src="media/screenshot.png" width=75% alt="Dashboard screenshot" style="border: 1px solid black;">
 
 ::: {.figure-caption}
 Screenshot of interactive dashboard
@@ -35,5 +35,5 @@ Screenshot of interactive dashboard
 
 ## Project Workflow
 
-<img class="center-img" src="media/workflow.png" width=75% alt="Application workflow" >
+<img class="center-img" src="media/workflow.png" width=75% alt="Application workflow" style="border: 1px solid black;">
 

@@ -20,7 +20,7 @@ DeLand is a small residential city in central Florida with an estimated populati
 
 ## Data Sources and Methodology
 
-<img class="center-img" src="media/project_workflow.png" width=60% alt="Project workflow" >
+<img class="center-img" src="media/project_workflow.png" width=60% alt="Project workflow"  style="border: 1px solid black;">
 
 **Raw data inputs:** 
 
@@ -47,7 +47,7 @@ solar energy converted into electricity. Meanwhile, the performance ratio quanti
 (@) I show below a map of pixel-level solar insolation estimates, revealing shading effects from nearby trees. South-facing rooftops receive the highest insolation, especially evident from pixels with $\gtrsim 1000$&nbsp;kWh/m$^2$ insolation.
  <br>
 
-<img class="center-img" src="media/solar_insolation.png" width=60% alt="Pixel-level solar insolation map" >
+<img class="center-img" src="media/solar_insolation.png" width=60% alt="Pixel-level solar insolation map" style="border: 1px solid black;">
 
 ::: {.figure-caption}
  Pixel-level solar insolation map. Left insets show zoomed-in views of the right panel for two specific localities. The top left inset demonstrates solar insolation values for a single home surrounded by trees. Evidently, solar insolation values are lower at roof bottoms due to shading from adjacent trees. The bottom left inset shows a collection of homes, where shade from tree cover significantly diminishes solar insolation near the edges of various building rooftops.

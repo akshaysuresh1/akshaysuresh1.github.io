@@ -4,7 +4,7 @@ author: Akshay Suresh
 date: 2022-06-15
 image: media/clusters.png
 description: Home to over 1.38 billion people, India is tackling a severe hunger crisis. Though the country has achieved self-sufficiency in grain production, nearly 14% of the population is still undernourished. India's agricultural landscape is primarily rural, where widespread poverty, low literacy rates, and poor infrastructure lead to questions over its sustainability. Indiscriminate use of fertilizers has led to significant irregularity in crop production despite consistent agricultural subsidies. With the current global shortage of fertilizers, precision farming is vital to eliminate redundant costs and streamline resources to ensure equitable food access for all communities. Here, we assist policy-makers in their decisions through models predicting the fertilizer consumption (nitrogen, phosphorus, and potash) required to obtain specific rice yields in different cultivation environments. 
-categories: [AI for Agriculture, Data Science, Geospatial Data Science, Supervised Learning, Unsupervised Learning]
+categories: [AI for Agriculture, Geospatial Data Science, Traditional Machine Learning]
 ---
 ---
 
@@ -32,7 +32,8 @@ Links to our submitted deliverables are provided in a note near the top of this 
 
 ## Project Workflow
 
-<img class="center-img" src="media/workflow.png" width=75% alt="Project workflow" >
+<img class="center-img" src="media/workflow.png" width=75% alt="Project workflow" 
+style="border: 1px solid black;">
 
 ::: {.figure-caption}
 Project workflow diagram 
@@ -57,14 +58,14 @@ Rice is a hardy crop capable of thriving in a variety of soils, including loams,
 
 1. Firstly, we grouped districts with similar ecological parameters into clusters. To do so, we experimented with two unsupervised learning approaches, namely, $k$-means and hierarchical clustering. Both methods favored the grouping of Indian districts into 6 rice cultivation clusters.
 
-<img class="center-img" src="media/clusters.png" width=30% alt="Clustering results" >
+<img class="center-img" src="media/clusters.png" width=30% alt="Clustering results" style="border: 1px solid black;">
 
 ::: {.figure-caption}
 Optimal clustering of Indian districts based on application of hierarchical clustering to our environmental data (temperature, precipitation, wind speed, evapotranspiration). Note that the above map bears some visual resemblance to the [Koppen-Geiger climate classification map of India](https://en.wikipedia.org/wiki/Climate_of_India#/media/File:Koppen-Geiger_Map_IND_present.svg). However, we caution readers against performing meticulous comparisons between these maps as our algorithms additionally incorporate soil-dependent features such as surface runoff and evapotranspiration. 
 ::: 
 
 2. Over independent clusters, we regressed the historical NPK consumption data against rice yield. Here, we trialed simple linear regression, random forest regression, and support vector regression. 
-<img class="center-img" src="media/svr_results.png" width=75% alt="Results from support vector regression of historical NPK usage against rice yield" >
+<img class="center-img" src="media/svr_results.png" width=75% alt="Results from support vector regression of historical NPK usage against rice yield" style="border: 1px solid black;">
 
 ::: {.figure-caption}
 Results from application of support vector regression to cluster&nbsp;1 data. Our fit residuals to the potash data (bottom row) look reasonably flat and structure-free. However, the same cannot be said for our nitrogen (top row) and phosphorous (middle row) fit residuals, possibly hinting at either some confounding variable or some parameter cross-correlations unaccounted for in our analyses.
@@ -78,7 +79,7 @@ $$
 
 For a perfect model (true value = predicted value), ${\rm SMAPE} = 0\%$. Meanwhile, a null prediction (predicted value = 0) entails ${\rm SMAPE} = 200\%$. 
 
-<img class="center-img" src="media/smape_performance.png" width=75% alt="SMAPE results" >
+<img class="center-img" src="media/smape_performance.png" width=75% alt="SMAPE results" style="border: 1px solid black;">
 
 Studying the above SMAPE barplots, we note that support vector regression marginally outperforms other regression models. However, in general, our regression models are not too accurate, yielding median SMAPE values of about 50% for N and P, and nearly 75% for K.
 

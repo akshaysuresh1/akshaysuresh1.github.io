@@ -4,7 +4,7 @@ author: Akshay Suresh
 date: 2019-12-15
 image: media/layer6_2.png
 description: Radio waves from human technologies frequently interfere with searches for exotic astrophysical phenomena, yielding hordes of false positives in downstream signal detection pipelines. Discerning astronomical signals of interest from a pile of false positives presents a “needle in a haystack” challenge demanding significant human time investment. Implementing interference blocking at telescope sites offers a bypass that shuts out streams of false positives, allowing the creation of clean datasets for scientific exploration. However, the execution of such methods relies on prior knowledge of the diverse structures exhibited by interference signals in radio telescope data. Convolutional neural networks (CNNs) can efficiently capture local structures in images and group related structural shapes into common classification categories. Here, as a proof of principle, we train CNNs of different depths to classify interference signals into one of four categories based on their observed spectrotemporal morphology.
-categories: [Astronomy, Computer Vision, Deep Learning, Supervised Learning]
+categories: [Astronomy, Computer Vision]
 ---
 ---
 
@@ -28,7 +28,8 @@ We generated simulated data for our study to circumvent the need to manually lab
 For each of the above classes, we simulated 1200 images of size 128&nbsp;pixels $\times$ 128&nbsp;pixels. From these, we randomly selected and set aside 200 images per category as validation data. The remaining images (1000 per category) formed our training dataset. 
 
 <img class="center-img" src="media/signal_classes.png" width=65%
-alt="Sample frequency-time images of signals belonging to the ``llbb`` (top left), ``llnb`` (top right), ``slbb`` (bottom left) and ``slnb`` (bottom right) output classes." >
+alt="Sample frequency-time images of signals belonging to the ``llbb`` (top left), ``llnb`` (top right), ``slbb`` (bottom left) and ``slnb`` (bottom right) output classes."  
+style="border: 1px solid black;">
 
 ::: {.figure-caption}
 Sample frequency-time images of signals belonging to the ``llbb`` (top left), ``llnb`` (top right), ``slbb`` (bottom left) and ``slnb`` (bottom right) output classes.
@@ -51,7 +52,7 @@ A neural network is said to be an N-layer network if it contains N layers exclud
 
 Our base network is a 6-layer model whose hidden layers include two convolutional layers, two max-pooling layers, and one fully connected (or dense) layer. We sandwiched [ReLU](https://builtin.com/machine-learning/relu-activation-function) activation functions between our convolutional and max-pooling layers to enable our model to learn non-linear behaviors. Finally, the outputs of our flattened dense layer are normalized to probabilities using a [softmax](https://en.wikipedia.org/wiki/Softmax_function) activation function.
 
-<img class="center-img" src="media/layer6_1.png" width=55% alt="6-layer network" >
+<img class="center-img" src="media/layer6_1.png" width=55% alt="6-layer network" style="border: 1px solid black;">
 
 ::: {.figure-caption}
 Our base 6-layer CNN model
@@ -63,7 +64,7 @@ We built models of greater depth by inserting additional convolutional and max-p
 ## Model Training & Results
 We trained all of our models using the [categorical cross-entropy (CE) loss function](https://www.v7labs.com/blog/cross-entropy-loss-guide) to perform multiclass classification. Further, we uniformly applied the [Adam optimizer](https://arxiv.org/abs/1412.6980) for model backpropagation with an initial learning rate of $10^{-5}$.
 
-<img class="center-img" src="media/accuracy_6to10.png" width=65% alt="Network accuracy curves" >
+<img class="center-img" src="media/accuracy_6to10.png" width=65% alt="Network accuracy curves" style="border: 1px solid black;">
 
 ::: {.figure-caption}
 Accuracy curves for CNN models of different depths (various colors). Dotted and solid curves represent network performances on the training and validation data respectively.
@@ -77,7 +78,7 @@ Training CNNs of increasing depth, we observe a growth in the maximum network ac
 
 1. Our definition of interference signal classes is overly simplistic to allow ready extension to real-world data. Interference signals in radio telescope data often exhibit complex spectrotemporal characteristics that do not fall neatly into any of our predefined output classes. For instance, consider the below sawtooth interference signal (some sort of radar?) seen in data from the [Green Bank Telescope](https://greenbankobservatory.org/science/telescopes/gbt/) in West Viriginia, USA.
 <img class="center-img" src="media/sawtooth_rfi.png" width=45% 
-alt="Sawtooth interference signal detected in data from the Green Bank Telescope" >
+alt="Sawtooth interference signal detected in data from the Green Bank Telescope" style="border: 1px solid black;">
 
 2. Our models do not account for scenarios where multiple signal classes are present in a single frequency-time snippet. For instance, what if a weak astrophysical signal of interest happens to coincide in time with two bright interference signals of different bandwidths?
 - Perhaps multilabel classification is worth an exercise.

@@ -163,8 +163,6 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
   <div class="quarto-categories">
     <div class="quarto-category">Astronomy</div>
     <div class="quarto-category">Computer Vision</div>
-    <div class="quarto-category">Deep Learning</div>
-    <div class="quarto-category">Supervised Learning</div>
   </div>
   </div>
 
@@ -228,7 +226,7 @@ Note
 <li><code>noise</code>: Background Gaussian noise only</li>
 </ul>
 <p>For each of the above classes, we simulated 1200 images of size 128&nbsp;pixels <span class="math inline">\(\times\)</span> 128&nbsp;pixels. From these, we randomly selected and set aside 200 images per category as validation data. The remaining images (1000 per category) formed our training dataset.</p>
-<p><img class="center-img" src="media/signal_classes.png" width="65%" alt="Sample frequency-time images of signals belonging to the ``llbb`` (top left), ``llnb`` (top right), ``slbb`` (bottom left) and ``slnb`` (bottom right) output classes."></p>
+<p><img class="center-img" src="media/signal_classes.png" width="65%" alt="Sample frequency-time images of signals belonging to the ``llbb`` (top left), ``llnb`` (top right), ``slbb`` (bottom left) and ``slnb`` (bottom right) output classes." style="border: 1px solid black;"></p>
 <div class="figure-caption">
 <p>Sample frequency-time images of signals belonging to the <code>llbb</code> (top left), <code>llnb</code> (top right), <code>slbb</code> (bottom left) and <code>slnb</code> (bottom right) output classes.</p>
 </div>
@@ -254,7 +252,7 @@ Naming convention
 </div>
 </div>
 <p>Our base network is a 6-layer model whose hidden layers include two convolutional layers, two max-pooling layers, and one fully connected (or dense) layer. We sandwiched <a href="https://builtin.com/machine-learning/relu-activation-function">ReLU</a> activation functions between our convolutional and max-pooling layers to enable our model to learn non-linear behaviors. Finally, the outputs of our flattened dense layer are normalized to probabilities using a <a href="https://en.wikipedia.org/wiki/Softmax_function">softmax</a> activation function.</p>
-<p><img class="center-img" src="media/layer6_1.png" width="55%" alt="6-layer network"></p>
+<p><img class="center-img" src="media/layer6_1.png" width="55%" alt="6-layer network" style="border: 1px solid black;"></p>
 <div class="figure-caption">
 <p>Our base 6-layer CNN model</p>
 </div>
@@ -263,7 +261,7 @@ Naming convention
 <section id="model-training-results" class="level2">
 <h2 class="anchored" data-anchor-id="model-training-results">Model Training &amp; Results</h2>
 <p>We trained all of our models using the <a href="https://www.v7labs.com/blog/cross-entropy-loss-guide">categorical cross-entropy (CE) loss function</a> to perform multiclass classification. Further, we uniformly applied the <a href="https://arxiv.org/abs/1412.6980">Adam optimizer</a> for model backpropagation with an initial learning rate of <span class="math inline">\(10^{-5}\)</span>.</p>
-<p><img class="center-img" src="media/accuracy_6to10.png" width="65%" alt="Network accuracy curves"></p>
+<p><img class="center-img" src="media/accuracy_6to10.png" width="65%" alt="Network accuracy curves" style="border: 1px solid black;"></p>
 <div class="figure-caption">
 <p>Accuracy curves for CNN models of different depths (various colors). Dotted and solid curves represent network performances on the training and validation data respectively.</p>
 </div>
@@ -273,7 +271,7 @@ Naming convention
 <section id="areas-for-improvement" class="level2">
 <h2 class="anchored" data-anchor-id="areas-for-improvement">Areas for Improvement</h2>
 <ol type="1">
-<li><p>Our definition of interference signal classes is overly simplistic to allow ready extension to real-world data. Interference signals in radio telescope data often exhibit complex spectrotemporal characteristics that do not fall neatly into any of our predefined output classes. For instance, consider the below sawtooth interference signal (some sort of radar?) seen in data from the <a href="https://greenbankobservatory.org/science/telescopes/gbt/">Green Bank Telescope</a> in West Viriginia, USA. <img class="center-img" src="media/sawtooth_rfi.png" width="45%" alt="Sawtooth interference signal detected in data from the Green Bank Telescope"></p></li>
+<li><p>Our definition of interference signal classes is overly simplistic to allow ready extension to real-world data. Interference signals in radio telescope data often exhibit complex spectrotemporal characteristics that do not fall neatly into any of our predefined output classes. For instance, consider the below sawtooth interference signal (some sort of radar?) seen in data from the <a href="https://greenbankobservatory.org/science/telescopes/gbt/">Green Bank Telescope</a> in West Viriginia, USA. <img class="center-img" src="media/sawtooth_rfi.png" width="45%" alt="Sawtooth interference signal detected in data from the Green Bank Telescope" style="border: 1px solid black;"></p></li>
 <li><p>Our models do not account for scenarios where multiple signal classes are present in a single frequency-time snippet. For instance, what if a weak astrophysical signal of interest happens to coincide in time with two bright interference signals of different bandwidths?</p></li>
 </ol>
 <ul>
