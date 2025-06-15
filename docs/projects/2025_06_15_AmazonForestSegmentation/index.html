@@ -253,7 +253,7 @@ Note
 </div>
 <section id="project-workflow" class="level2">
 <h2 class="anchored" data-anchor-id="project-workflow">Project Workflow</h2>
-<p><img class="center-img" src="media/project_workflow.png" width="70%" alt="Project workflow" style="border: 1px solid black;"></p>
+<p><img class="center-img" src="media/project_workflow.png" width="60%" alt="Project workflow" style="border: 1px solid black;"></p>
 </section>
 <section id="data-and-models" class="level2">
 <h2 class="anchored" data-anchor-id="data-and-models">Data and Models</h2>
@@ -305,11 +305,11 @@ Weights &amp; Biases Grid-search Hyperparameter Sweep Settings
 </section>
 <section id="model-training-results" class="level2">
 <h2 class="anchored" data-anchor-id="model-training-results">Model Training Results</h2>
-<p><img class="center-img" src="media/loss_curve.png" width="60%" alt="Loss curve data" style="border: 1px solid black;"></p>
+<p><img class="center-img" src="media/loss_curve.png" width="40%" alt="Loss curve data" style="border: 1px solid black;"></p>
 <div class="figure-caption">
 <p>Loss curves for the training (dashed line) and validation datasets (solid line) for the best performing model from the W&amp;B hyperparameter sweep. The red cross marks the epoch at which the lowest validation loss of <span class="math inline">\(\approx 0.03\)</span> was recorded.</p>
 </div>
-<p><img class="center-img" src="media/val_precision_recall_curve.png" width="60%" alt="Precision-recall curve on validation dataset" style="border: 1px solid black;"></p>
+<p><img class="center-img" src="media/val_precision_recall_curve.png" width="40%" alt="Precision-recall curve on validation dataset" style="border: 1px solid black;"></p>
 <div class="figure-caption">
 <p>Precision-recall curve for the validation data at different binarization thresholds. The goal of a binary semantic segmentation model in this project is to classify each pixel in an input image as either “forest” or “not forest.” The model outputs a probability for every pixel, which is then converted into a label using a chosen threshold.</p>
 <p>The orange star marks the threshold value of 0.35, where the model achieves its highest F1 score. The dotted horizontal line indicates the baseline performance of a model that always predicts “forest” for every pixel in the validation set.</p>
@@ -378,9 +378,22 @@ Performance of the Optimized Model on Validation and Test Datasets
 \end{equation}\]</span> where “NIR” is the near-infrared band and “Red” is the red band of the image.</p>
 <p>NDVI values can range from -1 to +1, where high NDVI values (close to +1) indicate dense, healthy vegetation such as forests. NDVI values around zero correspond to barren areas with little or no vegetation, such as rocks or bare soil. Meanwhile, Negative NDVI values represent surfaces like water, clouds, or snow, which lack vegetation.</p>
 <p>In the plot below, the model accurately identifies regions with NDVI values near +1 as forested areas. The limited precision of <span class="math inline">\(\approx 79\%\)</span> on this sample image arisess primarily from the model mislabeling pixels within large forested areas as “forest”, thereby revealing a tendency to overlook fine granular details within such regions.</p>
-<p><img class="center-img" src="media/image_results.png" width="70%" alt="Model performance on validation image" style="border: 1px solid black;"></p>
+<p><img class="center-img" src="media/image_results.png" width="50%" alt="Model performance on validation image" style="border: 1px solid black;"></p>
 <div class="figure-caption">
 <p>Top left panel: An RGB image from the validation dataset. <br> Top right panel: NDVI of the same image scene. <br> Middle left panel: Ground truth mask with forested areas marked in green. <br> Middle right panel: Ground truth mask overlaid on NDVI image. <br> Bottom left panel: Predicted mask from best performing model configuration. <br> Bottom right panel: Predicted mask overlaid on the NDVI image.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Interested in visualizations of the model predictions for the entire validation and test datasets?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Here is a <a href="https://drive.google.com/drive/folders/1FXKWImrCqdXtTWFVrqiZx0NLHim4K08d?usp=sharing">Google drive folder</a> where one can access all plots for images in the validation and test datasets.</p>
+</div>
 </div>
 </section>
 <section id="frequently-asked-questions" class="level2">

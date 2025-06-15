@@ -18,7 +18,7 @@ categories: [Geospatial Data Science, Computer Vision, AI for Climate]
 
 ## Project Workflow
 
-<img class="center-img" src="media/project_workflow.png" width=70% alt="Project workflow" style="border: 1px solid black;">
+<img class="center-img" src="media/project_workflow.png" width=60% alt="Project workflow" style="border: 1px solid black;">
 
 ## Data and Models
 
@@ -44,13 +44,13 @@ Run log available [here](https://wandb.ai/akshaysuresh1/amazonforest_segmentatio
 
 ## Model Training Results
 
-<img class="center-img" src="media/loss_curve.png" width=60% alt="Loss curve data" style="border: 1px solid black;">
+<img class="center-img" src="media/loss_curve.png" width=40% alt="Loss curve data" style="border: 1px solid black;">
 
 ::: {.figure-caption}
 Loss curves for the training (dashed line) and validation datasets (solid line) for the best performing model from the W&B hyperparameter sweep. The red cross marks the epoch at which the lowest validation loss of $\approx 0.03$ was recorded.
 :::
 
-<img class="center-img" src="media/val_precision_recall_curve.png" width=60% alt="Precision-recall curve on validation dataset" style="border: 1px solid black;">
+<img class="center-img" src="media/val_precision_recall_curve.png" width=40% alt="Precision-recall curve on validation dataset" style="border: 1px solid black;">
 
 ::: {.figure-caption}
 Precision-recall curve for the validation data at different binarization thresholds. The goal of a binary semantic segmentation model in this project is to classify each pixel in an input image as either "forest" or "not forest." The model outputs a probability for every pixel, which is then converted into a label using a chosen threshold.
@@ -83,7 +83,7 @@ NDVI values can range from -1 to +1, where high NDVI values (close to +1) indica
 
 In the plot below, the model accurately identifies regions with NDVI values near +1 as forested areas. The limited precision of $\approx 79\%$ on this sample image arisess primarily from the model mislabeling pixels within large forested areas as "forest", thereby revealing a tendency to overlook fine granular details within such regions.
 
-<img class="center-img" src="media/image_results.png" width=70% alt="Model performance on validation image" style="border: 1px solid black;">
+<img class="center-img" src="media/image_results.png" width=50% alt="Model performance on validation image" style="border: 1px solid black;">
 
 ::: {.figure-caption}
 Top left panel: An RGB image from the validation dataset. <br>
@@ -94,6 +94,10 @@ Bottom left panel: Predicted mask from best performing model configuration. <br>
 Bottom right panel: Predicted mask overlaid on the NDVI image.
 :::
 
+::: {.callout-tip}
+## Interested in visualizations of the model predictions for the entire validation and test datasets?
+Here is a [Google drive folder](https://drive.google.com/drive/folders/1FXKWImrCqdXtTWFVrqiZx0NLHim4K08d?usp=sharing) where one can access all plots for images in the validation and test datasets.
+:::
 
 ## Frequently Asked Questions
 
