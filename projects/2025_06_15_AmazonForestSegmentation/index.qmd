@@ -96,7 +96,7 @@ Bottom right panel: Predicted mask overlaid on the NDVI image.
 
 ::: {.callout-tip}
 ## Interested in visualizations of the model predictions for the entire validation and test datasets?
-Here is a [Google drive folder](https://drive.google.com/drive/folders/1FXKWImrCqdXtTWFVrqiZx0NLHim4K08d?usp=sharing) from where one can access plots for all images in the validation and test datasets.
+Here is a [Google drive folder](https://drive.google.com/drive/folders/1FXKWImrCqdXtTWFVrqiZx0NLHim4K08d?usp=sharing) where one can access plots for all images in the validation and test datasets.
 :::
 
 ## Frequently Asked Questions
