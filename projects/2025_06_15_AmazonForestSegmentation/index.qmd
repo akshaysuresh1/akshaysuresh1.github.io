@@ -143,9 +143,9 @@ Here is a [Google drive folder](https://drive.google.com/drive/folders/1FXKWImrC
 <br>
 ```
 
-**2. How can one access the best-fit model from this project for use in a downstream application?**
+**2. How can one access the best-fit model from this project for use in an external application?**
 
-- Create a W&B account and [API key](https://docs.wandb.ai/support/find_api_key/). Store the created API key in the WANDB_API_KEY environment variable.
+- Sign up for a [Weights & Biases API key](https://docs.wandb.ai/support/find_api_key/). Store the received API key in the `WANDB_API_KEY` environment variable.
 
 - Have `numpy`, `torch`, `wandb`, and `segmentation_models_pytorch` installed in your local Python environment. Preferably, use [uv](https://docs.astral.sh/uv/concepts/projects/dependencies/) to handle package dependencies and resolve version conflicts.
 
@@ -192,4 +192,4 @@ model = Unet(
 state_dict = torch.load(os.path.join(artifact_dir, weights_file), map_location=device)
 model.load_state_dict(state_dict)
 ```
-Your model is now good to go.
+Your model is now ready for deployment.
