@@ -9,14 +9,24 @@ toc: true
 <table class="table table-borderless table-hover w-auto" >
     <!-- Row 1 -->
     <tr>
-        <td><b>01/2024 &ndash; Present<b></td>
-        <td>Freelance Data Scientist, AI for Positive Climate Action<br>
+        <td><b>05/2025 &ndash; 07/2025<b></td>
+        <td>Data Science Fellow, Faculty AI<br>
+        <i>Next-level Hiring: LLM-powered CV Analysis & Candidate Ranking</i><br>
+            <button class="btn btn-outline-secondary" disabled>Prompt Engineering</button>
+            <button class="btn btn-outline-secondary" disabled>Retrieval-augmented Generation</button>
+            <button class="btn btn-outline-secondary" disabled>FastAPI</button>
+        </td>
+    </tr>
+    <!-- Row 2 -->
+    <tr>
+        <td><b>01/2024 &ndash; 04/2025<b></td>
+        <td>Freelance Applied Data Scientist, AI for Positive Human and Climate Impact<br>
             <button class="btn btn-outline-secondary" disabled>Computer Vision</button>
             <button class="btn btn-outline-secondary" disabled>Geospatial Data</button>
             <button class="btn btn-outline-secondary" disabled>Time Series Forecasting</button>
         </td>
     </tr>
-    <!-- Row 2 -->
+    <!-- Row 3 -->
     <tr>
         <td><b>08/2017 &ndash; 08/2023<b></td>
         <td>Graduate Researcher, Cornell University, Ithaca, NY, USA<br>
@@ -28,7 +38,7 @@ toc: true
             <button class="btn btn-outline-secondary" disabled>Radio Astronomy</button><br>
         </td>
     </tr>
-    <!-- Row 3 -->
+    <!-- Row 4 -->
     <tr>
         <td><b>06/2022 &ndash; 08/2022<b></td>
         <td>Machine Learning Researcher, Frontier Development Lab USA<br>
@@ -40,7 +50,7 @@ toc: true
             <button class="btn btn-outline-secondary" disabled>Climate Adaptation</button><br>
         </td>
     </tr>
-    <!-- Row 4 -->
+    <!-- Row 5 -->
     <tr>
         <td><b>09/2021 &ndash; 06/2022<b></td>
         <td>Visiting Researcher, University of California, Berkeley, USA<br>
@@ -91,8 +101,24 @@ toc: true
     <!-- Row 3: Software engineering skills -->
     <tr>
         <td><b>Software Engineering<b></td>
-        <td>Production code development, high performance computing</td>
-    </tr>    
+        <td>
+            <ul>
+                <li>Production code development</li>
+                <li>High-performance computing</li>
+                <li>Dagster (data orchestration)</li>
+                <li>Continuous Integration / Continuous Delivery (CI/CD) tools:
+                <ul class="a">
+                    <li>CircleCI</li>
+                    <li>GitHub Actions</li>
+                </ul></li>
+                <li>Model delpoyment tools:
+                <ul class="a">
+                    <li>Weights & Biases</li>
+                    <li>FastAPI</li>
+                </ul></li>         
+            </ul>
+        </td>   
+    </tr> 
     <!-- Row 4: Cloud computing experience-->
     <tr>
         <td><b>Cloud Computing</b></td>
