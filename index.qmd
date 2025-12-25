@@ -9,11 +9,14 @@ about:
   image-width: 14em
   links:
     - icon: filetype-pdf
-      text: "Resume (last updated: July 27, 2025)"
+      text: "Resume (last updated: December 25, 2025)"
       href: pdfs/AkshaySuresh_Resume.pdf
     - icon: book
       text: Publications
       href: publications.qmd
+    - icon: award
+      text: Awards & Honors
+      href: awards.qmd
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/akshaysureshas1
@@ -32,7 +35,7 @@ I leverage data and artificial intelligence (AI) for positive human and climate 
 
 **Major project highlights:**
 
-* Orchestrated test-driven software development of a segmentation model to detect Amazon rainforest cover in satellite imagery with a 97% true positive rate. 
+* Led test-driven software development of a segmentation model to detect Amazon rainforest cover in satellite imagery, eliminating up to 15 hours of tedious manual processing per week. 
 
 * Evaluated rooftop solar viability through LiDAR data analysis, demonstrating that 53% of homeowners in DeLand, Florida, could save over $1,000 annually by transitioning to solar-powered households.
 

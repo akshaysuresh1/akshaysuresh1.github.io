@@ -4,7 +4,7 @@ author: Akshay Suresh
 date: 2023-06-01
 image: media/artificial_pulsar.jpg
 description: The Search for Extraterrestrial Intelligence (SETI) endeavors to find evidence of advanced alien life in the Universe through signatures of their technologies. Historically, SETI programs have focused mainly on the discovery and follow-up of one-off narrowband ($\sim$&nbsp;1&nbsp;Hz bandwidth), hard-to-explain events. In contrast, repeating broadband signals analogous to radar offer an energy-efficient mode of signal transmission detectable across vast interstellar distances. Here, we released an open-source CPU-based Python package <i>blipss</i> to enable frequent SETI explorations for repeating signals. Our software detects the uniform spacing between a sequence of pulses using the fast folding algorithm, a phase-folding technique first proposed by David H.&nbsp;Staelin in 1969.
-categories: [Astronomy, Production Code Development]
+categories: [Astronomy, Open-source Code Development]
 ---
 ---
 

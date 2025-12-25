@@ -1,0 +1,16 @@
+---
+title: "Awards & Honors"
+toc: true
+---
+---
+
+
+| **Year / Institution** | **Award & Description** |
+|:------------------------|:--------------------------|
+| **2022**<br>*Frontier Development Lab (FDL), USA* | **Most Useful Contribution Award**<br>Recognized for work voted as having the greatest positive impact for humanity at FDL 2022.<br>Awarded to the *Geomechanics for CO₂ Sequestration* team, where I contributed as a machine learning researcher. |
+| **2019**<br>*Department of Astronomy, Cornell University* | **Cranson & Edna B. Shelley Outstanding Teaching Assistant Award**<br>Honored for exemplary organizational and leadership skills as Head Teaching Assistant (Fall 2018).<br>Responsibilities included assisting the course instructor with syllabus design, coordinating TA schedules, leading discussion sessions, managing exams, and providing student support. |
+| **2017**<br>*IISER Pune* | **Institute Gold Medal**<br>Awarded for achieving the highest GPA among the 2017 BS–MS graduating cohort. |
+| **2016**<br>*American Geophysical Union (AGU)* | **Outstanding Student Paper Award (OSPA), Space Physics & Aeronomy**<br>Recognized at the AGU Fall Meeting for excellence in research and scientific communication. |
+| **2015**<br>*DAAD–WISE Program* | **DAAD–WISE Scholarship**<br>Selected by the German Academic Exchange Service to conduct research at the Max Planck Institute for Extraterrestrial Physics, Munich. |
+| **2013**<br>*Homi Bhabha Centre for Science Education (TIFR), Mumbai* | **NIUS–Physics Fellowship**<br>Awarded under the National Initiative on Undergraduate Science for advanced research training and mentorship in physics. |
+| **2012–2017**<br>*Government of India* | **KVPY Fellowship**<br>Prestigious national fellowship supporting highly motivated students with strong aptitude for research in basic sciences. |

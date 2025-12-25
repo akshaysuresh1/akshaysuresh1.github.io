@@ -4,7 +4,7 @@ author: Akshay Suresh
 date: 2022-08-31
 image: media/seismic_concern.png
 description: Carbon sequestration involves capturing CO$_2$ from factories or directly from the air and storing it underground as a supercritical fluid. Geologic carbon capture and storage is required to meet global carbon neutrality goals, with over 30&nbsp;gigatons of CO$_2$ storage needed in the US alone by 2050. However, subsurface carbon storage comes with a catch. One may artificially induce earthquakes by injecting CO$_2$ (or any fluid) underground. Seismicity forecasts help safeguard public trust in carbon sequestration plants by informing the pace of fluid injections to minimize the associated seismic hazard. Here, leveraging numerical computing best practices and state-of-the-art time series analysis tools, we built an accessible, streamlined version of an existing physics-based earthquake forecasting model to enable near real-time accurate seismicity forecasts for safe commercial sequestration operations.
-categories: [AI for Climate, Physics-informed AI, Time Series Forecasting]
+categories: [AI for Climate, Time Series Forecasting]
 ---
 ---
 

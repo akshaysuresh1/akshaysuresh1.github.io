@@ -55,7 +55,7 @@ Loss curves for the training (dashed line) and validation datasets (solid line) 
 ::: {.figure-caption}
 Precision-recall curve for the validation data at different binarization thresholds. The goal of a binary semantic segmentation model in this project is to classify each pixel in an input image as either "forest" or "not forest." The model outputs a probability for every pixel, which is then converted into a label using a chosen threshold.
 
-The orange star marks the threshold value of 0.35, where the model achieves its highest F1 score. The dotted horizontal line indicates the baseline performance of a model that always predicts "forest" for every pixel in the validation set.
+The orange star marks the threshold value of 0.35, where the model achieves its highest F1 score. The dotted horizontal line indicates the baseline precision of a model that always predicts "forest" for every pixel in the validation set. The recall for such a baseline equals 1.
 :::
 
 ## Model Performance Analysis
