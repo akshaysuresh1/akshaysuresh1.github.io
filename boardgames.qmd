@@ -18,6 +18,7 @@ toc: false
 * [Fluxx](https://boardgamegeek.com/boardgame/314413/fluxx)
 * [Imhotep](https://boardgamegeek.com/boardgame/191862/imhotep)
 * [Lanterns: The Harvest Festival](https://boardgamegeek.com/boardgame/160851/lanterns-harvest-festival)
+* [Lost Ruins of Arnak](https://boardgamegeek.com/boardgame/312484/lost-ruins-of-arnak)
 * [Modern Art](https://boardgamegeek.com/boardgame/118/modern-art)
 * [Perudo](https://boardgamegeek.com/boardgame/45/perudo)
 * [Potion Explosion](https://boardgamegeek.com/boardgame/180974/potion-explosion)
