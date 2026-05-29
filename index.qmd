@@ -1,16 +1,12 @@
 ---
 title: Akshay Suresh
 image: images/AkshaySuresh_2025_07.png
-resources: pdfs/AkshaySuresh_Resume.pdf
 toc: false
 about: 
   template: trestles
   image-shape: round
   image-width: 14em
   links:
-    - icon: filetype-pdf
-      text: "Resume (last updated: December 25, 2025)"
-      href: pdfs/AkshaySuresh_Resume.pdf
     - icon: book
       text: Publications
       href: publications.qmd
@@ -28,17 +24,17 @@ about:
       href: mailto:akshay721@gmail.com
 ---
 
-### Data Scientist | Machine Learning Engineer 
+### Machine Learning Researcher | Computer Vision, GeoAI & Physics | Astronomy PhD
 ---
 
-I leverage data and artificial intelligence (AI) for positive human and climate impact. In the past, I engineered software pipelines to automate searches of radio astronomy data for time-variable events, including plausible signs of intelligent life beyond the Earth.
+I am a physicist building AI and signal processing systems that accelerate scientific discovery, from searching terabytes of astronomy data for signs of life beyond the Earth to shipping production geospatial foundation models for climate action. I combine the academic rigor of a scientist with the execution focus of an engineer, having shipped production ML systems at leading AI startups in London.
 
-**Major project highlights:**
+**Project highlights:**
 
-* Led test-driven software development of a segmentation model to detect Amazon rainforest cover in satellite imagery, eliminating up to 15 hours of tedious manual processing per week. 
+* Led the [test-driven development of a segmentation model to detect Amazon rainforest cover in satellite imagery](https://akshaysuresh1.com/projects/2025_06_15_AmazonForestSegmentation), eliminating up to 15&nbsp;hours of tedious manual data labeling per week.
 
-* Evaluated rooftop solar viability through LiDAR data analysis, demonstrating that 53% of homeowners in DeLand, Florida, could save over $1,000 annually by transitioning to solar-powered households.
+* Built [BLIPSS](https://akshaysuresh1.com/projects/2023_06_01_blipss/), a novel open-source signal processing software to search for radar-like transmissions from about 600,000 planetary systems in the Milky Way.
 
-* Developed a scalable tool for near real-time forecast of earthquakes induced from underground carbon storage, thereby enabling proactive measures to minimize the seismic hazard.
+* Developed a [scalable tool for near real-time forecasts of earthquake counts from underground carbon storage](https://akshaysuresh1.com/projects/2022_08_31_FDL_CO2/), enabling proactive seismic hazard mitigation.
 
 Check out my [About](about.qmd) and [Projects](projects.qmd) pages to learn about my educational background and workplace experiences. I  maintain a [blog](blog.qmd), where I occasionally post about readings that catch my interest. Outside of work, I enjoy following cricket, playing board games, and going out on nature walks.

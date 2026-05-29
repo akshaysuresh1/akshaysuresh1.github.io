@@ -39,7 +39,7 @@ style="border: 1px solid black;">
 Project workflow diagram 
 ::: 
 
-**Objective:** Predict mean NPK (nitrogen, phosophorous and potash) fertilizer inputs to achieve specific rice yields in different cultivation environments across India.
+**Objective:** Predict mean NPK (nitrogen, phosphorous and potash) fertilizer inputs to achieve specific rice yields in different cultivation environments across India.
 
 **Target stakeholders:** Agriculture policy makers in India
 

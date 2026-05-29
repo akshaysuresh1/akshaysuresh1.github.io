@@ -96,7 +96,7 @@ Consider targets $\{y_i\}_{i=1}^n$ and model predictions $\{\widehat{y_i}\}_{i=1
 & \mathrm{Annual \ average \ unit \mbox{-} level \ power \ generation}.
 \end{align}
 
-The annual average CO$_2$ emissions of a power plant are finally obtained through a weighted sum of emissions estimates from its constitutent NDT and FGD units. 
+The annual average CO$_2$ emissions of a power plant are finally obtained through a weighted sum of emissions estimates from its constituent NDT and FGD units. 
 
 
 ## Key Results

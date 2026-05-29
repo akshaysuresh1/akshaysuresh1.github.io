@@ -201,8 +201,17 @@ footer {
    
 }
 
+// trestles panel widths (landing page)
+.about-entity {
+  flex: 0 0 30% !important;
+}
+
+.about-contents {
+  flex: 1 1 70% !important;
+}
+
 // button text size (landing page)
-.about-link-text { 
+.about-link-text {
   font-size: 18px;
 }
 
@@ -310,7 +319,36 @@ div.callout-tip.callout-style-default>.callout-header {
 iframe {
   width: 100%;
   height: 100%;
-  border: 2px solid rgb(239, 191, 191); 
+  border: 2px solid rgb(239, 191, 191);
   margin: 0;
   padding: 0;
 }
+
+// Compact work-experience list
+.exp-list { padding: 0; }
+.exp-entry {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid $gray;
+}
+.exp-entry:last-child { border-bottom: none; }
+.exp-header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+.exp-role  { font-weight: 700; }
+.exp-org   { color: $dim-gray; font-size: 0.88em; }
+.exp-date  { margin-left: auto; color: $dim-gray; font-size: 0.82em; font-weight: 600; white-space: nowrap; }
+.exp-desc  { font-size: 0.85em; display: block; margin-top: 0.1rem; }
+.exp-links { font-size: 0.82em; margin-top: 0.1rem; }
+.exp-tags  { margin-top: 0.2rem; }
+.exp-tags .btn {
+  font-size: 0.72em;
+  padding: 0.1rem 0.45rem;
+  margin: 0.05rem;
+}
+
+// Employment-type badge palette (industry = muted steel-blue, academic = dark-sage-green)
+.badge.emp-industry  { background-color: #6E8FAD;         color: #fff; font-size: 0.72em; }
+.badge.emp-academic  { background-color: $dark-sage-green; color: #fff; font-size: 0.72em; }

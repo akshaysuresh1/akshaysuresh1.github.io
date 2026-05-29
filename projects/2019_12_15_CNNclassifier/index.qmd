@@ -76,7 +76,7 @@ Training CNNs of increasing depth, we observe a growth in the maximum network ac
 
 ## Areas for Improvement
 
-1. Our definition of interference signal classes is overly simplistic to allow ready extension to real-world data. Interference signals in radio telescope data often exhibit complex spectrotemporal characteristics that do not fall neatly into any of our predefined output classes. For instance, consider the below sawtooth interference signal (some sort of radar?) seen in data from the [Green Bank Telescope](https://greenbankobservatory.org/science/telescopes/gbt/) in West Viriginia, USA.
+1. Our definition of interference signal classes is overly simplistic to allow ready extension to real-world data. Interference signals in radio telescope data often exhibit complex spectrotemporal characteristics that do not fall neatly into any of our predefined output classes. For instance, consider the below sawtooth interference signal (some sort of radar?) seen in data from the [Green Bank Telescope](https://greenbankobservatory.org/science/telescopes/gbt/) in West Virginia, USA.
 <img class="center-img" src="media/sawtooth_rfi.png" width=45% 
 alt="Sawtooth interference signal detected in data from the Green Bank Telescope" style="border: 1px solid black;">
 
