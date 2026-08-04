@@ -107,8 +107,22 @@ gtag('js', new Date());
 gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <meta property="og:title" content="Semantic Segmentation of Amazon Rainforest Cover in Sentinel-2 Satellite Imagery">
 <meta property="og:description" content="The integration of artificial intelligence and remote sensing is transforming forest mapping, enabling automated image segmentation, land cover classification, and change detection at unprecedented scales. The Amazon rainforest, a vital global carbon sink, is under increasing threat from rising temperatures, prolonged droughts, deforestation, and wildfires. Timely, accurate monitoring of forest cover is critical for detecting changes and guiding ecosystem conservation efforts. In this project, I built a U-net model to segment Amazon rainforest cover in 10 m resolution Sentinel-2 satellite imagery (4 color channels – red, green, blue, near-infrared). My model achieves a 97% true positive rate in detecting “forest” pixels, thereby offering reliable rainforest surveying for users. This solution can be integrated into real-time monitoring platforms, providing conservation organizations and policymakers with actionable insights to support rapid response and long-term planning for Amazon biome preservation.">
@@ -257,7 +271,7 @@ Note
 </section>
 <section id="data-and-models" class="level2">
 <h2 class="anchored" data-anchor-id="data-and-models">Data and Models</h2>
-<p><strong>Data source:</strong> <a href="https://zenodo.org/records/4498086">Bragagnolo, L., da Silva, R. V., &amp; Grzybowski, J. M. V. (2021)</a> dataset of 512&nbsp;<span class="math inline">\(\times\)</span>&nbsp;512&nbsp;pixel Sentinel-2 GeoTIFF images covering the Amazon rainforest basin. Each GeoTiff file contains four spectral channels—red, green, blue, and near-infrared—corresponding to <a href="https://custom-scripts.sentinel-hub.com/custom-scripts/sentinel-2/bands/">Sentinel-2 bands 4, 3, 2, and 8</a> respectively. The complete collection comprises 619 images, divided into training (499), validation (100), and test (20) subsets.</p>
+<p><strong>Data source:</strong> <a href="https://zenodo.org/records/4498086">Bragagnolo, L., da Silva, R. V., &amp; Grzybowski, J. M. V. (2021)</a> dataset of 512&nbsp;<span class="math inline">\times</span>&nbsp;512&nbsp;pixel Sentinel-2 GeoTIFF images covering the Amazon rainforest basin. Each GeoTiff file contains four spectral channels—red, green, blue, and near-infrared—corresponding to <a href="https://custom-scripts.sentinel-hub.com/custom-scripts/sentinel-2/bands/">Sentinel-2 bands 4, 3, 2, and 8</a> respectively. The complete collection comprises 619 images, divided into training (499), validation (100), and test (20) subsets.</p>
 <p><strong>U-Net architecture and training:</strong> U-Net, introduced by <a href="https://arxiv.org/abs/1505.04597">Ronneberger, O., Fischer, P., &amp; Brox, T. (2015)</a>, is a fully convolutional neural network widely used for biomedical image segmentation. Its architecture features two main components: an encoder (contracting path) and a decoder (expanding path). The encoder extracts increasingly abstract features at multiple spatial scales, capturing the context of the input image. The decoder then reconstructs the spatial resolution of these feature maps, enabling precise pixel-level classification by mapping them back to the original image size.</p>
 <p>For this project, I used a U-Net model whose encoder was frozen with weights pretrained on ImageNet. The decoder was initialized with random weights. During training, I optimized the decoder using batch gradient descent with the AdamW optimizer. Model performance was monitored using the Dice loss on the validation dataset, and training was stopped early if no improvement in the validation loss was observed for five consecutive epochs. This approach helped prevent overfitting and ensured efficient model convergence.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -289,7 +303,7 @@ Weights &amp; Biases Grid-search Hyperparameter Sweep Settings
 </tr>
 <tr class="odd">
 <td style="text-align: center;">Initial learning rate</td>
-<td style="text-align: center;"><span class="math inline">\(10^{-4}\)</span></td>
+<td style="text-align: center;"><span class="math inline">10^{-4}</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">Maximum no. of epochs</td>
@@ -307,7 +321,7 @@ Weights &amp; Biases Grid-search Hyperparameter Sweep Settings
 <h2 class="anchored" data-anchor-id="model-training-results">Model Training Results</h2>
 <p><img class="center-img" src="media/loss_curve.png" width="40%" alt="Loss curve data" style="border: 1px solid black;"></p>
 <div class="figure-caption">
-<p>Loss curves for the training (dashed line) and validation datasets (solid line) for the best performing model from the W&amp;B hyperparameter sweep. The red cross marks the epoch at which the lowest validation loss of <span class="math inline">\(\approx 0.03\)</span> was recorded.</p>
+<p>Loss curves for the training (dashed line) and validation datasets (solid line) for the best performing model from the W&amp;B hyperparameter sweep. The red cross marks the epoch at which the lowest validation loss of <span class="math inline">\approx 0.03</span> was recorded.</p>
 </div>
 <p><img class="center-img" src="media/val_precision_recall_curve.png" width="40%" alt="Precision-recall curve on validation dataset" style="border: 1px solid black;"></p>
 <div class="figure-caption">
@@ -373,11 +387,11 @@ Performance of the Optimized Model on Validation and Test Datasets
 </div>
 </div>
 <p><br> Below is a sample plot that demonstrates the model’s performance on an image from the validation dataset.</p>
-<p>The <a href="https://gisgeography.com/ndvi-normalized-difference-vegetation-index/">Normalized Difference Vegetation Index</a> (NDVI) is a widely used metric for assessing vegetation health and density. It is calculated using the formula: <span class="math display">\[\begin{equation}
+<p>The <a href="https://gisgeography.com/ndvi-normalized-difference-vegetation-index/">Normalized Difference Vegetation Index</a> (NDVI) is a widely used metric for assessing vegetation health and density. It is calculated using the formula: <span class="math display">\begin{equation}
 \mathrm{NDVI} = \frac{\mathrm{NIR}−\mathrm{Red}}{\mathrm{NIR} + \mathrm{Red}},
-\end{equation}\]</span> where “NIR” is the near-infrared band and “Red” is the red band of the image.</p>
+\end{equation}</span> where “NIR” is the near-infrared band and “Red” is the red band of the image.</p>
 <p>NDVI values can range from -1 to +1, where high NDVI values (close to +1) indicate dense, healthy vegetation such as forests. NDVI values around zero correspond to barren areas with little or no vegetation, such as rocks or bare soil. Meanwhile, Negative NDVI values represent surfaces like water, clouds, or snow, which lack vegetation.</p>
-<p>In the plot below, the model accurately identifies regions with NDVI values near +1 as forested areas. The limited precision of <span class="math inline">\(\approx 79\%\)</span> on this sample image arises primarily from the model mislabeling pixels within large forested areas as “forest”, thereby revealing a tendency to overlook fine granular details within such regions.</p>
+<p>In the plot below, the model accurately identifies regions with NDVI values near +1 as forested areas. The limited precision of <span class="math inline">\approx 79\%</span> on this sample image arises primarily from the model mislabeling pixels within large forested areas as “forest”, thereby revealing a tendency to overlook fine granular details within such regions.</p>
 <p><img class="center-img" src="media/image_results.png" width="50%" alt="Model performance on validation image" style="border: 1px solid black;"></p>
 <div class="figure-caption">
 <p>Top left panel: An RGB image from the validation dataset. <br> Top right panel: NDVI of the same image scene. <br> Middle left panel: Ground truth mask with forested areas marked in green. <br> Middle right panel: Ground truth mask overlaid on NDVI image. <br> Bottom left panel: Predicted mask from best performing model configuration. <br> Bottom right panel: Predicted mask overlaid on the NDVI image.</p>

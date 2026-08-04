@@ -73,8 +73,22 @@ gtag('js', new Date());
 gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <meta property="og:title" content="Predicting Fertilizer Input for Rice Cultivation in India">
 <meta property="og:description" content="Home to over 1.38 billion people, India is tackling a severe hunger crisis. Though the country has achieved self-sufficiency in grain production, nearly 14% of the population is still undernourished. India’s agricultural landscape is primarily rural, where widespread poverty, low literacy rates, and poor infrastructure lead to questions over its sustainability. Indiscriminate use of fertilizers has led to significant irregularity in crop production despite consistent agricultural subsidies. With the current global shortage of fertilizers, precision farming is vital to eliminate redundant costs and streamline resources to ensure equitable food access for all communities. Here, we assist policy-makers in their decisions through models predicting the fertilizer consumption (nitrogen, phosphorus, and potash) required to obtain specific rice yields in different cultivation environments.">
@@ -216,7 +230,7 @@ Note
 <li><strong>Executive summary:</strong> <a href="https://raw.githubusercontent.com/akshaysuresh1/may22-barrel/main/media/May22-barrel_execsummary.pdf">PDF</a></li>
 <li><strong>Programming language:</strong> Python (numpy, pandas, scikit-learn, geopandas, matplotlib seaborn)</li>
 <li><strong>Supervised machine learning (ML) techniques:</strong> Linear regression, random forest, support vector machine</li>
-<li><strong>Unsupervised ML algorithms</strong>: <span class="math inline">\(k\)</span>-means clustering, hierarchical clustering</li>
+<li><strong>Unsupervised ML algorithms</strong>: <span class="math inline">k</span>-means clustering, hierarchical clustering</li>
 </ul>
 </div>
 </div>
@@ -256,7 +270,7 @@ Note
 <h2 class="anchored" data-anchor-id="modeling-and-results">Modeling and Results</h2>
 <p>Rice is a hardy crop capable of thriving in a variety of soils, including loams, silts, and gravel. Collating up to 26 years of district-level rice cultivation (cropped area, yield, irrigated area) and environment data (temperature, precipitation, wind speed, evapotranspiration), our analysis involved three steps.</p>
 <ol type="1">
-<li>Firstly, we grouped districts with similar ecological parameters into clusters. To do so, we experimented with two unsupervised learning approaches, namely, <span class="math inline">\(k\)</span>-means and hierarchical clustering. Both methods favored the grouping of Indian districts into 6 rice cultivation clusters.</li>
+<li>Firstly, we grouped districts with similar ecological parameters into clusters. To do so, we experimented with two unsupervised learning approaches, namely, <span class="math inline">k</span>-means and hierarchical clustering. Both methods favored the grouping of Indian districts into 6 rice cultivation clusters.</li>
 </ol>
 <p><img class="center-img" src="media/clusters.png" width="30%" alt="Clustering results" style="border: 1px solid black;"></p>
 <div class="figure-caption">
@@ -271,10 +285,10 @@ Note
 <ol start="3" type="1">
 <li>The <a href="https://en.wikipedia.org/wiki/Symmetric_mean_absolute_percentage_error">symmetric mean absolute percent error (SMAPE)</a> offers a convenient difference-based relative measure for comparing model performances across clusters with unequal numbers of data points.</li>
 </ol>
-<p><span class="math display">\[
+<p><span class="math display">
 {\rm SMAPE} = \left( \frac{100\%}{N_{\rm observations}} \right) \sum_{\rm observations} \left(\frac{|{\rm True \ value} - {\rm Predicted \ value}|}{(|{\rm True \ value}| + |{\rm Predicted \ value}|)/2} \right)
-\]</span></p>
-<p>For a perfect model (true value = predicted value), <span class="math inline">\({\rm SMAPE} = 0\%\)</span>. Meanwhile, a null prediction (predicted value = 0) entails <span class="math inline">\({\rm SMAPE} = 200\%\)</span>.</p>
+</span></p>
+<p>For a perfect model (true value = predicted value), <span class="math inline">{\rm SMAPE} = 0\%</span>. Meanwhile, a null prediction (predicted value = 0) entails <span class="math inline">{\rm SMAPE} = 200\%</span>.</p>
 <p><img class="center-img" src="media/smape_performance.png" width="75%" alt="SMAPE results" style="border: 1px solid black;"></p>
 <p>Studying the above SMAPE barplots, we note that support vector regression marginally outperforms other regression models. However, in general, our regression models are not too accurate, yielding median SMAPE values of about 50% for N and P, and nearly 75% for K.</p>
 </section>

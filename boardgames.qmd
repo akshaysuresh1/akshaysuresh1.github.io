@@ -16,6 +16,7 @@ toc: false
 * [Coup](https://boardgamegeek.com/boardgame/131357/coup)
 * [Dragonwood](https://boardgamegeek.com/boardgame/172933/dragonwood)
 * [Exploding Kittens](https://boardgamegeek.com/boardgame/172225/exploding-kittens)
+* [Formula D](https://boardgamegeek.com/boardgame/37904/formula-d)
 * [Fluxx](https://boardgamegeek.com/boardgame/314413/fluxx)
 * [Imhotep](https://boardgamegeek.com/boardgame/191862/imhotep)
 * [Lanterns: The Harvest Festival](https://boardgamegeek.com/boardgame/160851/lanterns-harvest-festival)

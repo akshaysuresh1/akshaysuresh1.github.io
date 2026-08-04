@@ -7,7 +7,7 @@ toc: true
 
 ### {{< fa newspaper >}} Technical Memo (AI for Climate)
 
-1. Castiglione,&nbsp;G., Chen,&nbsp;A., <b>Suresh,&nbsp;A.</b>, Xiao,&nbsp;H., Kroll,&nbsp;K., Sherman,&nbsp;C., & Weisser,&nbsp;C., <i>Geomechanics for CO$_2$ Sequestration</i>, [Frontier Development Lab USA 2022 Technical Results and Findings, pp. 210--226](https://www.calameo.com/read/0055032805743f9fd8bf6).
+1. Castiglione,&nbsp;G., Chen,&nbsp;A., <b>Suresh,&nbsp;A.</b>, Xiao,&nbsp;H., Kroll,&nbsp;K., Sherman,&nbsp;C., & Weisser,&nbsp;C., <i>Geomechanics for CO$_2$ Sequestration</i>, [Frontier Development Lab USA 2022 Technical Results and Findings, pp. 210--226](https://www.calameo.com/read/005503280ea58461854fe).
 
 ### {{< fa receipt >}} Refereed Journal Articles
 

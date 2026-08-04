@@ -73,8 +73,22 @@ gtag('js', new Date());
 gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <meta property="og:title" content="Scientific Discovery in the Age of Artificial Intelligence">
 <meta property="og:description" content="AI techniques, with their power to accelerate scientific discovery, are becoming increasingly integrated into all stages of scientific research, including hypothesis testing, data annotation, system modeling, and insight generation. This paper reviews key scientific breakthroughs from the past decade in the application of AI for science. Here, I touch upon a selection of AI advancements that are of specific interest to me.">
@@ -278,7 +292,7 @@ Resources on Neural Operators and Their Applications
 <li>A scalar reward signal (specifies the goal)</li>
 <li>An agent comprising necessarily of an agent state and a policy (mapping from agent states to actions).</li>
 </ul>
-<p>At every time step <span class="math inline">\(t\)</span>, the agent makes an observation of the environment and perceives a reward (or a penalty). Based on the instantaneous reward, the agent estimates its rewards into the future and decides its next action based on an internal policy. By defining AI policies that maximize rewards in the direction of increased fit between model parameters and the data, RL can drive systems towards optimal solutions. Further, by introducing inductive biases in AI policies, one can incorporate prior scientific knowledge to steer searches towards realistically feasible solutions, thereby enhancing model trust and interpretability.</p>
+<p>At every time step <span class="math inline">t</span>, the agent makes an observation of the environment and perceives a reward (or a penalty). Based on the instantaneous reward, the agent estimates its rewards into the future and decides its next action based on an internal policy. By defining AI policies that maximize rewards in the direction of increased fit between model parameters and the data, RL can drive systems towards optimal solutions. Further, by introducing inductive biases in AI policies, one can incorporate prior scientific knowledge to steer searches towards realistically feasible solutions, thereby enhancing model trust and interpretability.</p>
 <p>Note that the AI policy must allow adequate exploration of the search parameter space so as to not get trapped in a local optimum during the quest to globally maximize the cumulative reward.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">

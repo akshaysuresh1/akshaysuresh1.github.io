@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2022-08-31">
 <meta name="description" content="Carbon sequestration involves capturing CO_2 from factories or directly from the air and storing it underground as a supercritical fluid. Geologic carbon capture and storage is required to meet global carbon neutrality goals, with over 30&nbsp;gigatons of CO_2 storage needed in the US alone by 2050. However, subsurface carbon storage comes with a catch. One may artificially induce earthquakes by injecting CO_2 (or any fluid) underground. Seismicity forecasts help safeguard public trust in carbon sequestration plants by informing the pace of fluid injections to minimize the associated seismic hazard. Here, leveraging numerical computing best practices and state-of-the-art time series analysis tools, we built an accessible, streamlined version of an existing physics-based earthquake forecasting model to enable near real-time accurate seismicity forecasts for safe commercial sequestration operations.">
 
-<title>Geomechanics for CO\(_2\) Sequestration</title>
+<title>Geomechanics for CO_2 Sequestration</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,11 +73,25 @@ gtag('js', new Date());
 gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
-<meta property="og:title" content="Geomechanics for CO\(_2\) Sequestration">
-<meta property="og:description" content="Carbon sequestration involves capturing CO\(_2\) from factories or directly from the air and storing it underground as a supercritical fluid. Geologic carbon capture and storage is required to meet global carbon neutrality goals, with over 30&nbsp;gigatons of CO\(_2\) storage needed in the US alone by 2050. However, subsurface carbon storage comes with a catch. One may artificially induce earthquakes by injecting CO\(_2\) (or any fluid) underground. Seismicity forecasts help safeguard public trust in carbon sequestration plants by informing the pace of fluid injections to minimize the associated seismic hazard. Here, leveraging numerical computing best practices and state-of-the-art time series analysis tools, we built an accessible, streamlined version of an existing physics-based earthquake forecasting model to enable near real-time accurate seismicity forecasts for safe commercial sequestration operations.">
+<meta property="og:title" content="Geomechanics for CO_2 Sequestration">
+<meta property="og:description" content="Carbon sequestration involves capturing CO_2 from factories or directly from the air and storing it underground as a supercritical fluid. Geologic carbon capture and storage is required to meet global carbon neutrality goals, with over 30&nbsp;gigatons of CO_2 storage needed in the US alone by 2050. However, subsurface carbon storage comes with a catch. One may artificially induce earthquakes by injecting CO_2 (or any fluid) underground. Seismicity forecasts help safeguard public trust in carbon sequestration plants by informing the pace of fluid injections to minimize the associated seismic hazard. Here, leveraging numerical computing best practices and state-of-the-art time series analysis tools, we built an accessible, streamlined version of an existing physics-based earthquake forecasting model to enable near real-time accurate seismicity forecasts for safe commercial sequestration operations.">
 <meta property="og:image" content="https://akshaysuresh1.com/projects/2022_08_31_FDL_CO2/media/seismic_concern.png">
 <meta property="og:image:height" content="1104">
 <meta property="og:image:width" content="1116">
@@ -157,7 +171,7 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Geomechanics for CO<span class="math inline">\(_2\)</span> Sequestration</h1>
+<h1 class="title">Geomechanics for CO<span class="math inline">_2</span> Sequestration</h1>
   <div class="quarto-categories">
     <div class="quarto-category">AI for Climate</div>
     <div class="quarto-category">Time Series Forecasting</div>
@@ -166,7 +180,7 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 
 <div>
   <div class="description">
-    Carbon sequestration involves capturing CO<span class="math inline">\(_2\)</span> from factories or directly from the air and storing it underground as a supercritical fluid. Geologic carbon capture and storage is required to meet global carbon neutrality goals, with over 30&nbsp;gigatons of CO<span class="math inline">\(_2\)</span> storage needed in the US alone by 2050. However, subsurface carbon storage comes with a catch. One may artificially induce earthquakes by injecting CO<span class="math inline">\(_2\)</span> (or any fluid) underground. Seismicity forecasts help safeguard public trust in carbon sequestration plants by informing the pace of fluid injections to minimize the associated seismic hazard. Here, leveraging numerical computing best practices and state-of-the-art time series analysis tools, we built an accessible, streamlined version of an existing physics-based earthquake forecasting model to enable near real-time accurate seismicity forecasts for safe commercial sequestration operations.
+    Carbon sequestration involves capturing CO<span class="math inline">_2</span> from factories or directly from the air and storing it underground as a supercritical fluid. Geologic carbon capture and storage is required to meet global carbon neutrality goals, with over 30&nbsp;gigatons of CO<span class="math inline">_2</span> storage needed in the US alone by 2050. However, subsurface carbon storage comes with a catch. One may artificially induce earthquakes by injecting CO<span class="math inline">_2</span> (or any fluid) underground. Seismicity forecasts help safeguard public trust in carbon sequestration plants by informing the pace of fluid injections to minimize the associated seismic hazard. Here, leveraging numerical computing best practices and state-of-the-art time series analysis tools, we built an accessible, streamlined version of an existing physics-based earthquake forecasting model to enable near real-time accurate seismicity forecasts for safe commercial sequestration operations.
   </div>
 </div>
 
@@ -234,19 +248,19 @@ Achievements
 <p><u><strong>Personal contributions to team success:</strong></u></p>
 <ul>
 <li>Transformed raw data into clean ML-ready labeled data products for supervised learning.</li>
-<li>Built an LSTM model to enable <span class="math inline">\(70 - 90\%\)</span> accurate short-term seismicity forecasts, complementing the long-range forecasting capabilities of our physics-based model.</li>
+<li>Built an LSTM model to enable <span class="math inline">70 - 90\%</span> accurate short-term seismicity forecasts, complementing the long-range forecasting capabilities of our physics-based model.</li>
 <li>Organized virtual board game sessions to facilitate team building amidst an intense 8-week research sprint (first 3 weeks in-person, next 5 weeks virtual).</li>
 </ul>
 </div>
 </div>
 <section id="the-challenge" class="level2">
 <h2 class="anchored" data-anchor-id="the-challenge">The Challenge</h2>
-<p>Achieving the US goal of carbon neutrality by 2050 will require the storage of over 30&nbsp;gigatons of CO<span class="math inline">\(_2\)</span> across 30,000 carbon sequestration plants in the country. However, carbon capture and storage, like any other underground fluid injection process, carries the risk of artificially inducing earthquakes. A noteworthy historical example in this regard is Oklahoma, a US state which saw sparse seismic activity during 1974 – 2008. Continued underground wastewater disposal since then has sparked a significant surge in seismic activity across Oklahoma.</p>
+<p>Achieving the US goal of carbon neutrality by 2050 will require the storage of over 30&nbsp;gigatons of CO<span class="math inline">_2</span> across 30,000 carbon sequestration plants in the country. However, carbon capture and storage, like any other underground fluid injection process, carries the risk of artificially inducing earthquakes. A noteworthy historical example in this regard is Oklahoma, a US state which saw sparse seismic activity during 1974 – 2008. Continued underground wastewater disposal since then has sparked a significant surge in seismic activity across Oklahoma.</p>
 <p><img class="center-img" src="media/oklahoma_wastewater.png" width="40%" alt="Occurrence of earthquakes tied to underground wastewater disposal in Oklahoma" style="border: 1px solid black;"></p>
 <div class="figure-caption">
 <p>Observed lagged correlation between wastewater disposal rate (red) and the associated induced seismicity (black) in Oklahoma, USA. Data sources: <a href="https://ogsweb.ou.edu/eq_catalog/">Oklahoma Geological Survey</a> &amp; <a href="https://oklahoma.gov/occ/divisions/oil-gas/oil-gas-data.html">Oklahoma Corporation Commission</a>.</p>
 </div>
-<p>Forecasts of induced seismicity are essential to permit bulk underground storage of CO<span class="math inline">\(_2\)</span> with minimal seismic hazard. However, existing models of induced seismicity leave much to be desired. Some forecasting models, as evident from the blue, pink, and gray curves in the below figure, are highly inaccurate. Among the more accurate formulations, the physics-based Coupled Coulomb Rate-State (CRS) models are highly site-specific, prohibitively slow, and extremely resource-intensive — requiring supercomputers to train. Further, operation of these models demands significant domain knowledge at the level of a seismology PhD candidate, which limits their utility to a general operator at a CO<span class="math inline">\(_2\)</span> sequestration plant.</p>
+<p>Forecasts of induced seismicity are essential to permit bulk underground storage of CO<span class="math inline">_2</span> with minimal seismic hazard. However, existing models of induced seismicity leave much to be desired. Some forecasting models, as evident from the blue, pink, and gray curves in the below figure, are highly inaccurate. Among the more accurate formulations, the physics-based Coupled Coulomb Rate-State (CRS) models are highly site-specific, prohibitively slow, and extremely resource-intensive — requiring supercomputers to train. Further, operation of these models demands significant domain knowledge at the level of a seismology PhD candidate, which limits their utility to a general operator at a CO<span class="math inline">_2</span> sequestration plant.</p>
 <p><img class="center-img" src="media/seismicity_models.png" width="80%" alt="Time series of cumulative earthquake counts observed in Canterbury, New Zealand"></p>
 <div class="figure-caption">
 <p>Time series of cumulative earthquake counts (black) observed in Canterbury, New Zealand between 2010 – 2012. Vertical lines label main quakes with magnitudes exceeding 5.9. Colored curves correspond to various models that have been fit to the data. Shaded areas around colored curves denote Poisson errors on forecasted earthquake counts. Reference: <a href="https://doi.org/10.1785/0220180033">Cattania et al.&nbsp;(2018)</a>.</p>
@@ -296,21 +310,21 @@ ML-ready data products on Zenodo
 <tbody>
 <tr class="odd">
 <td>Decatur, Illinois</td>
-<td style="text-align: left;">4 km <span class="math inline">\(\times\)</span> 5 km</td>
+<td style="text-align: left;">4 km <span class="math inline">\times</span> 5 km</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">Subsurface CO<span class="math inline">\(_2\)</span> injection</td>
+<td style="text-align: center;">Subsurface CO<span class="math inline">_2</span> injection</td>
 </tr>
 <tr class="even">
 <td>Cushing, Oklahoma</td>
-<td style="text-align: left;">4 km <span class="math inline">\(\times\)</span> 6 km</td>
+<td style="text-align: left;">4 km <span class="math inline">\times</span> 6 km</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">Underground wastewater disposal</td>
 </tr>
 <tr class="odd">
 <td>Kansas</td>
-<td style="text-align: left;">60 km <span class="math inline">\(\times\)</span> 45 km</td>
+<td style="text-align: left;">60 km <span class="math inline">\times</span> 45 km</td>
 <td style="text-align: right;">102</td>
 <td style="text-align: center;">8</td>
 <td style="text-align: center;">Underground wastewater disposal</td>
@@ -343,15 +357,15 @@ ML-ready data products on Zenodo
 <ol start="3" type="1">
 <li><strong>Accessibility upgrade:</strong> Users of our streamlined CRS implementation now only need to understand basic signal processing, some elementary statistics, and the concept of model fitting. Domain knowledge in seismology is no longer a prerequisite for model operation.</li>
 </ol>
-<p><u><strong>Quantifying model gains:</strong></u> <span class="math display">\[
+<p><u><strong>Quantifying model gains:</strong></u> <span class="math display">
 \frac{{\rm No. \ of \ CO_2 \ sequestration \ sites} \times {\rm Model \  training \ time} }{\rm Time \ between \ runs} = {\rm No. \ of \ operators \ required}
-\]</span></p>
-<p>Original CRS model (not scalable): <span class="math display">\[
+</span></p>
+<p>Original CRS model (not scalable): <span class="math display">
 \frac{{\rm 30,000 } \times {\rm 1 \ day} }{\rm 5 \ days } = {\rm 6,000 \ analysts \ from \ a \ pool \ of \ 10,000 \ seismology \ PhDs}
-\]</span> This would require restructuring the academic seismological community to do repetitive tasks and stop working on other pressing issues. Also, achieving safety with forecasts would be expensive.</p>
-<p>Streamlined CRS model: <span class="math display">\[
+</span> This would require restructuring the academic seismological community to do repetitive tasks and stop working on other pressing issues. Also, achieving safety with forecasts would be expensive.</p>
+<p>Streamlined CRS model: <span class="math display">
 \frac{{\rm 30,000 } \times {\rm (1/10) \ day} }{\rm 5 \ days } = {\rm 600 \ individuals\ with \ basic \ computing \ skills \ (feasible)}
-\]</span></p>
+</span></p>
 <p><strong>Note:</strong></p>
 <ol type="1">
 <li>In the above calculations, we assumed a gap of 5 days between successive model runs.</li>

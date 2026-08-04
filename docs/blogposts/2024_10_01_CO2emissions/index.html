@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2024-10-01">
 <meta name="description" content="Electric power generation from fuel combustion in power plants was alone responsible for 15&nbsp;gigatons of CO_2 emission annually during the years 2015–2020. Achieving net zero emissions requires monitoring power plant emissions and identifying pathways for emissions reduction. Climate&nbsp;TRACE is an international non-profit coalition dedicated to providing independent emissions monitoring worldwide. Leveraging remote sensing techniques and machine learning, Climate TRACE members WattTime and Transition&nbsp;Zero have developed an innovative approach to quantify CO_2 emissions from combustion power plants using water vapor plumes as a proxy. Here, I summarize my learnings from their efforts detailed in Couture et al.&nbsp;(2024).">
 
-<title>Indirect Estimation of Facility-level CO\(_2\) Emissions from Water Vapor Plumes</title>
+<title>Indirect Estimation of Facility-level CO_2 Emissions from Water Vapor Plumes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,11 +73,25 @@ gtag('js', new Date());
 gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
-<meta property="og:title" content="Indirect Estimation of Facility-level CO\(_2\) Emissions from Water Vapor Plumes">
-<meta property="og:description" content="Electric power generation from fuel combustion in power plants was alone responsible for 15&nbsp;gigatons of CO\(_2\) emission annually during the years 2015–2020. Achieving net zero emissions requires monitoring power plant emissions and identifying pathways for emissions reduction. Climate&nbsp;TRACE is an international non-profit coalition dedicated to providing independent emissions monitoring worldwide. Leveraging remote sensing techniques and machine learning, Climate TRACE members WattTime and Transition&nbsp;Zero have developed an innovative approach to quantify CO\(_2\) emissions from combustion power plants using water vapor plumes as a proxy. Here, I summarize my learnings from their efforts detailed in Couture et al.&nbsp;(2024).">
+<meta property="og:title" content="Indirect Estimation of Facility-level CO_2 Emissions from Water Vapor Plumes">
+<meta property="og:description" content="Electric power generation from fuel combustion in power plants was alone responsible for 15&nbsp;gigatons of CO_2 emission annually during the years 2015–2020. Achieving net zero emissions requires monitoring power plant emissions and identifying pathways for emissions reduction. Climate&nbsp;TRACE is an international non-profit coalition dedicated to providing independent emissions monitoring worldwide. Leveraging remote sensing techniques and machine learning, Climate TRACE members WattTime and Transition&nbsp;Zero have developed an innovative approach to quantify CO_2 emissions from combustion power plants using water vapor plumes as a proxy. Here, I summarize my learnings from their efforts detailed in Couture et al.&nbsp;(2024).">
 <meta property="og:image" content="https://akshaysuresh1.com/blogposts/2024_10_01_CO2emissions/media/AI_plume_detection.png">
 <meta property="og:image:height" content="990">
 <meta property="og:image:width" content="842">
@@ -158,7 +172,7 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Indirect Estimation of Facility-level CO<span class="math inline">\(_2\)</span> Emissions from Water Vapor Plumes</h1>
+<h1 class="title">Indirect Estimation of Facility-level CO<span class="math inline">_2</span> Emissions from Water Vapor Plumes</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Paper Recap</div>
     <div class="quarto-category">AI for Climate</div>
@@ -167,7 +181,7 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 
 <div>
   <div class="description">
-    Electric power generation from fuel combustion in power plants was alone responsible for 15&nbsp;gigatons of CO<span class="math inline">\(_2\)</span> emission annually during the years 2015–2020. Achieving net zero emissions requires monitoring power plant emissions and identifying pathways for emissions reduction. Climate&nbsp;TRACE is an international non-profit coalition dedicated to providing independent emissions monitoring worldwide. Leveraging remote sensing techniques and machine learning, Climate TRACE members WattTime and Transition&nbsp;Zero have developed an innovative approach to quantify CO<span class="math inline">\(_2\)</span> emissions from combustion power plants using water vapor plumes as a proxy. Here, I summarize my learnings from their efforts detailed in <a href="https://doi.org/10.3390/rs16071290">Couture et al.&nbsp;(2024)</a>.
+    Electric power generation from fuel combustion in power plants was alone responsible for 15&nbsp;gigatons of CO<span class="math inline">_2</span> emission annually during the years 2015–2020. Achieving net zero emissions requires monitoring power plant emissions and identifying pathways for emissions reduction. Climate&nbsp;TRACE is an international non-profit coalition dedicated to providing independent emissions monitoring worldwide. Leveraging remote sensing techniques and machine learning, Climate TRACE members WattTime and Transition&nbsp;Zero have developed an innovative approach to quantify CO<span class="math inline">_2</span> emissions from combustion power plants using water vapor plumes as a proxy. Here, I summarize my learnings from their efforts detailed in <a href="https://doi.org/10.3390/rs16071290">Couture et al.&nbsp;(2024)</a>.
   </div>
 </div>
 
@@ -213,9 +227,9 @@ References
 </div>
 <section id="context" class="level2">
 <h2 class="anchored" data-anchor-id="context">Context</h2>
-<p>During the years 2015–2020, the energy sector emitted between <a href="https://www.wri.org/blog/2020/02/greenhouse-gas-emissions-by-country-sector">33–37 gigatons of CO<span class="math inline">\(_2\)</span></a> annually, amounting for about 76% of global greenhouse gas (GHG) emissions. Of these, fossil fuel combustion for electricity generation alone accounted for 15 gigatons of CO<span class="math inline">\(_2\)</span> per year. Minimizing power plant carbon footprints necessitates meticulous GHG emissions monitoring.</p>
-<p>Measurements of CO<span class="math inline">\(_2\)</span> emissions from combustion power plants have often relied on bottom-up estimates based on emission factors, the type of fuel, the mass of fuel burnt, and the fuel efficiency. Such estimates, though straightforward, tend to be frequently inaccurate and vary in temporal granularity from one power plant to the next. In contrast, continuous emissions monitoring systems (CEMS) deployed in some power plants in the Global North enable reliable emissions tracking at hourly or sub-hourly temporal resolutions. However, CEMS are costly to install, calibrate, and maintain, making their mass deployment difficult.</p>
-<p>With a need for standardized global emissions monitoring, <a href="https://climatetrace.org/">Climate TRACE</a> members <a href="https://watttime.org/">WattTime</a> and <a href="https://www.transitionzero.org/">Transition Zero</a> have turned to remote sensing as a means to derive plant-level CO<span class="math inline">\(_2\)</span> emissions. Here, I summarize the efforts of <a href="https://doi.org/10.3390/rs16071290">Couture et al.&nbsp;(2024)</a> who trained machine learning models to predict power plant capacity factors from multispectral satellite images. Building upon <a href="https://transitionzero.medium.com/estimating-coal-power-plant-operation-from-satellite-images-with-computer-vision-b966af56919e">past work by Transition Zero members</a>, these models rely on detecting water vapor plumes from coolant towers as a proxy for plant activity.</p>
+<p>During the years 2015–2020, the energy sector emitted between <a href="https://www.wri.org/blog/2020/02/greenhouse-gas-emissions-by-country-sector">33–37 gigatons of CO<span class="math inline">_2</span></a> annually, amounting for about 76% of global greenhouse gas (GHG) emissions. Of these, fossil fuel combustion for electricity generation alone accounted for 15 gigatons of CO<span class="math inline">_2</span> per year. Minimizing power plant carbon footprints necessitates meticulous GHG emissions monitoring.</p>
+<p>Measurements of CO<span class="math inline">_2</span> emissions from combustion power plants have often relied on bottom-up estimates based on emission factors, the type of fuel, the mass of fuel burnt, and the fuel efficiency. Such estimates, though straightforward, tend to be frequently inaccurate and vary in temporal granularity from one power plant to the next. In contrast, continuous emissions monitoring systems (CEMS) deployed in some power plants in the Global North enable reliable emissions tracking at hourly or sub-hourly temporal resolutions. However, CEMS are costly to install, calibrate, and maintain, making their mass deployment difficult.</p>
+<p>With a need for standardized global emissions monitoring, <a href="https://climatetrace.org/">Climate TRACE</a> members <a href="https://watttime.org/">WattTime</a> and <a href="https://www.transitionzero.org/">Transition Zero</a> have turned to remote sensing as a means to derive plant-level CO<span class="math inline">_2</span> emissions. Here, I summarize the efforts of <a href="https://doi.org/10.3390/rs16071290">Couture et al.&nbsp;(2024)</a> who trained machine learning models to predict power plant capacity factors from multispectral satellite images. Building upon <a href="https://transitionzero.medium.com/estimating-coal-power-plant-operation-from-satellite-images-with-computer-vision-b966af56919e">past work by Transition Zero members</a>, these models rely on detecting water vapor plumes from coolant towers as a proxy for plant activity.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -246,13 +260,13 @@ Power plant capacity factor
 <li>Power plant attributes such as the type of fuel, the cooling technology adopted, and any air pollution control equipment in use</li>
 <li>Power plant maximum capacity</li>
 <li>Time series of electrical energy generation at various power plants</li>
-<li>Fuel and prime mover (steam or gas turbine) type to estimate the emissions factor (or carbon intensity) measured in kg of CO<span class="math inline">\(_2\)</span> per MWh of electrical energy</li>
+<li>Fuel and prime mover (steam or gas turbine) type to estimate the emissions factor (or carbon intensity) measured in kg of CO<span class="math inline">_2</span> per MWh of electrical energy</li>
 </ul>
 <p><a href="https://doi.org/10.3390/rs16071290">Couture et al.&nbsp;(2024)</a> specified, in Section&nbsp;3.4 of their paper, certain custom filters to select viable power plants for subsequent modeling. For every power plant that passed their filters, they downloaded multispectral satellite imagery from three data sources: PlanetScope (3&nbsp;m resolution, daily revisits), Sentinel-2 (10&nbsp;m resolution, 5-day revisit rate), and Landsat&nbsp;8 (30&nbsp;m resolution, 16-day revisit rate). They then matched each satellite image to a capacity factor determined from the plant capacity and the electrical power generated by the plant at the time stamp closest to that of the image.</p>
 <p>To ensure reasonable matches of satellite images to capacity factors, <a href="https://doi.org/10.3390/rs16071290">Couture et al.&nbsp;(2024)</a> required that all plants in their training data have electrical power generation data available at least hourly cadence. This restriction limited their training data to combustion power plants in the US, Europe, and Australia. Their validation data set included power plants in India and Türkiye in addition to ones in the US, Europe, and Australia. Finally, model inference was performed on 1042 power plants across 41 countries, including several plants in countries with high emissions such as China, US, India, Russia, and Japan.</p>
 <p><img class="center-img" src="media/fig2.png" width="60%" alt="Workflow diagram"></p>
 <div class="figure-caption">
-<p>Figure 2 of <a href="https://doi.org/10.3390/rs16071290">Couture et al.&nbsp;(2024)</a>: Summary of the data and machine learning workflow implemented to output plant-level CO<span class="math inline">\(_2\)</span> emissions from multispectral satellite imagery.</p>
+<p>Figure 2 of <a href="https://doi.org/10.3390/rs16071290">Couture et al.&nbsp;(2024)</a>: Summary of the data and machine learning workflow implemented to output plant-level CO<span class="math inline">_2</span> emissions from multispectral satellite imagery.</p>
 </div>
 <p><strong>Models and Inference:</strong></p>
 <ul>
@@ -302,35 +316,35 @@ Root Mean-squared Error and Mean Bias Error
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Consider targets <span class="math inline">\(\{y_i\}_{i=1}^n\)</span> and model predictions <span class="math inline">\(\{\widehat{y_i}\}_{i=1}^n\)</span>. The root mean-squared error and the mean bias error between the target and the prediction are respectively given by: <span class="math display">\[\begin{align}
+<p>Consider targets <span class="math inline">\{y_i\}_{i=1}^n</span> and model predictions <span class="math inline">\{\widehat{y_i}\}_{i=1}^n</span>. The root mean-squared error and the mean bias error between the target and the prediction are respectively given by: <span class="math display">\begin{align}
 \mathrm{RMSE} &amp;= \left( \frac{1}{n-1} \right) \sqrt{\sum_{i=1}^{n} (y_i - \widehat{y_i})^2}, \\
 \mathrm{MBE} &amp;= \left( \frac{1}{n} \right) \sum_{i=1}^{n} (y_i - \widehat{y_i}).
-\end{align}\]</span></p>
+\end{align}</span></p>
 </div>
 </div>
 <ul>
 <li><strong>Generation models</strong> (L1-regularized linear regression) aggregate unit level capacity factor estimates from the sounding models to derive time-averaged unit- and plant-level capacity factor values.</li>
 </ul>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\begin{align}
 \mathrm{Annual \ average \ unit \mbox{-} level \ power \ generation} =  
 \ &amp;\left({\rm Hourly \ capacity \ factor} \right) \times \\
 &amp;\left({\rm Maximum \ capacity \ of \ unit} \right) \times \\
 &amp;({\rm No. \ of \ hours \ in \ a \ year}).
-\end{align}\]</span></p>
-<p><span class="math display">\[\begin{align}
+\end{align}</span></p>
+<p><span class="math display">\begin{align}
 \mathrm{Annual \ average \ unit \mbox{-} level \ emissions} = \ &amp;{\rm Carbon \ intensity (fuel \ type, prime \ mover, \ country)} \times \\
 &amp; \mathrm{Annual \ average \ unit \mbox{-} level \ power \ generation}.
-\end{align}\]</span></p>
-<p>The annual average CO<span class="math inline">\(_2\)</span> emissions of a power plant are finally obtained through a weighted sum of emissions estimates from its constituent NDT and FGD units.</p>
+\end{align}</span></p>
+<p>The annual average CO<span class="math inline">_2</span> emissions of a power plant are finally obtained through a weighted sum of emissions estimates from its constituent NDT and FGD units.</p>
 </section>
 <section id="key-results" class="level2">
 <h2 class="anchored" data-anchor-id="key-results">Key Results</h2>
 <ol type="1">
-<li><a href="https://doi.org/10.3390/rs16071290">Couture et al.&nbsp;(2024)</a> used machine learning to estimate CO<span class="math inline">\(_2\)</span> emissions for 1042 facilities, representing 3% of combustion power plants globally but accounting for about 32% of CO<span class="math inline">\(_2\)</span> emissions from all combustion power plants during the years 2015–2022.</li>
+<li><a href="https://doi.org/10.3390/rs16071290">Couture et al.&nbsp;(2024)</a> used machine learning to estimate CO<span class="math inline">_2</span> emissions for 1042 facilities, representing 3% of combustion power plants globally but accounting for about 32% of CO<span class="math inline">_2</span> emissions from all combustion power plants during the years 2015–2022.</li>
 </ol>
 <p><img class="center-img" src="media/fig3.png" width="60%" alt="Map of carbon emissions"></p>
 <div class="figure-caption">
-<p>Figure 6 of <a href="https://doi.org/10.3390/rs16071290">Couture et al.&nbsp;(2024)</a>: Map of CO<span class="math inline">\(_2\)</span> emissions estimated for 1042 power plants using machine learning. Each circle represents a single power plant, with the size of the circle proportional to the estimated plant-level CO<span class="math inline">\(_2\)</span> emission during the year 2022.</p>
+<p>Figure 6 of <a href="https://doi.org/10.3390/rs16071290">Couture et al.&nbsp;(2024)</a>: Map of CO<span class="math inline">_2</span> emissions estimated for 1042 power plants using machine learning. Each circle represents a single power plant, with the size of the circle proportional to the estimated plant-level CO<span class="math inline">_2</span> emission during the year 2022.</p>
 </div>
 <ol start="2" type="1">
 <li><p>All machine learning models developed by <a href="https://doi.org/10.3390/rs16071290">Couture et al.&nbsp;(2024)</a> significantly outperformed their respective naive baseline competitors. The NDT detection models achieved mAP values between 0.865 to 0.959, while the corresponding mAP range for FGD was 0.811 to 0.903. The NDT regression models achieved RMSEs between 0.196–0.266, all with small negative MBEs. Meanwhile, the FGD regression models reached RMSEs between 0.263–0.301, again with mostly tiny negative MBEs. The comparatively better performance of the NDT sounding models as opposed to their FGD counterparts can be attributed to the relative ease in detecting water vapor plumes from the large hyperbolic architectures of NDT units.</p></li>

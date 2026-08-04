@@ -73,11 +73,25 @@ gtag('js', new Date());
 gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <meta property="og:title" content="Aligning AI with Climate Change Mitigation">
-<meta property="og:description" content="As AI-powered systems gain increased traction in society, a key concern to address is the climate cost of deploying such powerful models at scale. Depending on the model complexity and the intended applications, AI can accelerate or decrease greenhouse gas (GHG) emissions. Though AI systems accounted for \(\leq 1.4\%\) of global GHG emissions in 2020, the growing demand for billion-parameter foundational models may lead to an explosive surge in GHG emissions unless carefully quantified and accounted for. Here, I summarize my learnings from the framework devised by Kaack et al.&nbsp;(2022) for evaluating the GHG emissions impact of machine learning (ML) systems.">
+<meta property="og:description" content="As AI-powered systems gain increased traction in society, a key concern to address is the climate cost of deploying such powerful models at scale. Depending on the model complexity and the intended applications, AI can accelerate or decrease greenhouse gas (GHG) emissions. Though AI systems accounted for \leq 1.4\% of global GHG emissions in 2020, the growing demand for billion-parameter foundational models may lead to an explosive surge in GHG emissions unless carefully quantified and accounted for. Here, I summarize my learnings from the framework devised by Kaack et al.&nbsp;(2022) for evaluating the GHG emissions impact of machine learning (ML) systems.">
 <meta property="og:image" content="https://akshaysuresh1.com/blogposts/2024_01_19_AIigningAIwithClimate/media/AI_emissions.png">
 <meta property="og:image:height" content="824">
 <meta property="og:image:width" content="1260">
@@ -159,7 +173,7 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 
 <div>
   <div class="description">
-    As AI-powered systems gain increased traction in society, a key concern to address is the climate cost of deploying such powerful models at scale. Depending on the model complexity and the intended applications, AI can accelerate or decrease greenhouse gas (GHG) emissions. Though AI systems accounted for <span class="math inline">\(\leq 1.4\%\)</span> of global GHG emissions in 2020, the growing demand for billion-parameter foundational models may lead to an explosive surge in GHG emissions unless carefully quantified and accounted for. Here, I summarize my learnings from the framework devised by <a href="https://doi.org/10.1038/s41558-022-01377-7">Kaack et al.&nbsp;(2022)</a> for evaluating the GHG emissions impact of machine learning (ML) systems.
+    As AI-powered systems gain increased traction in society, a key concern to address is the climate cost of deploying such powerful models at scale. Depending on the model complexity and the intended applications, AI can accelerate or decrease greenhouse gas (GHG) emissions. Though AI systems accounted for <span class="math inline">\leq 1.4\%</span> of global GHG emissions in 2020, the growing demand for billion-parameter foundational models may lead to an explosive surge in GHG emissions unless carefully quantified and accounted for. Here, I summarize my learnings from the framework devised by <a href="https://doi.org/10.1038/s41558-022-01377-7">Kaack et al.&nbsp;(2022)</a> for evaluating the GHG emissions impact of machine learning (ML) systems.
   </div>
 </div>
 
@@ -211,7 +225,7 @@ References
 <p>Regarding electricity usage, it is essential to distinguish between the various life-cycle stages involved in ML model production. Model development is the most energy-intensive stage, requiring the identification of a suitable network architecture through trial-and-error training of several models. Once a specific model configuration has been chosen, model training and hyperparameter tuning are next. This stage isn’t as energy-demanding as model development but may need to be performed more frequently in practice.</p>
 <p><img class="center-img" src="media/AI_emissions.png" width="45%" alt="Pulse folding"></p>
 <div class="figure-caption">
-<p>Boxplot showing equivalent carbon intensities from training 11 different AI models in cloud instances. The y-axis (log-scale) measures electricity consumption in MWh translated into equivalent grams of CO<span class="math inline">\(_2\)</span> emissions generated. The x-axis corresponds to various trialed models, including two BERT experiments (finetuning and language model pretraining), partial training of a 6.1&nbsp;billion-parameter transformer model, three sizes of dense (or fully connected) neural networks, and five sizes of vision transformers. Light blue bars for each model mark the ranges of their respective equivalent emissions, where the top of the bar represents the maximum estimate and the bottom labels the minimum emissions. The heights of the dark blue rectangles contained in the light blue boxes measure interquartile ranges in equivalent emissions. The solid black lines in the dark blue rectangles for various models demarcate their respective average equivalent emissions (or energy consumption).</p>
+<p>Boxplot showing equivalent carbon intensities from training 11 different AI models in cloud instances. The y-axis (log-scale) measures electricity consumption in MWh translated into equivalent grams of CO<span class="math inline">_2</span> emissions generated. The x-axis corresponds to various trialed models, including two BERT experiments (finetuning and language model pretraining), partial training of a 6.1&nbsp;billion-parameter transformer model, three sizes of dense (or fully connected) neural networks, and five sizes of vision transformers. Light blue bars for each model mark the ranges of their respective equivalent emissions, where the top of the bar represents the maximum estimate and the bottom labels the minimum emissions. The heights of the dark blue rectangles contained in the light blue boxes measure interquartile ranges in equivalent emissions. The solid black lines in the dark blue rectangles for various models demarcate their respective average equivalent emissions (or energy consumption).</p>
 </div>
 <p><a href="https://arxiv.org/abs/2206.05229">Dodge et al.&nbsp;(2022)</a> measured the electricity consumption from training 11 different models covering natural language processing and computer vision applications. Notably, partial training (up to 13%) of a 6.1&nbsp;billion-parameter transformer on 256&nbsp;NVIDIA A100 GPUs for 8&nbsp;hours used up an astounding 13.8&nbsp;MWh of energy, i.e., equivalent to the annual electricity requirement of an average US home. Examining the above figure, the equivalent carbon emissions intensity of ML exhibits positive correlations with both the model size and the model complexity. <strong>Since foundation models with billions of trainable parameters are energetically expensive to build and train, one way to mitigate climate change is to adapt pretrained, open-source models (when possible) to custom domains via transfer learning or by using parameter-efficient tuning methods.</strong></p>
 <p>After model training, we have model inference, i.e., obtaining predictions on test data using a trained model. A single model inference task bears a negligible energy load. However, a model may need to be called thousands of times during deployment, leading to a cumulative energy budget for inference that can exceed those of model development and tuning. For instance, see numbers for Meta in Figure&nbsp;4 of <a href="https://arxiv.org/abs/2111.00364">Wu et al.&nbsp;(2022)</a>.</p>

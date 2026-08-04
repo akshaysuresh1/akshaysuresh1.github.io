@@ -73,8 +73,22 @@ gtag('js', new Date());
 gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <meta property="og:title" content="Convolutional Neural Networks for Signal Classification in Radio Astronomy">
 <meta property="og:description" content="Radio waves from human technologies frequently interfere with searches for exotic astrophysical phenomena, yielding hordes of false positives in downstream signal detection pipelines. Discerning astronomical signals of interest from a pile of false positives presents a “needle in a haystack” challenge demanding significant human time investment. Implementing interference blocking at telescope sites offers a bypass that shuts out streams of false positives, allowing the creation of clean datasets for scientific exploration. However, the execution of such methods relies on prior knowledge of the diverse structures exhibited by interference signals in radio telescope data. Convolutional neural networks (CNNs) can efficiently capture local structures in images and group related structural shapes into common classification categories. Here, as a proof of principle, we train CNNs of different depths to classify interference signals into one of four categories based on their observed spectrotemporal morphology.">
@@ -225,15 +239,15 @@ Note
 <li><code>slnb</code>: Short-lived narrowband interference + background Gaussian noise</li>
 <li><code>noise</code>: Background Gaussian noise only</li>
 </ul>
-<p>For each of the above classes, we simulated 1200 images of size 128&nbsp;pixels <span class="math inline">\(\times\)</span> 128&nbsp;pixels. From these, we randomly selected and set aside 200 images per category as validation data. The remaining images (1000 per category) formed our training dataset.</p>
+<p>For each of the above classes, we simulated 1200 images of size 128&nbsp;pixels <span class="math inline">\times</span> 128&nbsp;pixels. From these, we randomly selected and set aside 200 images per category as validation data. The remaining images (1000 per category) formed our training dataset.</p>
 <p><img class="center-img" src="media/signal_classes.png" width="65%" alt="Sample frequency-time images of signals belonging to the ``llbb`` (top left), ``llnb`` (top right), ``slbb`` (bottom left) and ``slnb`` (bottom right) output classes." style="border: 1px solid black;"></p>
 <div class="figure-caption">
 <p>Sample frequency-time images of signals belonging to the <code>llbb</code> (top left), <code>llnb</code> (top right), <code>slbb</code> (bottom left) and <code>slnb</code> (bottom right) output classes.</p>
 </div>
-<p>Since our training data are balanced across all output classes, we adopt the accuracy metric to quantify our model performance. During model training, we observed how the category-integrated model accuracy (defined below) varied with training epoch for our training and validation data. <span class="math display">\[
+<p>Since our training data are balanced across all output classes, we adopt the accuracy metric to quantify our model performance. During model training, we observed how the category-integrated model accuracy (defined below) varied with training epoch for our training and validation data. <span class="math display">
 {\rm Network \ accuracy \ across \ all \ classes} = \frac{\rm No.\  of\  images \
 correctly \ classified}{\rm Total \ no. \ of \ images} \times 100\%
-\]</span> We also investigated confusion matrices built using category-specific model accuracies. We encourage interested readers to consult our <a href="https://github.com/akshaysuresh1/RFI-classifier/blob/master/RFI_classifier.pdf">project report</a> for relevant details.</p>
+</span> We also investigated confusion matrices built using category-specific model accuracies. We encourage interested readers to consult our <a href="https://github.com/akshaysuresh1/RFI-classifier/blob/master/RFI_classifier.pdf">project report</a> for relevant details.</p>
 </section>
 <section id="model-architecture" class="level2">
 <h2 class="anchored" data-anchor-id="model-architecture">Model Architecture</h2>
@@ -260,12 +274,12 @@ Naming convention
 </section>
 <section id="model-training-results" class="level2">
 <h2 class="anchored" data-anchor-id="model-training-results">Model Training &amp; Results</h2>
-<p>We trained all of our models using the <a href="https://www.v7labs.com/blog/cross-entropy-loss-guide">categorical cross-entropy (CE) loss function</a> to perform multiclass classification. Further, we uniformly applied the <a href="https://arxiv.org/abs/1412.6980">Adam optimizer</a> for model backpropagation with an initial learning rate of <span class="math inline">\(10^{-5}\)</span>.</p>
+<p>We trained all of our models using the <a href="https://www.v7labs.com/blog/cross-entropy-loss-guide">categorical cross-entropy (CE) loss function</a> to perform multiclass classification. Further, we uniformly applied the <a href="https://arxiv.org/abs/1412.6980">Adam optimizer</a> for model backpropagation with an initial learning rate of <span class="math inline">10^{-5}</span>.</p>
 <p><img class="center-img" src="media/accuracy_6to10.png" width="65%" alt="Network accuracy curves" style="border: 1px solid black;"></p>
 <div class="figure-caption">
 <p>Accuracy curves for CNN models of different depths (various colors). Dotted and solid curves represent network performances on the training and validation data respectively.</p>
 </div>
-<p>Starting with our base network (blue curves), we notice that our model performance grows monotonically on the training data (dotted curve) with increasing epoch. However, the network accuracy on the validation data (solid curve) drops after epoch&nbsp;3, suggesting that the model has now begun to overfit the training data. Based on these trends, we reloaded our saved model weights from epoch&nbsp;3 to obtain robust predictions using our 6-layer network. Note that our 6-layer model, even at epoch&nbsp;3, only reaches a maximum accuracy of <span class="math inline">\(85\%\)</span> on the validation data.</p>
+<p>Starting with our base network (blue curves), we notice that our model performance grows monotonically on the training data (dotted curve) with increasing epoch. However, the network accuracy on the validation data (solid curve) drops after epoch&nbsp;3, suggesting that the model has now begun to overfit the training data. Based on these trends, we reloaded our saved model weights from epoch&nbsp;3 to obtain robust predictions using our 6-layer network. Note that our 6-layer model, even at epoch&nbsp;3, only reaches a maximum accuracy of <span class="math inline">85\%</span> on the validation data.</p>
 <p>Training CNNs of increasing depth, we observe a growth in the maximum network accuracy achieved under conditions of a robust fit. However, the incremental gain in network accuracy diminishes with every added layer. Setting a 95% accuracy threshold, we find that an 8/9-layer CNN model is adequate for our classification problem.</p>
 </section>
 <section id="areas-for-improvement" class="level2">

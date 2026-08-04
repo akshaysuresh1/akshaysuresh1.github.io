@@ -73,11 +73,25 @@ gtag('js', new Date());
 gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <meta property="og:title" content="A LiDAR-based Evaluation of Rooftop Solar Potential in DeLand, Florida">
-<meta property="og:description" content="The state of Florida, with access to abundant sunlight, is well positioned to transition from fossil fuel dependency to solar energy. Encouraging residential solar panel installations, particularly in small cities like DeLand, is a crucial aspect of this transition. Light Detection and Ranging (LiDAR) surveys enable detailed maps of residential neighborhoods, thereby permitting homeowners to assess the feasibility of household rooftop solar, even accounting for shading from nearby structures. Here, I leveraged freely available LiDAR data to evaluate the potential for rooftop solar installations on 996&nbsp;households within a 1.52&nbsp;km \(\times\) 1.52&nbsp;km area of DeLand. My analysis reveals that approximately 76% of these households can generate sufficient solar energy to meet the average annual demand of 19.2&nbsp;MWh per home in DeLand. Moreover, with Florida’s net metering system, surplus electricity can be sold back to the state grid for credits. Assuming a selling rate of 11&nbsp;cents per kWh, my projections suggest potential yearly profits exceeding $1000 for about 53% of households in my study area. My findings, therefore, underscore the significant potential for widespread adoption of solar panels on residential properties in DeLand, highlighting the economic and environmental benefits of such initiatives.">
+<meta property="og:description" content="The state of Florida, with access to abundant sunlight, is well positioned to transition from fossil fuel dependency to solar energy. Encouraging residential solar panel installations, particularly in small cities like DeLand, is a crucial aspect of this transition. Light Detection and Ranging (LiDAR) surveys enable detailed maps of residential neighborhoods, thereby permitting homeowners to assess the feasibility of household rooftop solar, even accounting for shading from nearby structures. Here, I leveraged freely available LiDAR data to evaluate the potential for rooftop solar installations on 996&nbsp;households within a 1.52&nbsp;km \times 1.52&nbsp;km area of DeLand. My analysis reveals that approximately 76% of these households can generate sufficient solar energy to meet the average annual demand of 19.2&nbsp;MWh per home in DeLand. Moreover, with Florida’s net metering system, surplus electricity can be sold back to the state grid for credits. Assuming a selling rate of 11&nbsp;cents per kWh, my projections suggest potential yearly profits exceeding $1000 for about 53% of households in my study area. My findings, therefore, underscore the significant potential for widespread adoption of solar panels on residential properties in DeLand, highlighting the economic and environmental benefits of such initiatives.">
 <meta property="og:image" content="https://akshaysuresh1.com/projects/2024_05_14_LiDARSolarPotential/media/DeLand_solar_insolation_zoom1_magenta.png">
 <meta property="og:image:height" content="988">
 <meta property="og:image:width" content="1244">
@@ -169,7 +183,7 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 
 <div>
   <div class="description">
-    The state of Florida, with access to abundant sunlight, is well positioned to transition from fossil fuel dependency to solar energy. Encouraging residential solar panel installations, particularly in small cities like DeLand, is a crucial aspect of this transition. Light Detection and Ranging (LiDAR) surveys enable detailed maps of residential neighborhoods, thereby permitting homeowners to assess the feasibility of household rooftop solar, even accounting for shading from nearby structures. Here, I leveraged freely available LiDAR data to evaluate the potential for rooftop solar installations on 996&nbsp;households within a 1.52&nbsp;km <span class="math inline">\(\times\)</span> 1.52&nbsp;km area of DeLand. My analysis reveals that approximately 76% of these households can generate sufficient solar energy to meet the average annual demand of 19.2&nbsp;MWh per home in DeLand. Moreover, with Florida’s net metering system, surplus electricity can be sold back to the state grid for credits. Assuming a selling rate of 11&nbsp;cents per kWh, my projections suggest potential yearly profits exceeding $1000 for about 53% of households in my study area. My findings, therefore, underscore the significant potential for widespread adoption of solar panels on residential properties in DeLand, highlighting the economic and environmental benefits of such initiatives.
+    The state of Florida, with access to abundant sunlight, is well positioned to transition from fossil fuel dependency to solar energy. Encouraging residential solar panel installations, particularly in small cities like DeLand, is a crucial aspect of this transition. Light Detection and Ranging (LiDAR) surveys enable detailed maps of residential neighborhoods, thereby permitting homeowners to assess the feasibility of household rooftop solar, even accounting for shading from nearby structures. Here, I leveraged freely available LiDAR data to evaluate the potential for rooftop solar installations on 996&nbsp;households within a 1.52&nbsp;km <span class="math inline">\times</span> 1.52&nbsp;km area of DeLand. My analysis reveals that approximately 76% of these households can generate sufficient solar energy to meet the average annual demand of 19.2&nbsp;MWh per home in DeLand. Moreover, with Florida’s net metering system, surplus electricity can be sold back to the state grid for credits. Assuming a selling rate of 11&nbsp;cents per kWh, my projections suggest potential yearly profits exceeding $1000 for about 53% of households in my study area. My findings, therefore, underscore the significant potential for widespread adoption of solar panels on residential properties in DeLand, highlighting the economic and environmental benefits of such initiatives.
   </div>
 </div>
 
@@ -224,20 +238,20 @@ Note
 <p><img class="center-img" src="media/project_workflow.png" width="60%" alt="Project workflow" style="border: 1px solid black;"></p>
 <p><strong>Raw data inputs:</strong></p>
 <ol type="1">
-<li><p>US 3D Elevation Program (3DEP) LiDAR point cloud data (<a href="https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/FL_Peninsular_2018_D18/FL_Peninsular_Volusia_2018/LAZ/USGS_LPC_FL_Peninsular_2018_D18_LID2019_247579_E.laz">download link</a>) of a 1.52&nbsp;km <span class="math inline">\(\times\)</span> 1.52&nbsp;km area of DeLand, FL</p></li>
+<li><p>US 3D Elevation Program (3DEP) LiDAR point cloud data (<a href="https://rockyweb.usgs.gov/vdelivery/Datasets/Staged/Elevation/LPC/Projects/FL_Peninsular_2018_D18/FL_Peninsular_Volusia_2018/LAZ/USGS_LPC_FL_Peninsular_2018_D18_LID2019_247579_E.laz">download link</a>) of a 1.52&nbsp;km <span class="math inline">\times</span> 1.52&nbsp;km area of DeLand, FL</p></li>
 <li><p><a href="https://github.com/microsoft/USBuildingFootprints">Shapefile of Florida building footprints</a> generated by Microsoft using computer vision models applied to Bing satellite imagery from 2012 and 2019—2020.</p></li>
 </ol>
 <p><strong>Methodology:</strong></p>
 <p>A digital elevation model (DEM) measures the elevation of the bare Earth surface relative to mean sea level. DEMs exclude surface objects such as buildings, vegetation, or infrastructure, from their representations. On the other hand, a digital surface model (DSM) captures the Earth’s surface as seen from overhead imagery. <br></p>
-<p>I first generated a DEM and a DSM of my study region using my input LiDAR point cloud data. Then, I applied the <a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/area-solar-radiation.htm"><em>Area Solar Radiation</em></a> routine of ArcGIS Pro to compute pixel-level solar insolation estimates in kWh/m<span class="math inline">\(^2\)</span> for the year 2024. Here, the solar insolation of a surface in a year is defined as the cumulative solar energy received per unit area normal to the surface.</p>
-<p>Finally, I derived estimates of the household solar energy production as follows. <span class="math display">\[
+<p>I first generated a DEM and a DSM of my study region using my input LiDAR point cloud data. Then, I applied the <a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/area-solar-radiation.htm"><em>Area Solar Radiation</em></a> routine of ArcGIS Pro to compute pixel-level solar insolation estimates in kWh/m<span class="math inline">^2</span> for the year 2024. Here, the solar insolation of a surface in a year is defined as the cumulative solar energy received per unit area normal to the surface.</p>
+<p>Finally, I derived estimates of the household solar energy production as follows. <span class="math display">
 {\rm Household \ solar \ energy \ production} =  \epsilon \Upsilon ({\rm Footprint \ Area}) \times ({\rm Footprint-averaged \ solar \ insolation})
-\]</span> In the above equation, <span class="math inline">\(\epsilon\)</span> and <span class="math inline">\(\Upsilon\)</span> are the solar panel panel efficiency and performance ratio respectively. The solar panel efficiency measures the fraction of incoming solar energy converted into electricity. Meanwhile, the performance ratio quantifies the proportion of generated electrical energy that is preserved through the panel installation. For this study, I chose <span class="math inline">\(\epsilon=22\%\)</span> and <span class="math inline">\(\Upsilon=80\%\)</span>, which are representative values for commercially manufactured solar panels in 2024.</p>
+</span> In the above equation, <span class="math inline">\epsilon</span> and <span class="math inline">\Upsilon</span> are the solar panel panel efficiency and performance ratio respectively. The solar panel efficiency measures the fraction of incoming solar energy converted into electricity. Meanwhile, the performance ratio quantifies the proportion of generated electrical energy that is preserved through the panel installation. For this study, I chose <span class="math inline">\epsilon=22\%</span> and <span class="math inline">\Upsilon=80\%</span>, which are representative values for commercially manufactured solar panels in 2024.</p>
 </section>
 <section id="results" class="level2">
 <h2 class="anchored" data-anchor-id="results">Results</h2>
 <ol class="example" type="1">
-<li>I show below a map of pixel-level solar insolation estimates, revealing shading effects from nearby trees. South-facing rooftops receive the highest insolation, especially evident from pixels with <span class="math inline">\(\gtrsim 1000\)</span>&nbsp;kWh/m<span class="math inline">\(^2\)</span> insolation. <br></li>
+<li>I show below a map of pixel-level solar insolation estimates, revealing shading effects from nearby trees. South-facing rooftops receive the highest insolation, especially evident from pixels with <span class="math inline">\gtrsim 1000</span>&nbsp;kWh/m<span class="math inline">^2</span> insolation. <br></li>
 </ol>
 <p><img class="center-img" src="media/solar_insolation.png" width="60%" alt="Pixel-level solar insolation map" style="border: 1px solid black;"></p>
 <div class="figure-caption">
@@ -245,11 +259,11 @@ Note
 </div>
 <ol start="2" class="example" type="1">
 <li><p>I present a web map showcasing solar energy production estimates for homes in my study region during the year 2024. In the absence of granular knowledge of the annual electricity consumption for each building, I assumed every household to uniformly require the mean energy demand of 19.2&nbsp;MWh per year.</p>
-<p>757 households (<span class="math inline">\(\approx\)</span>&nbsp;76% of homes) in my study region are expected to receive adequate solar exposure to meet the annual average demand of 19.2&nbsp;MWh per home. Further, production of at least 19.2&nbsp;MWh of solar energy necessitates a minimum home area of <span class="math inline">\(\approx\)</span>&nbsp;108&nbsp;m<span class="math inline">\(^2\)</span>.</p>
+<p>757 households (<span class="math inline">\approx</span>&nbsp;76% of homes) in my study region are expected to receive adequate solar exposure to meet the annual average demand of 19.2&nbsp;MWh per home. Further, production of at least 19.2&nbsp;MWh of solar energy necessitates a minimum home area of <span class="math inline">\approx</span>&nbsp;108&nbsp;m<span class="math inline">^2</span>.</p>
 <div class="iframe-container">
 <iframe src="https://www.arcgis.com/apps/Embed/index.html?webmap=bb1f534bd91148aa8b7bcd4caa26f2cd&amp;extent=-81.3003,29.0182,-81.2849,29.0451&amp;home=true&amp;zoom=true&amp;previewImage=false&amp;scale=true&amp;search=true&amp;searchextent=true&amp;legend=true&amp;basemap_gallery=true&amp;disable_scroll=true&amp;theme=dark" title="A LiDAR-based Evaluation of Rooftop Solar Potential in DeLand, Florida"></iframe>
 </div>
-<p>Florida has an active net metering system that pays residents for selling excess generated solar energy to the state power grid. Assuming a selling rate of 11 cents per kWh, 529 buildings (<span class="math inline">\(\approx\)</span>&nbsp;53% of homes) in our study area stand to generate annual profits exceeding $1000, thereby, highlighting the economic potential for widespread rooftop solar adoption in DeLand.</p></li>
+<p>Florida has an active net metering system that pays residents for selling excess generated solar energy to the state power grid. Assuming a selling rate of 11 cents per kWh, 529 buildings (<span class="math inline">\approx</span>&nbsp;53% of homes) in our study area stand to generate annual profits exceeding $1000, thereby, highlighting the economic potential for widespread rooftop solar adoption in DeLand.</p></li>
 </ol>
 </section>
 <section id="areas-for-improvement" class="level2">

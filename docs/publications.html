@@ -72,8 +72,22 @@ gtag('js', new Date());
 gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <meta property="og:title" content="Publications">
 <meta property="og:description" content="">
@@ -175,7 +189,7 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 <section id="fa-newspaper-technical-memo-ai-for-climate" class="level3">
 <h3 class="anchored" data-anchor-id="fa-newspaper-technical-memo-ai-for-climate"><i class="fa-solid fa-newspaper" aria-label="newspaper"></i> Technical Memo (AI for Climate)</h3>
 <ol type="1">
-<li>Castiglione,&nbsp;G., Chen,&nbsp;A., <b>Suresh,&nbsp;A.</b>, Xiao,&nbsp;H., Kroll,&nbsp;K., Sherman,&nbsp;C., &amp; Weisser,&nbsp;C., <i>Geomechanics for CO<span class="math inline">\(_2\)</span> Sequestration</i>, <a href="https://www.calameo.com/read/0055032805743f9fd8bf6">Frontier Development Lab USA 2022 Technical Results and Findings, pp.&nbsp;210–226</a>.</li>
+<li>Castiglione,&nbsp;G., Chen,&nbsp;A., <b>Suresh,&nbsp;A.</b>, Xiao,&nbsp;H., Kroll,&nbsp;K., Sherman,&nbsp;C., &amp; Weisser,&nbsp;C., <i>Geomechanics for CO<span class="math inline">_2</span> Sequestration</i>, <a href="https://www.calameo.com/read/005503280ea58461854fe">Frontier Development Lab USA 2022 Technical Results and Findings, pp.&nbsp;210–226</a>.</li>
 </ol>
 </section>
 <section id="fa-receipt-refereed-journal-articles" class="level3">
@@ -186,7 +200,7 @@ gtag('config', 'G-HVXS56J8T6', { 'anonymize_ip': true});
 <li><p><b>Suresh,&nbsp;A.</b>, Cordes,&nbsp;J.&nbsp;M., Chatterjee,&nbsp;S., Gajjar,&nbsp;V., et al.&nbsp;(9 authors), <i>4–8&nbsp;GHz Fourier-domain Searches for Galactic Center Pulsars</i>, <a href="https://doi.org/10.3847/1538-4357/ac74c0">2022 ApJ 933 121</a>.</p></li>
 <li><p><b>Suresh,&nbsp;A.</b>, Cordes,&nbsp;J.&nbsp;M., Chatterjee,&nbsp;S., Gajjar,&nbsp;V., et al.&nbsp;(7 authors), <i>4–8&nbsp;GHz Spectrotemporal Emission from the Galactic Center Magnetar PSR J1745—2900</i>, <a href="https://doi.org/10.3847/1538-4357/ac1d45">2021 ApJ 921 101</a>.</p></li>
 <li><p><b>Suresh,&nbsp;A.</b>, Chatterjee,&nbsp;S., Cordes,&nbsp;J.&nbsp;M., &amp; Crawford,&nbsp;F., <i>An Arecibo Search for Fast Radio Transients from M87</i>, <a href="https://doi.org/10.3847/1538-4357/ac1672">2021 ApJ 920 16</a>.</p></li>
-<li><p><b>Suresh,&nbsp;A.</b>, Chatterjee,&nbsp;S., Cordes,&nbsp;J.&nbsp;M., Bastian,&nbsp;T.&nbsp;S. &amp; Hallinan,&nbsp;G., <i>Detection of 2–4 GHz Continuum Emission from <span class="math inline">\(\epsilon\)</span>&nbsp;Eridani</i>, <a href="https://doi.org/10.3847/1538-4357/abc004">2020 ApJ 904 138</a>.</p></li>
+<li><p><b>Suresh,&nbsp;A.</b>, Chatterjee,&nbsp;S., Cordes,&nbsp;J.&nbsp;M., Bastian,&nbsp;T.&nbsp;S. &amp; Hallinan,&nbsp;G., <i>Detection of 2–4 GHz Continuum Emission from <span class="math inline">\epsilon</span>&nbsp;Eridani</i>, <a href="https://doi.org/10.3847/1538-4357/abc004">2020 ApJ 904 138</a>.</p></li>
 <li><p><b>Suresh,&nbsp;A.</b>, &amp; Cordes,&nbsp;J.&nbsp;M., <i>Induced Polarization from Birefringent Pulse Splitting in Magnetoionic Media</i>, <a href="https://doi.org/10.3847/1538-4357/aaf004">2019 ApJ 870 29</a>.</p></li>
 <li><p><b>Suresh,&nbsp;A.</b>, Sharma,&nbsp;R., Oberoi,&nbsp;D., et al.&nbsp;(39 authors), <i>Wavelet-based Characterization of Small-scale Solar Emission Features at Low Radio Frequencies</i>, <a href="https://doi.org/10.3847/1538-4357/aa774a">2017 ApJ 843 19</a>.</p></li>
 <li><p>Gajjar,&nbsp;V., et al.&nbsp;(22&nbsp;authors including <b>Suresh,&nbsp;A.</b>), <i>Searching for Broadband Pulsed Beacons from 1883&nbsp;Stars Using Neural Networks</i>, <a href="https://doi.org/10.3847/1538-4357/ac6dd5">2022 ApJ 932 81</a>.</p></li>

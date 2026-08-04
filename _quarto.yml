@@ -39,6 +39,7 @@ website:
 
 format:
   html:
+    html-math-method: katex
     page-layout: full
     sidebar: false
     grid: 
