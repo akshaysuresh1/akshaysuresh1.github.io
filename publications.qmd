@@ -44,4 +44,4 @@ from M87</i>, [2021 ApJ 920 16](https://doi.org/10.3847/1538-4357/ac1672).
 
 1. [PhD thesis:](https://doi.org/10.7298/wry4-y448) <b>Suresh,&nbsp;A.</b>, <i>Radio Transient Searches from Millisecond to Hour-long Time Scales</i>, Cornell University, USA, 2023.
 
-2. [MS thesis:](http://dr.iiserpune.ac.in:8080/xmlui/handle/123456789/800) <b>Suresh,&nbsp;A.</b>, <i>Investigation of Small Scale Weak Solar Emissions at Low Radio Frequencies</i>, IISER Pune, India, 2017.
+2. [MS thesis:](https://dr.iiserpune.ac.in/handle/123456789/800) <b>Suresh,&nbsp;A.</b>, <i>Investigation of Small Scale Weak Solar Emissions at Low Radio Frequencies</i>, IISER Pune, India, 2017.
